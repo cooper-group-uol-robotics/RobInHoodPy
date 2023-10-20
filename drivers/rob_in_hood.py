@@ -1,8 +1,8 @@
-#from frankx import Affine, LinearRelativeMotion, Robot, Gripper
+from frankx import Affine, LinearRelativeMotion, Robot, Gripper
 from src.frankx_helpers import FrankxHelpers
 from conf.configuration import *
 import time
-#from pylabware import RCTDigitalHotplate,XCalibur,QuantosQB1
+from pylabware import RCTDigitalHotplate,XCalibur,QuantosQB1
 from drivers.camera import Camera
 from drivers.timer import Timer
 
