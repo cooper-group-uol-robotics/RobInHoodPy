@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>drivers package &mdash; RobInHoodPy 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=af2ce170"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RobInHoodPy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">drivers package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-drivers.rob_in_hood">drivers.rob_in_hood module</a><ul>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood"><code class="docutils literal notranslate"><span class="pre">RobInHood</span></code></a><ul>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.camera_to_rack"><code class="docutils literal notranslate"><span class="pre">RobInHood.camera_to_rack()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.camera_to_rack_photos_on_the_way"><code class="docutils literal notranslate"><span class="pre">RobInHood.camera_to_rack_photos_on_the_way()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.check_quantos_cartridge"><code class="docutils literal notranslate"><span class="pre">RobInHood.check_quantos_cartridge()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.check_quantos_door_position"><code class="docutils literal notranslate"><span class="pre">RobInHood.check_quantos_door_position()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.devices_connected_report"><code class="docutils literal notranslate"><span class="pre">RobInHood.devices_connected_report()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.go_home"><code class="docutils literal notranslate"><span class="pre">RobInHood.go_home()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.init_camera"><code class="docutils literal notranslate"><span class="pre">RobInHood.init_camera()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.init_ika"><code class="docutils literal notranslate"><span class="pre">RobInHood.init_ika()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.init_pump"><code class="docutils literal notranslate"><span class="pre">RobInHood.init_pump()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.init_quantos"><code class="docutils literal notranslate"><span class="pre">RobInHood.init_quantos()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.init_robot"><code class="docutils literal notranslate"><span class="pre">RobInHood.init_robot()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.insert_cartridge_in_quantos"><code class="docutils literal notranslate"><span class="pre">RobInHood.insert_cartridge_in_quantos()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.pick_and_place_cartridge_in_holder"><code class="docutils literal notranslate"><span class="pre">RobInHood.pick_and_place_cartridge_in_holder()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.pick_and_place_cartridge_in_quantos"><code class="docutils literal notranslate"><span class="pre">RobInHood.pick_and_place_cartridge_in_quantos()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.pick_up_cartridge_from_holder"><code class="docutils literal notranslate"><span class="pre">RobInHood.pick_up_cartridge_from_holder()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.pull_pump"><code class="docutils literal notranslate"><span class="pre">RobInHood.pull_pump()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.pump_inyect"><code class="docutils literal notranslate"><span class="pre">RobInHood.pump_inyect()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.push_pump"><code class="docutils literal notranslate"><span class="pre">RobInHood.push_pump()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.quantos_dosing"><code class="docutils literal notranslate"><span class="pre">RobInHood.quantos_dosing()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.remove_cartridge_from_quantos"><code class="docutils literal notranslate"><span class="pre">RobInHood.remove_cartridge_from_quantos()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.return_cartridge_to_holder"><code class="docutils literal notranslate"><span class="pre">RobInHood.return_cartridge_to_holder()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_ika_to_pump"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_ika_to_pump()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_ika_to_quantos"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_ika_to_quantos()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_ika_to_rack"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_ika_to_rack()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_pump_to_ika"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_pump_to_ika()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_pump_to_quantos"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_pump_to_quantos()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_pump_to_rack"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_pump_to_rack()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_quantos_to_ika"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_quantos_to_ika()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_quantos_to_pump"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_quantos_to_pump()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_quantos_to_rack"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_quantos_to_rack()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_rack_to_ika"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_rack_to_ika()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_rack_to_pump"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_rack_to_pump()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.rob_in_hood.RobInHood.vial_rack_to_quantos"><code class="docutils literal notranslate"><span class="pre">RobInHood.vial_rack_to_quantos()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-drivers.camera">drivers.camera module</a><ul>
+<li><a class="reference internal" href="#drivers.camera.Camera"><code class="docutils literal notranslate"><span class="pre">Camera</span></code></a><ul>
+<li><a class="reference internal" href="#drivers.camera.Camera.camera_stream"><code class="docutils literal notranslate"><span class="pre">Camera.camera_stream()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.camera.Camera.init_camera"><code class="docutils literal notranslate"><span class="pre">Camera.init_camera()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.camera.Camera.save_picture"><code class="docutils literal notranslate"><span class="pre">Camera.save_picture()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.camera.Camera.start_streaming"><code class="docutils literal notranslate"><span class="pre">Camera.start_streaming()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.camera.Camera.stop_streaming"><code class="docutils literal notranslate"><span class="pre">Camera.stop_streaming()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-drivers.timer">drivers.timer module</a><ul>
+<li><a class="reference internal" href="#drivers.timer.Timer"><code class="docutils literal notranslate"><span class="pre">Timer</span></code></a><ul>
+<li><a class="reference internal" href="#drivers.timer.Timer.display_current_time"><code class="docutils literal notranslate"><span class="pre">Timer.display_current_time()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.timer.Timer.set_timer"><code class="docutils literal notranslate"><span class="pre">Timer.set_timer()</span></code></a></li>
+<li><a class="reference internal" href="#drivers.timer.Timer.start_timer"><code class="docutils literal notranslate"><span class="pre">Timer.start_timer()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-drivers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobInHoodPy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">drivers package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/drivers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="drivers-package">
+<h1>drivers package<a class="headerlink" href="#drivers-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-drivers.rob_in_hood">
+<span id="drivers-rob-in-hood-module"></span><h2>drivers.rob_in_hood module<a class="headerlink" href="#module-drivers.rob_in_hood" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">drivers.rob_in_hood.</span></span><span class="sig-name descname"><span class="pre">RobInHood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'conf/json/rih_robot_motion_positions.json'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'172.16.0.2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class connects with Panda robot.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.camera_to_rack">
+<span class="sig-name descname"><span class="pre">camera_to_rack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rack_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.camera_to_rack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.camera_to_rack" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a photo of a given rack.
+:param rack_number: The rack number is a integer which range go from 1 to 3.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.camera_to_rack_photos_on_the_way">
+<span class="sig-name descname"><span class="pre">camera_to_rack_photos_on_the_way</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.camera_to_rack_photos_on_the_way"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.camera_to_rack_photos_on_the_way" title="Permalink to this definition"></a></dt>
+<dd><p>Takes photos of the three racks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.check_quantos_cartridge">
+<span class="sig-name descname"><span class="pre">check_quantos_cartridge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.check_quantos_cartridge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.check_quantos_cartridge" title="Permalink to this definition"></a></dt>
+<dd><p>Terminates the program if the robot fails to mount the cartridge in order to avoid the quantos station to close the front when the robot is on the way.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.check_quantos_door_position">
+<span class="sig-name descname"><span class="pre">check_quantos_door_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.check_quantos_door_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.check_quantos_door_position" title="Permalink to this definition"></a></dt>
+<dd><p>Terminates the program when the door is closed, aiming to avoid the robot to collide against the mettler.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.devices_connected_report">
+<span class="sig-name descname"><span class="pre">devices_connected_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.devices_connected_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.devices_connected_report" title="Permalink to this definition"></a></dt>
+<dd><p>Terminates the program if one of the devices is not available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.go_home">
+<span class="sig-name descname"><span class="pre">go_home</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.go_home"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.go_home" title="Permalink to this definition"></a></dt>
+<dd><p>This method moves the robot to its home position in the Hood.</p>
+<p>WARNING: Since the robot is located in a constrained space, calling this method from a position where the robot is away from the home position may lead to potential crashes. 
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.init_camera">
+<span class="sig-name descname"><span class="pre">init_camera</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.init_camera"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.init_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True when connected to a camera and False otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.init_ika">
+<span class="sig-name descname"><span class="pre">init_ika</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.init_ika"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.init_ika" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True when IKA has been connected, False otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.init_pump">
+<span class="sig-name descname"><span class="pre">init_pump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.init_pump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.init_pump" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True when connected to the xCalibur pum, False otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.init_quantos">
+<span class="sig-name descname"><span class="pre">init_quantos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.init_quantos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.init_quantos" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True when connected to quantos, False otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.init_robot">
+<span class="sig-name descname"><span class="pre">init_robot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.init_robot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.init_robot" title="Permalink to this definition"></a></dt>
+<dd><p>This method stablishes connection with Panda robot when self.sim is set to True. TODO It is neccesary to work on the sim mode, which is currently not working. 
+:return: True when the robot is connected, False when the robot connection fails and True hen the sim mode (self.sim) is set to True
+:type: bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.insert_cartridge_in_quantos">
+<span class="sig-name descname"><span class="pre">insert_cartridge_in_quantos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cartridge_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.insert_cartridge_in_quantos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.insert_cartridge_in_quantos" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts the cartridge into quantos. 
+Terminates the program if the quantos front door is closed in order to avoid any collisions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.pick_and_place_cartridge_in_holder">
+<span class="sig-name descname"><span class="pre">pick_and_place_cartridge_in_holder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cartridge_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.pick_and_place_cartridge_in_holder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.pick_and_place_cartridge_in_holder" title="Permalink to this definition"></a></dt>
+<dd><p>Picks a cartrige from the quantos station and places it into its holder. 
+:param cartridge_number: and integer between 1 and 3 wchis represent the number of the cartridge.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.pick_and_place_cartridge_in_quantos">
+<span class="sig-name descname"><span class="pre">pick_and_place_cartridge_in_quantos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cartridge_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.pick_and_place_cartridge_in_quantos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.pick_and_place_cartridge_in_quantos" title="Permalink to this definition"></a></dt>
+<dd><p>Picks and places a given cartridge into the quantos station. 
+Terminates program if the cartridge was not mounted.
+:param cartridge_number: and integer between 1 and 3 wchis represent the number of the cartridge.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.pick_up_cartridge_from_holder">
+<span class="sig-name descname"><span class="pre">pick_up_cartridge_from_holder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cartridge_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.pick_up_cartridge_from_holder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.pick_up_cartridge_from_holder" title="Permalink to this definition"></a></dt>
+<dd><p>Picks the cartridge from its holder.
+Terminates the program if the quantos front door is closed in order to avoid any collisions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.pull_pump">
+<span class="sig-name descname"><span class="pre">pull_pump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.pull_pump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.pull_pump" title="Permalink to this definition"></a></dt>
+<dd><p>Pulls the vial holder of the pump.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.pump_inyect">
+<span class="sig-name descname"><span class="pre">pump_inyect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'I3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'I3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.pump_inyect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.pump_inyect" title="Permalink to this definition"></a></dt>
+<dd><p>Inyects a given quantity and repeats the cicle the times given by repeat
+:param input_source: I3, I4, …, I12
+:param output: I1 to vial and I2 goes to the left overs vial.
+:param quantity: 3000 = 1 ml 40000 =1 ml for microstepping …
+:param repeat: This is the number of times the shringe repeats a cicle (fills, inyects).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.push_pump">
+<span class="sig-name descname"><span class="pre">push_pump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.push_pump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.push_pump" title="Permalink to this definition"></a></dt>
+<dd><p>Pushes the vial holder of the pump.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.quantos_dosing">
+<span class="sig-name descname"><span class="pre">quantos_dosing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.quantos_dosing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.quantos_dosing" title="Permalink to this definition"></a></dt>
+<dd><p>Closes front and side doors and doses a given quantity. When finishes dosing, it opens the doors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.remove_cartridge_from_quantos">
+<span class="sig-name descname"><span class="pre">remove_cartridge_from_quantos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cartridge_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.remove_cartridge_from_quantos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.remove_cartridge_from_quantos" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the cartridge from quantos. It terminates the program if the front door of quantos is closed in order to avoid potential collisions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.return_cartridge_to_holder">
+<span class="sig-name descname"><span class="pre">return_cartridge_to_holder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cartridge_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.return_cartridge_to_holder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.return_cartridge_to_holder" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the cartridge to its holder TODO To recognise automatically which cartridge was taken..</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_ika_to_pump">
+<span class="sig-name descname"><span class="pre">vial_ika_to_pump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ika_slot_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_ika_to_pump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_ika_to_pump" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the IKA station to the vial holder of the pump.
+:param ika_slot_number: an integer which possible values go from 1 to 12</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_ika_to_quantos">
+<span class="sig-name descname"><span class="pre">vial_ika_to_quantos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ika_slot_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_ika_to_quantos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_ika_to_quantos" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the IKA station to the quantos station.
+Terminates if the front door of the quantos station is closed in order to avoid potential collisions.
+:param ika_slot_number: an integer which possible values go from 1 to 12</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_ika_to_rack">
+<span class="sig-name descname"><span class="pre">vial_ika_to_rack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ika_slot_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_ika_to_rack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_ika_to_rack" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the ika station to the rack.
+:param vial_number: an integer which possible values go from 1 to 22 
+:param ika_slot_number: an integer which possible values go from 1 to 12</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_pump_to_ika">
+<span class="sig-name descname"><span class="pre">vial_pump_to_ika</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ika_slot_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_pump_to_ika"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_pump_to_ika" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the vial holder of the pump to a given IKA slot.
+:param ika_slot_number: an integer which possible values go from 1 to 12</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_pump_to_quantos">
+<span class="sig-name descname"><span class="pre">vial_pump_to_quantos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_pump_to_quantos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_pump_to_quantos" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the vial holder of the pump to the Quantos mettler station. 
+Terminates the program if the front door of the quantos station is closed to avoid potential collisions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_pump_to_rack">
+<span class="sig-name descname"><span class="pre">vial_pump_to_rack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_home</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_pump_to_rack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_pump_to_rack" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the vial holder of the pump to the rack.
+:param vial_number: an integer which possible values go from 1 to 22 
+:param from_home: bool when set to True, the robot executes this method from its home position. When is set to False, the robot executes its movements from a position close to the pump.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_quantos_to_ika">
+<span class="sig-name descname"><span class="pre">vial_quantos_to_ika</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ika_slot_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_quantos_to_ika"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_quantos_to_ika" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the quantos station to the IKA station.
+:param ika_slot_number: an integer which possible values go from 1 to 12</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_quantos_to_pump">
+<span class="sig-name descname"><span class="pre">vial_quantos_to_pump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_quantos_to_pump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_quantos_to_pump" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the quantos station to the vial holder of the pump.
+Terminates if the front door of the quantos station is closed in order to avoid potential collisions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_quantos_to_rack">
+<span class="sig-name descname"><span class="pre">vial_quantos_to_rack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_quantos_to_rack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_quantos_to_rack" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the quantos station to the rack.
+Terminates if the front door of the quantos station is closed in order to avoid potential collisions.
+:param vial_number: an integer which possible values go from 1 to 22</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_rack_to_ika">
+<span class="sig-name descname"><span class="pre">vial_rack_to_ika</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ika_slot_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_rack_to_ika"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_rack_to_ika" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the rack to the IKA station.
+:param vial_number: an integer which possible values go from 1 to 22 
+:param ika_slot_number: an integer which possible values go from 1 to 12</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_rack_to_pump">
+<span class="sig-name descname"><span class="pre">vial_rack_to_pump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_rack_to_pump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_rack_to_pump" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the rack to the pump.
+:param vial_number: an integer which possible values go from 1 to 22</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.rob_in_hood.RobInHood.vial_rack_to_quantos">
+<span class="sig-name descname"><span class="pre">vial_rack_to_quantos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/rob_in_hood.html#RobInHood.vial_rack_to_quantos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.rob_in_hood.RobInHood.vial_rack_to_quantos" title="Permalink to this definition"></a></dt>
+<dd><p>Moves a vial from the rack to the quantos mettler. 
+Terminates the program if the front door of the quantos station is closed. 
+:param vial_number: an integer which possible values go from 1 to 22.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-drivers.camera">
+<span id="drivers-camera-module"></span><h2>drivers.camera module<a class="headerlink" href="#module-drivers.camera" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="drivers.camera.Camera">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">drivers.camera.</span></span><span class="sig-name descname"><span class="pre">Camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/camera.html#Camera"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.camera.Camera" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class connects with a camera and streams video while running in a thread.
+:param camera_id: integer</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.camera.Camera.camera_stream">
+<span class="sig-name descname"><span class="pre">camera_stream</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/camera.html#Camera.camera_stream"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.camera.Camera.camera_stream" title="Permalink to this definition"></a></dt>
+<dd><p>Streams the images from the camera.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.camera.Camera.init_camera">
+<span class="sig-name descname"><span class="pre">init_camera</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/camera.html#Camera.init_camera"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.camera.Camera.init_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Connects to a camera
+:returns: Returns True when the connection was succesful, False otherwise.
+:type: bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.camera.Camera.save_picture">
+<span class="sig-name descname"><span class="pre">save_picture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'imgs/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/camera.html#Camera.save_picture"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.camera.Camera.save_picture" title="Permalink to this definition"></a></dt>
+<dd><p>Saves a picture from the camera with a given name and arandomly generated id.
+:param name: name of the picture
+:type string: 
+:param path: path where the image is going to be saved
+:type string:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.camera.Camera.start_streaming">
+<span class="sig-name descname"><span class="pre">start_streaming</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/camera.html#Camera.start_streaming"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.camera.Camera.start_streaming" title="Permalink to this definition"></a></dt>
+<dd><p>Starts the thread that runs the video streaming.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.camera.Camera.stop_streaming">
+<span class="sig-name descname"><span class="pre">stop_streaming</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/camera.html#Camera.stop_streaming"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.camera.Camera.stop_streaming" title="Permalink to this definition"></a></dt>
+<dd><p>Stops the thread running the video streaming.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-drivers.timer">
+<span id="drivers-timer-module"></span><h2>drivers.timer module<a class="headerlink" href="#module-drivers.timer" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="drivers.timer.Timer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">drivers.timer.</span></span><span class="sig-name descname"><span class="pre">Timer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">display_updates_timer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/timer.html#Timer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.timer.Timer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class can be used to generate long time pauses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>display_timer</strong> – is an integer controls how long it takes to display updates, given in seconds, of the elapsed time</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.timer.Timer.display_current_time">
+<span class="sig-name descname"><span class="pre">display_current_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/timer.html#Timer.display_current_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.timer.Timer.display_current_time" title="Permalink to this definition"></a></dt>
+<dd><p>Prints updates of the elapsed time since the timer was started.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.timer.Timer.set_timer">
+<span class="sig-name descname"><span class="pre">set_timer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hours</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/timer.html#Timer.set_timer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.timer.Timer.set_timer" title="Permalink to this definition"></a></dt>
+<dd><p>Transforms the given hours, minutes and seconds into seconds.
+:param hours: integer
+:param min: integer
+:param sec: integer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="drivers.timer.Timer.start_timer">
+<span class="sig-name descname"><span class="pre">start_timer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/drivers/timer.html#Timer.start_timer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#drivers.timer.Timer.start_timer" title="Permalink to this definition"></a></dt>
+<dd><p>Starts a thread that allows displaying the elapsed time while producing a delay.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-drivers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-drivers" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Francisco Munguia.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
