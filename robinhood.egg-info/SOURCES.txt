@@ -1,13 +1,13 @@
 README.md
 setup.py
+config/__init__.py
+config/configuration.py
+config/workflow_config.py
 robinhood/__init__.py
 robinhood.egg-info/PKG-INFO
 robinhood.egg-info/SOURCES.txt
 robinhood.egg-info/dependency_links.txt
 robinhood.egg-info/top_level.txt
-robinhood/config/__init__.py
-robinhood/config/configuration.py
-robinhood/config/workflow_config.py
 robinhood/drivers/OnlyArduino.py
 robinhood/drivers/__init__.py
 robinhood/drivers/camera.py
@@ -18,7 +18,6 @@ robinhood/drivers/rob_in_hood.py
 robinhood/drivers/shaker.py
 robinhood/drivers/Filtbot/__init__.py
 robinhood/drivers/Filtbot/filt_machine.py
-robinhood/setup/__init__.py
 robinhood/utils/__init__.py
 robinhood/utils/cam_calibrator.py
 robinhood/utils/camera_colour_calibrator.py
@@ -29,3 +28,4 @@ robinhood/utils/inspector_hood.py
 robinhood/utils/read_current_state.py
 robinhood/utils/timer.py
 robinhood/utils/workflow_helper.py
+setup/__init__.py

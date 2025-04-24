@@ -3,9 +3,9 @@ import json
 FILENAME='conf/json/rih_robot_motion_positions.json'
 IMGS_PATH='imgs/dye_run_1/'
 
-LOG_PATH = "/home/panda1/RobInHood/log"
-SETUP_PATH ="/home/panda1/RobInHood/setup"
-DATA_PATH = "/home/panda1/RobInHood/data"
+LOG_PATH = "/home/panda1/RobInHoodPy/RobInHoodPy/log"
+SETUP_PATH ="/home/panda1/RobInHoodPy/RobInHoodPy/setup"
+DATA_PATH = "/home/panda1/RobInHoodPy/RobInHoodPy/data"
 
 
 

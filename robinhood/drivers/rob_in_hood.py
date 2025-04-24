@@ -10,18 +10,18 @@ import logging
 import time
 import datetime
 from frankx import Affine, LinearRelativeMotion, Robot, Gripper
-from utils.frankx_helpers import FrankxHelpers
-from config.configuration import *
-from config.workflow_config import *
+from ..utils.frankx_helpers import FrankxHelpers
+from ..config.configuration import *
+from ..config.workflow_config import *
 from pylabware import RCTDigitalHotplate,XCalibur,QuantosQB1,C3000SyringePump
-from drivers.camera import CameraCapper, RSCamera
-from utils.timer import Timer
-from drivers.capper import Capper
-from drivers.pumpholder import Holder
-from drivers.shaker import Shaker
-from drivers.lightbox import LightBox
-from drivers.Filtbot.filt_machine import FiltMachine
-from utils.workflow_helper import Workflow_Helper
+from ..drivers.camera import CameraCapper, RSCamera
+from ..utils.timer import Timer
+from ..drivers.capper import Capper
+from ..drivers.pumpholder import Holder
+from ..drivers.shaker import Shaker
+from ..drivers.lightbox import LightBox
+from ..drivers.Filtbot.filt_machine import FiltMachine
+from ..utils.workflow_helper import Workflow_Helper
 
 
 class RobInHood():
