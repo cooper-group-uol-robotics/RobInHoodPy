@@ -1,0 +1,731 @@
+2024-11-13 10:38:38,977 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 10:38:38,977 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 10:38:43,001 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:38:43,002 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:38:43,003 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 10:38:43,005 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:38:43,006 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 10:38:43,006 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:38:43,611 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 10:38:43,611 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:38:51,521 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 10:38:51,524 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:38:51,525 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 10:38:51,525 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 10:39:33,537 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 10:39:35,045 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 10:39:36,610 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 10:39:36,610 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 10:39:36,611 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 10:39:36,611 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 10:39:36,611 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 10:39:43,418 - RiH_Main - INFO - Quantos connected..
+2024-11-13 10:39:43,419 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 10:39:43,419 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 10:39:43,419 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:39:43,422 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:39:43,422 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 10:39:43,423 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 10:39:43,474 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 10:39:46,298 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 10:39:46,299 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 10:39:46,904 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 10:39:46,905 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 10:39:46,905 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 10:39:46,913 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 10:39:46,913 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 10:39:46,914 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 10:39:46,914 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 10:43:18,586 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 10:43:18,586 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 10:43:22,609 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:43:22,610 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:43:22,646 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 10:43:22,648 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:43:22,648 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 10:43:22,649 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:43:23,257 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 10:43:23,257 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:43:26,427 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 10:43:26,429 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:43:26,429 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 10:43:26,430 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 10:43:28,497 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 10:43:30,006 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 10:43:31,573 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 10:43:31,573 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 10:43:31,574 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 10:43:31,574 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 10:43:31,575 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 10:43:38,076 - RiH_Main - INFO - Quantos connected..
+2024-11-13 10:43:38,077 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 10:43:38,077 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 10:43:38,077 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:43:38,080 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:43:38,081 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 10:43:38,081 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 10:43:38,133 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 10:43:40,958 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 10:43:40,958 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 10:43:41,564 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 10:43:41,564 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 10:43:41,564 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 10:43:41,574 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 10:43:41,574 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 10:43:41,574 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 10:43:41,574 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 10:49:16,172 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 10:49:16,172 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 10:49:20,195 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:49:20,196 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:49:20,202 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 10:49:20,205 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:49:20,205 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 10:49:20,206 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:49:20,813 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 10:49:20,814 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:49:23,933 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 10:49:23,935 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:49:23,935 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 10:49:23,936 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 10:49:26,004 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 10:49:27,512 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 10:49:29,079 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 10:49:29,079 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 10:49:29,080 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 10:49:29,081 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 10:49:29,081 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 10:49:35,483 - RiH_Main - INFO - Quantos connected..
+2024-11-13 10:49:35,483 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 10:49:35,483 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 10:49:35,484 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:49:35,486 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:49:35,487 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 10:49:35,487 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 10:49:35,539 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 10:49:38,363 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 10:49:38,364 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 10:49:38,969 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 10:49:38,970 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 10:49:38,970 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 10:49:38,978 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 10:49:38,979 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 10:49:38,979 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 10:49:38,979 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 10:53:26,135 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 10:53:26,135 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 10:53:30,149 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:53:30,149 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:53:30,150 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 10:53:30,153 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:53:30,153 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 10:53:30,154 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:53:30,761 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 10:53:30,762 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:53:33,881 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 10:53:33,883 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:53:33,884 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 10:53:33,884 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 10:53:35,952 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 10:53:37,460 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 10:53:39,028 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 10:53:39,028 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 10:53:39,030 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 10:53:39,030 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 10:53:39,030 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 10:53:45,382 - RiH_Main - INFO - Quantos connected..
+2024-11-13 10:53:45,382 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 10:53:45,383 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 10:53:45,383 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:53:45,386 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:53:45,386 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 10:53:45,387 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 10:53:45,438 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 10:53:48,262 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 10:53:48,263 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 10:53:48,868 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 10:53:48,868 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 10:53:48,869 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 10:53:48,876 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 10:53:48,876 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 10:53:48,877 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 10:53:48,877 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 10:57:38,350 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 10:57:38,350 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 10:57:42,369 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:57:42,369 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:57:42,370 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 10:57:42,373 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:57:42,373 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 10:57:42,374 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:57:42,981 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 10:57:42,981 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 10:57:46,150 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 10:57:46,153 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:57:46,153 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 10:57:46,153 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 10:57:48,220 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 10:57:49,729 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 10:57:51,295 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 10:57:51,295 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 10:57:51,296 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 10:57:51,297 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 10:57:51,297 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 10:57:57,748 - RiH_Main - INFO - Quantos connected..
+2024-11-13 10:57:57,748 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 10:57:57,748 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 10:57:57,749 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 10:57:57,752 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 10:57:57,752 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 10:57:57,753 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 10:57:57,804 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 10:58:00,628 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 10:58:00,629 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 10:58:01,234 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 10:58:01,234 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 10:58:01,234 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 10:58:01,243 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 10:58:01,244 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 10:58:01,244 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 10:58:01,244 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:03:39,253 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:03:39,254 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:03:43,272 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:03:43,273 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:03:43,308 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:03:43,310 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:03:43,310 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:03:43,310 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:03:43,917 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:03:43,917 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:03:47,087 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:03:47,090 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:03:47,091 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:03:47,091 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:03:49,159 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:03:50,661 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:03:52,235 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:03:52,235 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:03:52,237 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:03:52,237 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:03:52,237 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:03:58,690 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:03:58,691 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:03:58,691 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:03:58,691 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:03:58,694 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:03:58,694 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:03:58,695 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:03:58,746 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:04:01,572 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:04:01,572 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:04:02,178 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:04:02,178 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:04:02,178 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:04:02,188 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:04:02,189 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:04:02,189 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:04:02,190 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:07:07,121 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:07:07,122 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:07:11,145 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:07:11,145 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:07:11,145 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:07:11,146 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:07:11,146 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:07:11,146 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:07:11,754 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:07:11,755 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:07:14,924 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:07:14,926 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:07:14,926 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:07:14,927 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:07:16,994 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:07:18,502 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:07:20,069 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:07:20,070 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:07:20,071 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:07:20,072 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:07:20,072 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:07:26,474 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:07:26,475 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:07:26,475 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:07:26,475 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:07:26,478 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:07:26,478 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:07:26,479 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:07:26,530 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:07:29,355 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:07:29,355 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:07:29,961 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:07:29,961 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:07:29,961 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:07:29,969 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:07:29,970 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:07:29,970 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:07:29,970 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:12:46,523 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:12:46,523 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:12:50,538 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:12:50,539 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:12:50,539 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:12:50,542 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:12:50,542 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:12:50,543 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:12:51,150 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:12:51,150 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:12:54,321 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:12:54,323 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:12:54,323 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:12:54,324 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:12:56,391 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:12:57,899 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:12:59,467 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:12:59,468 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:12:59,469 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:12:59,469 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:12:59,470 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:13:05,871 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:13:05,871 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:13:05,871 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:13:05,872 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:13:05,875 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:13:05,875 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:13:05,876 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:13:05,927 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:13:08,751 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:13:08,751 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:13:09,357 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:13:09,357 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:13:09,357 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:13:09,366 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:13:09,366 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:13:09,366 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:13:09,367 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:14:03,337 - RiH_Main - ERROR - Vial 8 not available.
+2024-11-13 11:14:34,761 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:14:34,761 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:14:38,784 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:14:38,785 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:14:38,785 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:14:38,788 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:14:38,788 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:14:38,789 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:14:39,395 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:14:39,396 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:14:42,516 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:14:42,518 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:14:42,519 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:14:42,519 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:14:44,586 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:14:46,095 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:14:47,663 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:14:47,663 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:14:47,664 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:14:47,664 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:14:47,665 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:14:54,068 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:14:54,069 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:14:54,069 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:14:54,070 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:14:54,073 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:14:54,073 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:14:54,074 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:14:54,125 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:14:56,950 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:14:56,950 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:14:57,556 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:14:57,556 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:14:57,557 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:14:57,564 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:14:57,564 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:14:57,565 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:14:57,565 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:18:34,569 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:18:34,569 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:18:38,589 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:18:38,589 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:18:38,589 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:18:38,590 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:18:38,591 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:18:38,591 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:18:39,198 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:18:39,199 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:18:42,365 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:18:42,367 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:18:42,367 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:18:42,368 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:18:44,435 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:18:45,943 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:18:47,510 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:18:47,511 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:18:47,512 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:18:47,512 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:18:47,512 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:18:53,917 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:18:53,917 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:18:53,917 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:18:53,917 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:18:53,919 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:18:53,919 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:18:53,919 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:18:53,970 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:18:56,794 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:18:56,795 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:18:57,401 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:18:57,401 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:18:57,401 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:18:57,407 - RiH_Main - ERROR - Robot not connected...
+2024-11-13 11:18:57,408 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:18:57,408 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:18:57,409 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:18:57,409 - RiH_Main - ERROR - Robot not available or the emergency stop button is activated.
+2024-11-13 11:18:57,409 - RiH_Main - ERROR - Terminating the program.
+2024-11-13 11:19:01,059 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:19:01,060 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:19:05,076 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:19:05,076 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:19:05,077 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:19:05,080 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:19:05,080 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:19:05,081 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:19:05,687 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:19:05,688 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:19:08,807 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:19:08,810 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:19:08,810 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:19:08,810 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:19:10,878 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:19:12,386 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:19:13,954 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:19:13,955 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:19:13,956 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:19:13,956 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:19:13,956 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:19:20,409 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:19:20,410 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:19:20,410 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:19:20,410 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:19:20,413 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:19:20,413 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:19:20,414 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:19:20,466 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:19:23,290 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:19:23,291 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:19:23,896 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:19:23,896 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:19:23,897 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:19:23,905 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:19:23,906 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:19:23,906 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:19:23,906 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:23:39,660 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:23:39,660 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:23:43,683 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:23:43,684 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:23:43,685 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:23:43,688 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:23:43,688 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:23:43,689 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:23:44,295 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:23:44,296 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:23:47,513 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:23:47,516 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:23:47,516 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:23:47,517 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:23:49,584 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:23:51,092 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:23:52,659 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:23:52,659 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:23:52,660 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:23:52,661 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:23:52,661 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:23:59,117 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:23:59,117 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:23:59,123 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:23:59,123 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:23:59,126 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:23:59,127 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:23:59,127 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:23:59,179 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:24:02,003 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:24:02,004 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:24:02,609 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:24:02,609 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:24:02,610 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:24:02,617 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:24:02,618 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:24:02,618 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:24:02,618 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:26:36,917 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:26:36,917 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:26:40,941 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:26:40,941 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:26:40,942 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:26:40,944 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:26:40,945 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:26:40,945 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:26:41,552 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:26:41,553 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:26:44,672 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:26:44,675 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:26:44,675 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:26:44,676 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:26:46,743 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:26:48,251 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:26:49,818 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:26:49,819 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:26:49,820 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:26:49,820 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:26:49,821 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:26:56,274 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:26:56,274 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:26:56,274 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:26:56,274 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:26:56,277 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:26:56,277 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:26:56,278 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:26:56,330 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:26:59,155 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:26:59,155 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:26:59,761 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:26:59,761 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:26:59,761 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:26:59,768 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:26:59,769 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:26:59,769 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:26:59,769 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:31:52,190 - Capper - INFO - Capper moving right
+2024-11-13 11:33:25,432 - Capper - INFO - Capper moving left
+2024-11-13 11:37:07,772 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:37:07,772 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:37:11,795 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:37:11,796 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:37:11,797 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:37:11,800 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:37:11,800 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:37:11,801 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:37:12,407 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:37:12,407 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:37:15,577 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:37:15,580 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:37:15,580 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:37:15,581 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:37:17,649 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:37:19,158 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:37:20,724 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:37:20,725 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:37:20,726 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:37:20,726 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:37:20,727 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:37:27,129 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:37:27,129 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:37:27,130 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:37:27,130 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:37:27,133 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:37:27,134 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:37:27,134 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:37:27,186 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:37:30,011 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:37:30,012 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:37:30,617 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:37:30,617 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:37:30,617 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:37:30,625 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:37:30,626 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:37:30,626 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:37:30,626 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:38:08,403 - RiH_Main - ERROR - Vial 8 not available.
+2024-11-13 11:40:48,999 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:40:48,999 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:40:53,060 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:40:53,061 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:40:53,061 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:40:53,064 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:40:53,064 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:40:53,065 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:40:53,672 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:40:53,673 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:40:56,843 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:40:56,845 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:40:56,845 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:40:56,846 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:40:58,914 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:41:00,416 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:41:01,990 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:41:01,991 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:41:01,992 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:41:01,992 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:41:01,992 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:41:08,495 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:41:08,495 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:41:08,495 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:41:08,496 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:41:08,499 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:41:08,499 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:41:08,500 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:41:08,551 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:41:11,375 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:41:11,375 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:41:11,981 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:41:11,982 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:41:11,982 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:41:11,989 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:41:11,989 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:41:11,989 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:41:11,990 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:43:53,109 - RiH_Main - INFO - Capping...
+2024-11-13 11:43:53,109 - Capper - INFO - Capper moving right
+2024-11-13 11:45:23,110 - Capper - INFO - Capper moving left
+2024-11-13 11:51:39,939 - Capper - INFO - Capper moving right
+2024-11-13 11:53:18,295 - Capper - INFO - Capper moving left
+2024-11-13 11:56:47,162 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 11:56:47,162 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 11:56:51,183 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:56:51,183 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:56:51,184 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 11:56:51,187 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:56:51,187 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 11:56:51,188 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:56:51,794 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 11:56:51,795 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 11:56:54,964 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 11:56:54,967 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:56:54,967 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 11:56:54,968 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 11:56:57,034 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 11:56:58,540 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 11:57:00,111 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 11:57:00,111 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 11:57:00,112 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 11:57:00,113 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 11:57:00,113 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 11:57:06,615 - RiH_Main - INFO - Quantos connected..
+2024-11-13 11:57:06,615 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 11:57:06,651 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 11:57:06,652 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 11:57:06,655 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 11:57:06,655 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 11:57:06,656 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 11:57:06,708 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 11:57:09,532 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 11:57:09,533 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 11:57:10,138 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 11:57:10,138 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 11:57:10,139 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 11:57:10,149 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 11:57:10,150 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 11:57:10,150 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 11:57:10,150 - RiH_Main - ERROR - Filtering machine not connected
+2024-11-13 11:59:09,909 - RiH_Main - INFO - Capping...
+2024-11-13 11:59:09,909 - Capper - INFO - Capper moving right
+2024-11-13 12:00:39,909 - Capper - INFO - Capper moving left
+2024-11-13 12:02:12,034 - Capper Camera - INFO - Camera ID = 0 connected.
+2024-11-13 12:02:12,035 - Capper Camera - INFO - Starting camera stream
+2024-11-13 12:02:43,463 - RiH_Main - INFO - Capping process succesful.
+2024-11-13 12:04:13,283 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-11-13 12:04:13,283 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-11-13 12:04:17,306 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 12:04:17,307 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 12:04:17,343 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-11-13 12:04:17,346 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 12:04:17,346 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-11-13 12:04:17,347 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 12:04:17,952 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-11-13 12:04:17,952 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-11-13 12:04:21,172 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-11-13 12:04:21,175 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 12:04:21,175 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-11-13 12:04:21,176 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-11-13 12:04:23,243 - RiH_Main - INFO - IKA RCT digital connected.
+2024-11-13 12:04:24,751 - RiH_Main - INFO - Stiring velocity set to 100.
+2024-11-13 12:04:26,318 - RiH_Main - INFO - Current temperature: 0.0.
+2024-11-13 12:04:26,318 - RiH_Main - INFO - Connecting Pump..
+2024-11-13 12:04:26,319 - RiH_Main - ERROR - Pump not connected.
+2024-11-13 12:04:26,320 - RiH_Main - ERROR - Can't connect to device <XCalibur.DISPENSE_PUMP>!
+2024-11-13 12:04:26,320 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-11-13 12:04:32,721 - RiH_Main - INFO - Quantos connected..
+2024-11-13 12:04:32,722 - RiH_Main - INFO - Initialising the filter machine
+2024-11-13 12:04:32,722 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-11-13 12:04:32,722 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-11-13 12:04:32,725 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-11-13 12:04:32,726 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-11-13 12:04:32,727 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-11-13 12:04:32,778 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-11-13 12:04:35,603 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-11-13 12:04:35,603 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-11-13 12:04:36,259 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-11-13 12:04:36,260 - RiH_Main - ERROR - Filter machine not connected.
+2024-11-13 12:04:36,260 - RiH_Main - ERROR - [Errno 2] could not open port /dev/ttyACM3: [Errno 2] No such file or directory: '/dev/ttyACM3'
+2024-11-13 12:04:36,269 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-11-13 12:04:36,269 - RiH_Main - ERROR - Capper camera is not available.
+2024-11-13 12:04:36,269 - RiH_Main - ERROR - XCalibur Pump is not available.
+2024-11-13 12:04:36,269 - RiH_Main - ERROR - Filtering machine not connected

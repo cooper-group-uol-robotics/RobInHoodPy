@@ -1,0 +1,191 @@
+2025-01-08 15:29:06,272 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-01-08 15:29:06,272 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-01-08 15:29:10,297 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-01-08 15:29:10,297 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-01-08 15:29:10,298 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-01-08 15:29:10,300 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-01-08 15:29:10,300 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-01-08 15:29:10,301 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-01-08 15:29:10,908 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-01-08 15:29:10,908 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-01-08 15:29:14,028 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-01-08 15:29:14,031 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-01-08 15:29:14,031 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-01-08 15:29:14,032 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-01-08 15:29:56,043 - RiH_Main - INFO - IKA RCT digital connected.
+2025-01-08 15:29:57,552 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-01-08 15:29:59,113 - RiH_Main - INFO - Current temperature: 0.0.
+2025-01-08 15:29:59,113 - RiH_Main - INFO - Connecting Pump..
+2025-01-08 15:29:59,115 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-01-08 15:29:59,116 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-01-08 15:29:59,116 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-01-08 15:29:59,671 - RiH_Main - INFO - Pump connected.
+2025-01-08 15:30:00,226 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-01-08 15:30:00,227 - RiH_Main - INFO - Pump initialised.
+2025-01-08 15:30:00,730 - RiH_Main - INFO - Checking for pump errors
+2025-01-08 15:30:00,730 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-01-08 15:30:07,634 - RiH_Main - INFO - Quantos connected..
+2025-01-08 15:30:07,634 - RiH_Main - INFO - Initialising the filter machine
+2025-01-08 15:30:07,634 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-01-08 15:30:10,650 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-01-08 15:30:10,653 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-01-08 15:30:10,653 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-01-08 15:30:10,654 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-01-08 15:30:10,705 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-01-08 15:30:12,974 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2025-01-08 15:30:12,975 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-01-08 15:30:13,631 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-01-08 15:30:13,637 - RiH_Main - ERROR - Robot not connected...
+2025-01-08 15:30:13,638 - RiH_Main - ERROR - Capper camera is not available.
+2025-01-08 15:30:13,638 - RiH_Main - ERROR - Robot not available or the emergency stop button is activated.
+2025-01-08 15:30:13,639 - RiH_Main - ERROR - Terminating the program.
+2025-01-08 15:30:26,133 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-01-08 15:30:26,133 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-01-08 15:30:30,154 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-01-08 15:30:30,154 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-01-08 15:30:30,155 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-01-08 15:30:30,157 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-01-08 15:30:30,158 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-01-08 15:30:30,158 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-01-08 15:30:30,765 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-01-08 15:30:30,766 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-01-08 15:30:33,936 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-01-08 15:30:33,938 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-01-08 15:30:33,938 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-01-08 15:30:33,939 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-01-08 15:30:36,007 - RiH_Main - INFO - IKA RCT digital connected.
+2025-01-08 15:30:37,515 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-01-08 15:30:39,083 - RiH_Main - INFO - Current temperature: 0.0.
+2025-01-08 15:30:39,083 - RiH_Main - INFO - Connecting Pump..
+2025-01-08 15:30:39,085 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-01-08 15:30:39,085 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-01-08 15:30:39,086 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-01-08 15:30:39,642 - RiH_Main - INFO - Pump connected.
+2025-01-08 15:30:40,197 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-01-08 15:30:40,197 - RiH_Main - INFO - Pump initialised.
+2025-01-08 15:30:40,700 - RiH_Main - INFO - Checking for pump errors
+2025-01-08 15:30:40,701 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-01-08 15:30:47,100 - RiH_Main - INFO - Quantos connected..
+2025-01-08 15:30:47,100 - RiH_Main - INFO - Initialising the filter machine
+2025-01-08 15:30:47,100 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-01-08 15:30:50,103 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-01-08 15:30:50,106 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-01-08 15:30:50,106 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-01-08 15:30:50,107 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-01-08 15:30:50,158 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-01-08 15:30:52,983 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2025-01-08 15:30:52,983 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-01-08 15:30:53,589 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-01-08 15:30:53,598 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-01-08 15:30:53,598 - RiH_Main - ERROR - Capper camera is not available.
+2025-01-08 15:30:53,598 - RiH_Main - INFO - Moving holder to home position...
+2025-01-08 15:30:53,599 - PumpHolder - INFO - Moving to holding/wash position
+2025-01-08 15:30:59,629 - RiH_Main - INFO - Priming dispense line with Water(DI) from port: 3
+2025-01-08 15:30:59,630 - RiH_Main - INFO - Emptying 2 ml volume from dispense line port 1 into waste on port '6
+2025-01-08 15:30:59,700 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2025-01-08 15:30:59,700 - pylabware.controllers.XCalibur.DISPENSE_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-01-08 15:31:00,253 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 2000 ul as 2 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-01-08 15:31:01,012 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:31:01,013 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:31:05,653 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:31:05,654 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:31:06,411 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-01-08 15:31:06,411 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-01-08 15:31:11,051 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:31:11,051 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:31:11,809 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:31:11,810 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:31:16,451 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:31:16,451 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:31:17,209 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-01-08 15:31:17,209 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-01-08 15:31:21,850 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:31:21,850 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:31:21,850 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-01-08 15:31:21,850 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-01-08 15:31:21,851 - RiH_Main - INFO - Starting 1 backward washing cycle
+2025-01-08 15:31:21,851 - RiH_Main - INFO - Dispensing 1 mL Water(DI) from port: 3 - overspill into waste vial
+2025-01-08 15:31:21,901 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 1000 ul as 1 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-01-08 15:31:23,214 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-01-08 15:31:23,214 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-01-08 15:31:27,855 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:31:27,855 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:31:29,168 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:31:29,168 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:31:33,809 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:31:33,809 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:31:33,810 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-01-08 15:31:33,810 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-01-08 15:31:33,810 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 1) to waste (port: 6)
+2025-01-08 15:31:33,860 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 2000 ul as 2 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-01-08 15:31:34,062 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:31:34,062 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:31:38,701 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:31:38,701 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:31:39,459 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-01-08 15:31:39,459 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-01-08 15:31:44,099 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:31:44,099 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:31:44,857 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:31:44,858 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:31:49,499 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:31:49,499 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:31:50,256 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-01-08 15:31:50,257 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-01-08 15:31:54,898 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:31:54,899 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:31:54,899 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-01-08 15:31:54,899 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-01-08 15:31:54,899 - RiH_Main - INFO - Starting 2 backward washing cycle
+2025-01-08 15:31:54,899 - RiH_Main - INFO - Dispensing 1 mL Water(DI) from port: 3 - overspill into waste vial
+2025-01-08 15:31:54,949 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 1000 ul as 1 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-01-08 15:31:56,261 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-01-08 15:31:56,262 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-01-08 15:32:00,903 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:32:00,903 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:32:02,216 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:32:02,216 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:32:06,859 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:32:06,859 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:32:06,859 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-01-08 15:32:06,860 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-01-08 15:32:06,860 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 1) to waste (port: 6)
+2025-01-08 15:32:06,910 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 2000 ul as 2 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-01-08 15:32:07,113 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:32:07,113 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:32:11,754 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:32:11,754 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:32:12,512 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-01-08 15:32:12,513 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-01-08 15:32:17,204 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:32:17,204 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:32:17,962 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:32:17,962 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:32:22,603 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:32:22,603 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:32:23,412 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-01-08 15:32:23,412 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-01-08 15:32:28,053 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:32:28,054 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:32:28,060 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-01-08 15:32:28,060 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-01-08 15:32:28,060 - RiH_Main - INFO - Priming the dispense line (port: 1) with Water(DI) port 3
+2025-01-08 15:32:28,104 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 1000 ul as 1 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-01-08 15:32:29,417 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-01-08 15:32:29,417 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-01-08 15:32:34,059 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-01-08 15:32:34,059 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-01-08 15:32:35,371 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 1
+2025-01-08 15:32:35,372 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 1 current valve is 1
+2025-01-08 15:32:40,013 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-01-08 15:32:40,014 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-01-08 15:32:40,014 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-01-08 15:32:40,014 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete

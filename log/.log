@@ -1,0 +1,19 @@
+2024-05-01 17:36:50,053 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-05-01 17:36:50,054 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-05-01 17:36:50,055 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-05-01 17:36:50,057 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-05-01 17:36:50,058 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-05-01 17:36:50,059 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-05-01 17:36:50,664 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-05-01 17:36:50,664 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-05-01 17:36:52,166 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-05-01 17:36:52,166 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-05-01 17:36:52,166 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-05-01 17:36:57,310 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-05-01 17:36:57,310 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2024-05-01 17:36:57,346 - pylabware.controllers.XCalibur.PUMP - INFO - Opened connection.
+2024-05-01 17:36:58,469 - pylabware.controllers.XCalibur.PUMP - INFO - Device initialized.
+2024-05-01 17:36:58,971 - root - INFO - CONNECTING QUANTOS - OPENING DOORS

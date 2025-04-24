@@ -1,0 +1,21 @@
+#{'sample_name': '9_1', 'material_name': 'CELITE 545', 'dye_name': 'DYE_1', 'vial': 1}
+#{'sample_name': '9_2', 'material_name': 'CELITE 545', 'dye_name': 'DYE_2', 'vial': 2}
+#{'sample_name': '9_3', 'material_name': 'CELITE 545', 'dye_name': 'DYE_3', 'vial': 3}
+#{'sample_name': '9_4', 'material_name': 'CELITE 545', 'dye_name': 'DYE_4', 'vial': 4}
+#{'sample_name': '9_5', 'material_name': 'CELITE 545', 'dye_name': 'DYE_5', 'vial': 5}
+#{'sample_name': '9_6', 'material_name': 'CELITE 545', 'dye_name': 'DYE_6', 'vial': 6}
+#{'sample_name': '10_1', 'material_name': 'Silica', 'dye_name': 'DYE_1', 'vial': 7}
+#{'sample_name': '10_2', 'material_name': 'Silica', 'dye_name': 'DYE_2', 'vial': 8}
+#{'sample_name': '10_3', 'material_name': 'Silica', 'dye_name': 'DYE_3', 'vial': 9}
+#{'sample_name': '10_4', 'material_name': 'Silica', 'dye_name': 'DYE_4', 'vial': 10}
+#sample_name:	material (type):	material weight (g):	dye (type):	dye volume (mL)	Time 
+9_1	CELITE 545	0.0062	DYE_1	9	Wed May  1 18:01:21 2024:
+9_2	CELITE 545	0.0065	DYE_2	9	Wed May  1 18:16:55 2024:
+9_3	CELITE 545	0.0062	DYE_3	9	Wed May  1 18:32:08 2024:
+9_4	CELITE 545	0.0061	DYE_4	9	Wed May  1 18:47:25 2024:
+9_5	CELITE 545	0.0064	DYE_5	9	Wed May  1 19:02:40 2024:
+9_6	CELITE 545	0.0062	DYE_6	9	Wed May  1 19:18:12 2024:
+10_1	Silica	0.0067	DYE_1	9	Wed May  1 19:37:20 2024:
+10_2	Silica	0.0062	DYE_2	9	Wed May  1 19:53:11 2024:
+10_3	Silica	0.0063	DYE_3	9	Wed May  1 20:08:49 2024:
+10_4	Silica	0.0066	DYE_4	9	Wed May  1 20:24:39 2024:

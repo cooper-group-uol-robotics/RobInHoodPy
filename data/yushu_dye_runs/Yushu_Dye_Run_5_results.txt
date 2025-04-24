@@ -1,0 +1,21 @@
+#{'sample_name': '10_5', 'material_name': 'Silica', 'dye_name': 'DYE_5', 'vial': 1}
+#{'sample_name': '10_6', 'material_name': 'Silica', 'dye_name': 'DYE_6', 'vial': 2}
+#{'sample_name': '4_1', 'material_name': 'MS 4A', 'dye_name': 'DYE_1', 'vial': 3}
+#{'sample_name': '4_2', 'material_name': 'MS 4A', 'dye_name': 'DYE_2', 'vial': 4}
+#{'sample_name': '4_3', 'material_name': 'MS 4A', 'dye_name': 'DYE_3', 'vial': 5}
+#{'sample_name': '4_4', 'material_name': 'MS 4A', 'dye_name': 'DYE_4', 'vial': 6}
+#{'sample_name': '4_5', 'material_name': 'MS 4A', 'dye_name': 'DYE_5', 'vial': 7}
+#{'sample_name': '4_6', 'material_name': 'MS 4A', 'dye_name': 'DYE_6', 'vial': 8}
+#{'sample_name': '5_1', 'material_name': 'MS Y', 'dye_name': 'DYE_1', 'vial': 9}
+#{'sample_name': '5_2', 'material_name': 'MS Y', 'dye_name': 'DYE_2', 'vial': 10}
+#sample_name:	material (type):	material weight (g):	dye (type):	dye volume (mL)	Time 
+10_5	Silica	0.0062	DYE_5	9	Thu May  2 11:21:00 2024:
+10_6	Silica	0.0061	DYE_6	9	Thu May  2 11:36:39 2024:
+4_1	MS 4A	0.0063	DYE_1	9	Thu May  2 11:55:22 2024:
+4_2	MS 4A	0.0064	DYE_2	9	Thu May  2 12:10:33 2024:
+4_3	MS 4A	0.0064	DYE_3	9	Thu May  2 12:25:47 2024:
+4_4	MS 4A	0.0062	DYE_4	9	Thu May  2 12:41:07 2024:
+4_5	MS 4A	0.0063	DYE_5	9	Thu May  2 12:56:25 2024:
+4_6	MS 4A	0.0064	DYE_6	9	Thu May  2 13:11:58 2024:
+5_1	MS Y	0.0064	DYE_1	9	Thu May  2 13:30:36 2024:
+5_2	MS Y	0.0063	DYE_2	9	Thu May  2 13:45:56 2024:

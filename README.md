@@ -1,4 +1,4 @@
-# RobInHoodPy
+# RobInHood
 
 This package integrates laboratory equipment, including an IKA station, a Quantos Mettler, an xCalibur pump, and a Panda robot, all placed in a fume hood.
 
@@ -165,14 +165,3 @@ This example aims to serve as a tutorial. If running ```python main.py```, the f
 
 
 [![Alt Text](http://img.youtube.com/vi/rQPUJDlCGj4/0.jpg)](https://www.youtube.com/watch?v=rQPUJDlCGj4)
-
-
-# Documentation
-
-Further details and descriptions of the classes and their methods can be found at RobInHoodPy/docs/_build/html/index.html
-
-<img src="docs/imgs/documentation.png" alt="alt text" width="60%">
-
-
-
-

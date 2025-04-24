@@ -1,0 +1,1064 @@
+2025-04-03 14:20:54,244 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 14:20:54,244 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 14:20:58,266 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:20:58,267 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:29:36,189 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 14:29:36,189 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 14:29:40,211 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:29:40,212 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:30:27,641 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 14:30:27,641 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 14:30:31,663 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:30:31,664 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:30:31,670 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:30:31,670 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 14:30:31,673 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:30:31,673 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 14:30:31,674 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:30:32,281 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 14:30:32,281 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:31:49,961 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 14:31:49,961 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 14:31:53,983 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:31:53,984 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:31:53,984 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:31:53,985 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 14:31:53,988 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:31:53,988 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 14:31:53,989 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:31:54,595 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 14:31:54,596 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:31:57,756 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 14:31:57,758 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:31:57,759 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 14:31:57,759 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 14:32:39,766 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 14:32:41,275 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 14:32:42,830 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 14:32:42,830 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 14:32:42,833 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:32:42,834 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 14:32:42,834 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 14:32:43,389 - RiH_Main - INFO - Pump connected.
+2025-04-03 14:32:43,944 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 14:32:43,944 - RiH_Main - INFO - Pump initialised.
+2025-04-03 14:32:44,447 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 14:32:44,448 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 14:32:50,803 - RiH_Main - INFO - Quantos connected..
+2025-04-03 14:32:50,804 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 14:32:50,804 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 14:32:53,820 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:32:53,823 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:32:53,823 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 14:32:53,824 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 14:32:53,874 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 14:32:56,699 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 14:32:57,304 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 14:32:57,313 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 14:32:57,314 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 14:32:57,314 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 14:32:57,314 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 14:37:45,648 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 14:37:45,648 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 14:37:49,671 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:37:49,672 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:37:49,672 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:37:49,673 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 14:37:49,675 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:37:49,675 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 14:37:49,676 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:37:50,283 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 14:37:50,283 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:37:53,454 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 14:37:53,456 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:37:53,456 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 14:37:53,457 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 14:37:55,523 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 14:37:57,032 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 14:37:58,599 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 14:37:58,600 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 14:37:58,638 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:37:58,639 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 14:37:58,639 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 14:37:59,194 - RiH_Main - INFO - Pump connected.
+2025-04-03 14:37:59,749 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 14:37:59,749 - RiH_Main - INFO - Pump initialised.
+2025-04-03 14:38:00,252 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 14:38:00,252 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 14:38:06,721 - RiH_Main - INFO - Quantos connected..
+2025-04-03 14:38:06,721 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 14:38:06,721 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 14:38:09,727 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:38:09,730 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:38:09,731 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 14:38:09,731 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 14:38:09,782 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 14:38:12,610 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 14:38:13,216 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 14:38:13,224 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 14:38:13,225 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 14:38:13,225 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 14:38:13,225 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 14:57:53,733 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 14:57:53,733 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 14:57:57,755 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:57:57,756 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:57:57,756 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:57:57,757 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 14:57:57,760 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:57:57,760 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 14:57:57,761 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:57:58,367 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 14:57:58,368 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:58:01,538 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 14:58:01,540 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:58:01,540 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 14:58:01,541 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 14:58:03,609 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 14:58:05,118 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 14:58:06,685 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 14:58:06,686 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 14:58:06,688 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:58:06,688 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 14:58:06,689 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 14:58:07,245 - RiH_Main - INFO - Pump connected.
+2025-04-03 14:58:07,800 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 14:58:07,800 - RiH_Main - INFO - Pump initialised.
+2025-04-03 14:58:08,303 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 14:58:08,303 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 14:58:14,703 - RiH_Main - INFO - Quantos connected..
+2025-04-03 14:58:14,704 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 14:58:14,704 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 14:58:17,720 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:58:17,723 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:58:17,724 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 14:58:17,725 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 14:58:17,775 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 14:58:20,600 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 14:58:21,206 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 14:58:21,214 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 14:58:21,215 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 14:58:21,215 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 14:58:21,215 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 14:58:27,246 - RiH_Main - INFO - Acid pump priming reagent tubing with Water(DI)_acid_pump from port 14 into waste on port: 18
+2025-04-03 14:59:06,864 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 14:59:06,865 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 14:59:10,878 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:59:10,879 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:59:10,879 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:59:10,880 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 14:59:10,882 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:59:10,883 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 14:59:10,883 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:59:11,490 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 14:59:11,490 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 14:59:14,660 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 14:59:14,663 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:59:14,663 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 14:59:14,664 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 14:59:16,731 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 14:59:18,239 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 14:59:19,806 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 14:59:19,807 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 14:59:19,844 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:59:19,844 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 14:59:19,845 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 14:59:20,400 - RiH_Main - INFO - Pump connected.
+2025-04-03 14:59:20,954 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 14:59:20,955 - RiH_Main - INFO - Pump initialised.
+2025-04-03 14:59:21,458 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 14:59:21,458 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 14:59:27,873 - RiH_Main - INFO - Quantos connected..
+2025-04-03 14:59:27,873 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 14:59:27,873 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 14:59:30,889 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 14:59:30,892 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 14:59:30,892 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 14:59:30,893 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 14:59:30,944 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 14:59:33,769 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 14:59:34,373 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 14:59:34,380 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 14:59:34,380 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 14:59:34,380 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 14:59:34,380 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 14:59:40,410 - RiH_Main - INFO - Acid pump priming reagent tubing with Water(DI)_acid_pump from port 14 into waste on port: 18
+2025-04-03 15:00:20,425 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:00:20,425 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:00:24,448 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:00:24,449 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:00:24,449 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:00:24,450 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:00:24,453 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:00:24,453 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:00:24,454 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:00:25,060 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:00:25,061 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:00:28,180 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:00:28,183 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:00:28,183 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:00:28,184 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:00:30,251 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:00:31,759 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:00:33,326 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:00:33,326 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:00:33,329 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:00:33,329 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:00:33,330 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:00:33,885 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:00:34,440 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:00:34,441 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:00:34,944 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:00:34,944 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:00:34,947 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:00:34,947 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:00:34,948 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:00:39,452 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:00:40,039 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:00:40,039 - RiH_Main - ERROR - Acid Pump not connected.
+2025-04-03 15:00:40,039 - RiH_Main - ERROR - Invalid port for initialization was provided!
+2025-04-03 15:00:40,040 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:00:46,541 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:00:46,541 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:00:46,541 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:00:49,558 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:00:49,560 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:00:49,561 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:00:49,561 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:00:49,612 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:00:52,437 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:00:53,042 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:00:53,051 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:00:53,052 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:00:53,052 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:00:53,052 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:00:59,062 - RiH_Main - INFO - Acid pump priming reagent tubing with Water(DI)_acid_pump from port 14 into waste on port: 18
+2025-04-03 15:00:59,100 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 6000 ul as 0 full dispenses of the 12.5mL and 6000 ul remaining volume
+2025-04-03 15:00:59,100 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 6000 ul is 1440.0 rounded to 1440
+2025-04-03 15:00:59,150 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - WARNING - Requested valve position doesn't seem to match valve type installed.
+2025-04-03 15:10:31,556 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:10:31,556 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:10:35,579 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:10:35,580 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:10:35,580 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:10:35,581 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:10:35,583 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:10:35,584 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:10:35,584 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:10:36,191 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:10:36,192 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:10:39,311 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:10:39,313 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:10:39,313 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:10:39,314 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:10:41,382 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:10:42,889 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:10:44,456 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:10:44,457 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:10:44,459 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:10:44,460 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:10:44,460 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:10:45,015 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:10:45,570 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:10:45,570 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:10:46,073 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:10:46,074 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:10:46,076 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:10:46,077 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:10:46,077 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:10:50,581 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:10:51,168 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:10:51,168 - RiH_Main - ERROR - Acid Pump not connected.
+2025-04-03 15:10:51,169 - RiH_Main - ERROR - Invalid port for initialization was provided!
+2025-04-03 15:10:51,169 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:10:57,567 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:10:57,568 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:10:57,568 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:11:00,584 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:11:00,587 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:11:00,587 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:11:00,588 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:11:00,639 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:11:03,464 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:11:04,069 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:11:04,077 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:11:04,078 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:11:04,078 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:11:04,078 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:11:10,087 - RiH_Main - INFO - Acid pump priming reagent tubing with Water(DI)_acid_pump from port 14 into waste on port: 18
+2025-04-03 15:11:10,124 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 6000 ul as 0 full dispenses of the 12.5mL and 6000 ul remaining volume
+2025-04-03 15:11:10,124 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 6000 ul is 1440.0 rounded to 1440
+2025-04-03 15:11:11,842 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:25:26,989 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:25:26,989 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:25:47,918 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:25:47,918 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:25:51,941 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:25:51,941 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:25:51,942 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:25:51,942 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:25:51,945 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:25:51,945 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:25:51,946 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:25:52,553 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:25:52,553 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:25:55,622 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:25:55,625 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:25:55,625 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:25:55,625 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:25:57,694 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:25:59,202 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:26:00,770 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:26:00,770 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:26:00,773 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:26:00,773 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:26:00,774 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:26:01,329 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:26:01,883 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:26:01,883 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:26:02,386 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:26:02,386 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:26:02,389 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:26:02,389 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:26:02,390 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:26:06,894 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:26:07,481 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:26:10,160 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialised, setting resolution mode to 0
+2025-04-03 15:26:10,261 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Valve is a 6 port distribution or a 4 port loop
+2025-04-03 15:26:10,261 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Setting maximum speed to 15 - maximum safe speed for the pump
+2025-04-03 15:26:10,363 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:26:10,363 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:26:10,866 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:26:10,867 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:26:17,267 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:26:17,268 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:26:17,268 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:26:20,284 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:26:20,287 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:26:20,287 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:26:20,288 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:26:20,338 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:26:23,162 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:26:23,767 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:26:23,776 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:26:23,776 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:26:23,776 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:26:23,777 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:26:29,874 - RiH_Main - INFO - Acid pump priming reagent tubing with Water(DI)_acid_pump from port 14 into waste on port: 18
+2025-04-03 15:26:29,925 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 6000 ul as 0 full dispenses of the 12.5mL and 6000 ul remaining volume
+2025-04-03 15:26:29,925 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 6000 ul is 1440.0 rounded to 1440
+2025-04-03 15:26:30,582 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:26:38,213 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 1440 current position is 1440
+2025-04-03 15:26:38,314 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 1440 current position is 1440
+2025-04-03 15:26:39,275 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:26:46,753 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:26:46,853 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:26:46,853 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:26:46,904 - RiH_Main - INFO - Priming dispense line with Water(DI)_acid_pump from port: 14
+2025-04-03 15:26:46,904 - RiH_Main - INFO - Emptying 2 ml volume from dispense line port 13 into waste on port '18
+2025-04-03 15:26:46,954 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:26:46,954 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:26:47,460 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:26:50,239 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:26:50,341 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:26:51,301 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:26:53,929 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:26:54,030 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:26:54,030 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:26:54,030 - RiH_Main - INFO - Starting 1 backward washing cycle
+2025-04-03 15:26:54,031 - RiH_Main - INFO - Dispensing 1 mL Water(DI)_acid_pump from port: 14 - overspill into waste vial
+2025-04-03 15:26:54,080 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:26:54,080 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:26:54,739 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:26:56,307 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:26:56,408 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:26:57,368 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:26:58,783 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:26:58,884 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:26:58,884 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:26:58,884 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 13) to waste (port: 18)
+2025-04-03 15:26:58,935 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:26:58,935 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:26:59,138 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:28:49,834 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:28:49,834 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:28:53,857 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:28:53,858 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:28:53,858 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:28:53,859 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:28:53,862 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:28:53,862 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:28:53,863 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:28:54,469 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:28:54,470 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:28:57,638 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:28:57,640 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:28:57,641 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:28:57,641 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:28:59,708 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:29:01,217 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:29:02,784 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:29:02,784 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:29:02,787 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:29:02,787 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:29:02,788 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:29:03,343 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:29:03,897 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:29:03,898 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:29:04,400 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:29:04,401 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:29:04,403 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:29:04,403 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:29:04,404 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:29:08,908 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:29:09,495 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:29:14,602 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialised, setting resolution mode to 0
+2025-04-03 15:29:14,703 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Valve is a 6 port distribution or a 4 port loop
+2025-04-03 15:29:14,703 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Setting maximum speed to 15 - maximum safe speed for the pump
+2025-04-03 15:29:14,804 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:29:14,804 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:29:15,307 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:29:15,308 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:29:21,698 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:29:21,698 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:29:21,698 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:29:24,714 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:29:24,717 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:29:24,718 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:29:24,718 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:29:24,769 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:29:27,594 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:29:28,199 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:29:28,208 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:29:28,209 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:29:28,209 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:29:28,209 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:31:43,186 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:31:43,186 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:31:47,209 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:31:47,210 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:31:47,210 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:31:47,211 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:31:47,214 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:31:47,214 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:31:47,214 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:31:47,821 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:31:47,821 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:31:50,991 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:31:50,994 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:31:50,994 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:31:50,994 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:31:53,061 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:31:54,570 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:31:56,137 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:31:56,138 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:31:56,141 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:31:56,141 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:31:56,142 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:31:56,697 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:31:57,251 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:31:57,252 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:31:57,754 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:31:57,755 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:31:57,757 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:31:57,758 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:31:57,758 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:32:02,263 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:32:02,849 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:32:05,831 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialised, setting resolution mode to 0
+2025-04-03 15:32:05,932 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Valve is a 6 port distribution or a 4 port loop
+2025-04-03 15:32:05,933 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Setting maximum speed to 15 - maximum safe speed for the pump
+2025-04-03 15:32:06,034 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:32:06,034 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:32:06,537 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:32:06,537 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:32:12,932 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:32:12,932 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:32:12,933 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:32:15,949 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:32:15,950 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:32:15,950 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:32:15,950 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:32:16,001 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:32:18,826 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:32:19,431 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:32:19,441 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:32:19,442 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:32:19,442 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:32:19,442 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:32:35,848 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-04-03 15:32:35,949 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-04-03 15:39:39,032 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:39:39,032 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:39:43,051 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:39:43,052 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:39:43,052 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:39:43,053 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:39:43,056 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:39:43,056 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:39:43,057 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:39:43,664 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:39:43,665 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:39:46,836 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:39:46,839 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:39:46,839 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:39:46,840 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:39:48,908 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:39:50,417 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:39:51,984 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:39:51,985 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:39:51,988 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:39:51,988 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:39:51,989 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:39:52,544 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:39:53,099 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:39:53,099 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:39:53,602 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:39:53,602 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:39:53,604 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:39:53,604 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:39:53,604 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:39:58,161 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:40:15,283 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:40:28,123 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialised, setting resolution mode to 0
+2025-04-03 15:40:28,224 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Valve is a 6 port distribution or a 4 port loop
+2025-04-03 15:40:28,224 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Setting maximum speed to 15 - maximum safe speed for the pump
+2025-04-03 15:40:28,325 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:40:28,326 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:40:28,829 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:40:28,829 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:40:35,257 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:40:35,258 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:40:35,258 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:40:38,274 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:40:38,277 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:40:38,278 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:40:38,278 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:40:38,329 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:40:41,154 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:40:41,760 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:40:41,769 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:40:41,769 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:40:41,770 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:40:41,770 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:40:47,885 - RiH_Main - INFO - Acid pump priming reagent tubing with Water(DI)_acid_pump from port 14 into waste on port: 18
+2025-04-03 15:40:47,936 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 6000 ul as 0 full dispenses of the 12.5mL and 6000 ul remaining volume
+2025-04-03 15:40:47,936 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 6000 ul is 1440.0 rounded to 1440
+2025-04-03 15:40:48,594 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:40:56,224 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 1440 current position is 1440
+2025-04-03 15:40:56,326 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 1440 current position is 1440
+2025-04-03 15:40:57,287 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:41:04,764 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:04,865 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:04,866 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:41:04,916 - RiH_Main - INFO - Priming dispense line with Water(DI)_acid_pump from port: 14
+2025-04-03 15:41:04,916 - RiH_Main - INFO - Emptying 2 ml volume from dispense line port 13 into waste on port '18
+2025-04-03 15:41:04,966 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:41:04,966 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:41:05,473 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:41:08,252 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:41:08,352 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:41:09,314 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:41:11,941 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:12,043 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:12,044 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:41:12,044 - RiH_Main - INFO - Starting 1 backward washing cycle
+2025-04-03 15:41:12,044 - RiH_Main - INFO - Dispensing 1 mL Water(DI)_acid_pump from port: 14 - overspill into waste vial
+2025-04-03 15:41:12,093 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:41:12,093 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:41:12,751 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:41:14,318 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:41:14,419 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:41:15,380 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:41:16,796 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:16,898 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:16,898 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:41:16,898 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 13) to waste (port: 18)
+2025-04-03 15:41:16,948 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:41:16,948 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:41:17,151 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:41:19,932 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:41:20,033 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:41:20,994 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:41:23,622 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:23,723 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:23,723 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:41:23,723 - RiH_Main - INFO - Starting 2 backward washing cycle
+2025-04-03 15:41:23,724 - RiH_Main - INFO - Dispensing 1 mL Water(DI)_acid_pump from port: 14 - overspill into waste vial
+2025-04-03 15:41:23,773 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:41:23,773 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:41:24,431 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:41:25,998 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:41:26,100 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:41:27,061 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:41:28,477 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:28,578 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:28,578 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:41:28,579 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 13) to waste (port: 18)
+2025-04-03 15:41:28,629 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:41:28,629 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:41:28,832 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:41:31,612 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:41:31,714 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:41:32,675 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:41:35,301 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:35,403 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:35,403 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:41:35,403 - RiH_Main - INFO - Priming the dispense line (port: 13) with Water(DI)_acid_pump port 14
+2025-04-03 15:41:35,454 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:41:35,454 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:41:36,113 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:41:37,681 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:41:37,783 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:41:38,744 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:41:40,159 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:40,260 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:41:40,260 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:42:46,382 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:42:46,382 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:42:50,405 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:42:50,405 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:42:50,406 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:42:50,407 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:42:50,410 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:42:50,410 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:42:50,411 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:42:51,017 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:42:51,017 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:42:54,138 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:42:54,140 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:42:54,141 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:42:54,141 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:42:56,209 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:42:57,717 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:42:59,285 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:42:59,285 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:42:59,288 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:42:59,288 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:42:59,289 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:42:59,844 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:43:00,398 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:43:00,399 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:43:00,902 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:43:00,902 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:43:00,905 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:43:00,905 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:43:00,906 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:43:05,410 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:43:05,997 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:43:09,434 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialised, setting resolution mode to 0
+2025-04-03 15:43:09,535 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Valve is a 6 port distribution or a 4 port loop
+2025-04-03 15:43:09,536 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Setting maximum speed to 15 - maximum safe speed for the pump
+2025-04-03 15:43:09,637 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:43:09,637 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:43:10,140 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:43:10,140 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:43:16,634 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:43:16,634 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:43:16,640 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:43:19,643 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:43:19,647 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:43:19,647 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:43:19,648 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:43:19,698 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:43:22,524 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:43:23,130 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:43:23,140 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:43:23,140 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:43:23,141 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:43:23,141 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:43:29,241 - RiH_Main - INFO - Acid pump priming reagent tubing with Water(DI)_acid_pump from port 14 into waste on port: 18
+2025-04-03 15:43:29,291 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 20000 ul as 1 full dispenses of the 12.5mL and 7500 ul remaining volume
+2025-04-03 15:43:29,949 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:43:45,307 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-04-03 15:43:45,408 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-04-03 15:43:46,372 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:44:01,581 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:44:01,682 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:44:01,683 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 7500 ul is 1800.0 rounded to 1800
+2025-04-03 15:44:02,340 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:44:11,634 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 1800 current position is 1800
+2025-04-03 15:44:11,735 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 1800 current position is 1800
+2025-04-03 15:44:12,696 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:44:21,992 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:44:22,093 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:44:22,093 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:45:32,222 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:45:32,222 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:45:36,235 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:45:36,235 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:45:36,236 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:45:36,236 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:45:36,239 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:45:36,239 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:45:36,240 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:45:36,848 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:45:36,848 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:45:39,967 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:45:39,970 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:45:39,970 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:45:39,971 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:45:42,039 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:45:43,547 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:45:45,114 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:45:45,115 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:45:45,118 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:45:45,118 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:45:45,119 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:45:45,674 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:45:46,228 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:45:46,228 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:45:46,729 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:45:46,730 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:45:46,732 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:45:46,732 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:45:46,732 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:45:51,236 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:45:51,824 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:45:54,502 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialised, setting resolution mode to 0
+2025-04-03 15:45:54,604 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Valve is a 6 port distribution or a 4 port loop
+2025-04-03 15:45:54,604 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Setting maximum speed to 15 - maximum safe speed for the pump
+2025-04-03 15:45:54,705 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:45:54,705 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:45:55,208 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:45:55,209 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:46:01,557 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:46:01,557 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:46:01,557 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:46:04,573 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:46:04,577 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:46:04,577 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:46:04,578 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:46:04,628 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:46:07,454 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:46:08,060 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:46:08,067 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:46:08,068 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:46:08,068 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:46:08,068 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:46:14,217 - RiH_Main - INFO - Acid pump priming reagent tubing with Water(DI)_acid_pump from port 14 into waste on port: 18
+2025-04-03 15:46:14,267 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 20000 ul as 1 full dispenses of the 12.5mL and 7500 ul remaining volume
+2025-04-03 15:46:14,926 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:46:30,287 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-04-03 15:46:30,388 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-04-03 15:46:31,349 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:46:46,608 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:46:46,709 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:46:46,709 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 7500 ul is 1800.0 rounded to 1800
+2025-04-03 15:46:47,366 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:46:56,660 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 1800 current position is 1800
+2025-04-03 15:46:56,762 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 1800 current position is 1800
+2025-04-03 15:46:57,722 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:47:07,021 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:47:07,122 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:47:07,123 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:52:50,095 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:52:50,095 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:52:54,118 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:52:54,119 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:52:54,120 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:52:54,120 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:52:54,123 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:52:54,123 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:52:54,124 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:52:54,731 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:52:54,731 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:52:57,851 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:52:57,853 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:52:57,854 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:52:57,854 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:52:59,922 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:53:01,430 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:53:02,998 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:53:02,999 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:53:03,002 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:53:03,002 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:53:03,002 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:53:03,557 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:53:04,112 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:53:04,112 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:53:04,615 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:53:04,615 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:53:04,618 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:53:04,618 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:53:04,619 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:53:09,123 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:53:09,710 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:53:12,542 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialised, setting resolution mode to 0
+2025-04-03 15:53:12,643 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Valve is a 6 port distribution or a 4 port loop
+2025-04-03 15:53:12,643 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Setting maximum speed to 15 - maximum safe speed for the pump
+2025-04-03 15:53:12,744 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:53:12,744 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:53:13,247 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:53:13,247 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:53:19,643 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:53:19,643 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:53:19,679 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:53:22,695 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:53:22,698 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:53:22,699 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:53:22,699 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:53:22,750 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:53:25,577 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:53:26,182 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:53:26,191 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:53:26,191 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:53:26,191 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:53:26,192 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:53:32,299 - RiH_Main - INFO - Priming dispense line with Water(DI)_acid_pump from port: 14
+2025-04-03 15:53:32,299 - RiH_Main - INFO - Emptying 2 ml volume from dispense line port 13 into waste on port '18
+2025-04-03 15:53:32,349 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:53:32,350 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:53:32,855 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:53:35,635 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:53:35,736 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:53:36,697 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:53:39,325 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:53:39,426 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:53:39,427 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:53:39,427 - RiH_Main - INFO - Starting 1 backward washing cycle
+2025-04-03 15:53:39,427 - RiH_Main - INFO - Dispensing 1 mL Water(DI)_acid_pump from port: 14 - overspill into waste vial
+2025-04-03 15:53:39,476 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:53:39,477 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:53:40,134 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:53:41,701 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:53:41,802 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:53:42,762 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:53:44,177 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:53:44,278 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:53:44,279 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:53:44,279 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 13) to waste (port: 18)
+2025-04-03 15:53:44,329 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:53:44,329 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:53:44,532 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:53:47,312 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:53:47,413 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:53:48,374 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:53:51,002 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:53:51,103 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:53:51,104 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:53:51,104 - RiH_Main - INFO - Starting 2 backward washing cycle
+2025-04-03 15:53:51,104 - RiH_Main - INFO - Dispensing 1 mL Water(DI)_acid_pump from port: 14 - overspill into waste vial
+2025-04-03 15:53:51,154 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:53:51,154 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:53:51,812 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:53:53,378 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:53:53,480 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:53:54,440 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:53:55,856 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:53:55,957 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:53:55,958 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:53:55,958 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 13) to waste (port: 18)
+2025-04-03 15:53:56,008 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:53:56,008 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:53:56,211 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:53:58,989 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:53:59,091 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:54:00,051 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:54:02,678 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:54:02,779 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:54:02,780 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:54:02,780 - RiH_Main - INFO - Priming the dispense line (port: 13) with Water(DI)_acid_pump port 14
+2025-04-03 15:54:02,830 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:54:02,830 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:54:03,488 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:54:05,054 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:54:05,156 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:54:06,117 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:54:07,532 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:54:07,634 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:54:07,634 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:55:24,738 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-04-03 15:55:24,738 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-04-03 15:55:28,754 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:55:28,755 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:55:28,756 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB4', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 0.1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:55:28,756 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-04-03 15:55:28,759 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:55:28,760 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-04-03 15:55:28,760 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:55:29,367 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-04-03 15:55:29,368 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-04-03 15:55:32,485 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-04-03 15:55:32,487 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:55:32,487 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-04-03 15:55:32,488 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-04-03 15:55:34,555 - RiH_Main - INFO - IKA RCT digital connected.
+2025-04-03 15:55:36,063 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-04-03 15:55:37,630 - RiH_Main - INFO - Current temperature: 0.0.
+2025-04-03 15:55:37,630 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:55:37,633 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:55:37,633 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-04-03 15:55:37,634 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:55:38,190 - RiH_Main - INFO - Pump connected.
+2025-04-03 15:55:38,744 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:55:38,744 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:55:39,246 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:55:39,247 - RiH_Main - INFO - Connecting Pump..
+2025-04-03 15:55:39,249 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:55:39,249 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB4 opened.
+2025-04-03 15:55:39,250 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Opened connection.
+2025-04-03 15:55:43,754 - RiH_Main - INFO - Acid Pump connected.
+2025-04-03 15:55:44,342 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Initialising with full force at speed 15
+2025-04-03 15:55:47,778 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialised, setting resolution mode to 0
+2025-04-03 15:55:47,880 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Valve is a 6 port distribution or a 4 port loop
+2025-04-03 15:55:47,880 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Setting maximum speed to 15 - maximum safe speed for the pump
+2025-04-03 15:55:47,982 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Device initialized.
+2025-04-03 15:55:47,982 - RiH_Main - INFO - Pump initialised.
+2025-04-03 15:55:48,485 - RiH_Main - INFO - Checking for pump errors
+2025-04-03 15:55:48,485 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-04-03 15:55:54,830 - RiH_Main - INFO - Quantos connected..
+2025-04-03 15:55:54,830 - RiH_Main - INFO - Initialising the filter machine
+2025-04-03 15:55:54,831 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-04-03 15:55:57,847 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-04-03 15:55:57,850 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-04-03 15:55:57,850 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-04-03 15:55:57,850 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-04-03 15:55:57,901 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-04-03 15:56:00,726 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-04-03 15:56:01,332 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-04-03 15:56:01,340 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-04-03 15:56:01,340 - RiH_Main - ERROR - Capper camera is not available.
+2025-04-03 15:56:01,341 - RiH_Main - INFO - Moving holder to home position...
+2025-04-03 15:56:01,341 - PumpHolder - INFO - Moving to holding/wash position
+2025-04-03 15:56:07,489 - RiH_Main - INFO - Priming dispense line with Water(DI)_acid_pump from port: 14
+2025-04-03 15:56:07,490 - RiH_Main - INFO - Emptying 2 ml volume from dispense line port 13 into waste on port '18
+2025-04-03 15:56:07,539 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:56:07,540 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:56:08,046 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:56:10,825 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:56:10,926 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:56:11,886 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:56:14,514 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:14,615 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:14,615 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:56:14,615 - RiH_Main - INFO - Starting 1 backward washing cycle
+2025-04-03 15:56:14,615 - RiH_Main - INFO - Dispensing 1 mL Water(DI)_acid_pump from port: 14 - overspill into waste vial
+2025-04-03 15:56:14,666 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:56:14,666 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:56:15,323 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:56:16,890 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:56:16,990 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:56:17,951 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:56:19,366 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:19,467 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:19,467 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:56:19,468 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 13) to waste (port: 18)
+2025-04-03 15:56:19,518 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:56:19,518 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:56:19,721 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:56:22,503 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:56:22,604 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:56:23,565 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:56:26,193 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:26,295 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:26,296 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:56:26,296 - RiH_Main - INFO - Starting 2 backward washing cycle
+2025-04-03 15:56:26,296 - RiH_Main - INFO - Dispensing 1 mL Water(DI)_acid_pump from port: 14 - overspill into waste vial
+2025-04-03 15:56:26,346 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:56:26,347 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:56:27,004 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:56:28,570 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:56:28,672 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:56:29,632 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:56:31,048 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:31,150 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:31,150 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:56:31,150 - RiH_Main - INFO - Aspirating 2 mL volume from dispense line (port: 13) to waste (port: 18)
+2025-04-03 15:56:31,200 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 12.5mL and 2000 ul remaining volume
+2025-04-03 15:56:31,201 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 2000 ul is 480.0 rounded to 480
+2025-04-03 15:56:31,403 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:56:34,183 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:56:34,285 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 480 current position is 480
+2025-04-03 15:56:35,247 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I6 current valve is 6
+2025-04-03 15:56:37,876 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:37,977 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:37,978 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete
+2025-04-03 15:56:37,978 - RiH_Main - INFO - Priming the dispense line (port: 13) with Water(DI)_acid_pump port 14
+2025-04-03 15:56:38,028 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing 1000 ul as 0 full dispenses of the 12.5mL and 1000 ul remaining volume
+2025-04-03 15:56:38,028 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Remaining volume 1000 ul is 240.0 rounded to 240
+2025-04-03 15:56:38,686 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I2 current valve is 2
+2025-04-03 15:56:40,253 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:56:40,354 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 240 current position is 240
+2025-04-03 15:56:41,314 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested valve was I1 current valve is 1
+2025-04-03 15:56:42,729 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:42,831 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-04-03 15:56:42,831 - pylabware.controllers.C3000SyringePump.ACID_DISPENSE_PUMP - INFO - Dispensing complete

@@ -1,0 +1,21 @@
+#{'sample_name': '5_3', 'material_name': 'MS Y', 'dye_name': 'DYE_3', 'vial': 1}
+#{'sample_name': '5_4', 'material_name': 'MS Y', 'dye_name': 'DYE_4', 'vial': 2}
+#{'sample_name': '5_5', 'material_name': 'MS Y', 'dye_name': 'DYE_5', 'vial': 3}
+#{'sample_name': '5_6', 'material_name': 'MS Y', 'dye_name': 'DYE_6', 'vial': 4}
+#{'sample_name': '6_1', 'material_name': 'MS 13X', 'dye_name': 'DYE_1', 'vial': 5}
+#{'sample_name': '6_2', 'material_name': 'MS 13X', 'dye_name': 'DYE_2', 'vial': 6}
+#{'sample_name': '6_3', 'material_name': 'MS 13X', 'dye_name': 'DYE_3', 'vial': 7}
+#{'sample_name': '6_4', 'material_name': 'MS 13X', 'dye_name': 'DYE_4', 'vial': 8}
+#{'sample_name': '6_5', 'material_name': 'MS 13X', 'dye_name': 'DYE_5', 'vial': 9}
+#{'sample_name': '6_6', 'material_name': 'MS 13X', 'dye_name': 'DYE_6', 'vial': 10}
+#sample_name:	material (type):	material weight (g):	dye (type):	dye volume (mL)	Time 
+5_3	MS Y	0.0063	DYE_3	9	Thu May  2 15:30:10 2024:
+5_4	MS Y	0.0063	DYE_4	9	Thu May  2 15:45:14 2024:
+5_5	MS Y	0.0063	DYE_5	9	Thu May  2 16:00:25 2024:
+5_6	MS Y	0.0066	DYE_6	9	Thu May  2 16:15:38 2024:
+6_1	MS 13X	0.0067	DYE_1	9	Thu May  2 16:34:13 2024:
+6_2	MS 13X	0.0070	DYE_2	9	Thu May  2 16:49:17 2024:
+6_3	MS 13X	0.0066	DYE_3	9	Thu May  2 17:04:31 2024:
+6_4	MS 13X	0.0065	DYE_4	9	Thu May  2 17:19:49 2024:
+6_5	MS 13X	0.0065	DYE_5	9	Thu May  2 17:34:59 2024:
+6_6	MS 13X	0.0063	DYE_6	9	Thu May  2 17:50:16 2024:

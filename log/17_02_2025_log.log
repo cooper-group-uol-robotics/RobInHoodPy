@@ -1,0 +1,423 @@
+2025-02-17 13:12:28,930 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2025-02-17 13:12:28,930 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2025-02-17 13:12:32,958 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-02-17 13:12:32,959 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-02-17 13:12:32,959 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2025-02-17 13:12:32,961 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-02-17 13:12:32,962 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2025-02-17 13:12:32,962 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-02-17 13:12:33,570 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2025-02-17 13:12:33,571 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2025-02-17 13:12:36,790 - RiH_Main - INFO - Connecting IKA RCT digital..
+2025-02-17 13:12:36,792 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-02-17 13:12:36,792 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2025-02-17 13:12:36,793 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2025-02-17 13:13:18,805 - RiH_Main - INFO - IKA RCT digital connected.
+2025-02-17 13:13:20,313 - RiH_Main - INFO - Stiring velocity set to 200.
+2025-02-17 13:13:21,880 - RiH_Main - INFO - Current temperature: 0.0.
+2025-02-17 13:13:21,881 - RiH_Main - INFO - Connecting Pump..
+2025-02-17 13:13:21,883 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-02-17 13:13:21,883 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2025-02-17 13:13:21,884 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2025-02-17 13:13:22,439 - RiH_Main - INFO - Pump connected.
+2025-02-17 13:13:22,994 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2025-02-17 13:13:22,994 - RiH_Main - INFO - Pump initialised.
+2025-02-17 13:13:23,497 - RiH_Main - INFO - Checking for pump errors
+2025-02-17 13:13:23,498 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2025-02-17 13:13:30,052 - RiH_Main - INFO - Quantos connected..
+2025-02-17 13:13:30,053 - RiH_Main - INFO - Initialising the filter machine
+2025-02-17 13:13:30,053 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2025-02-17 13:13:33,058 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2025-02-17 13:13:33,061 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2025-02-17 13:13:33,061 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2025-02-17 13:13:33,062 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2025-02-17 13:13:33,113 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2025-02-17 13:13:35,939 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2025-02-17 13:13:35,939 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-02-17 13:13:36,545 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2025-02-17 13:13:36,553 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2025-02-17 13:13:36,554 - RiH_Main - ERROR - Capper camera is not available.
+2025-02-17 13:13:36,554 - RiH_Main - INFO - Priming reagent tubing with Water(DI) from port 3 into waste on port: 6
+2025-02-17 13:13:36,607 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2025-02-17 13:13:36,607 - pylabware.controllers.XCalibur.DISPENSE_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2025-02-17 13:13:37,160 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 6000 ul as 6 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-02-17 13:13:38,473 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-02-17 13:13:38,473 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-02-17 13:13:43,114 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:13:43,114 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:13:43,871 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:13:43,872 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:13:48,515 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:13:48,515 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:13:49,827 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-02-17 13:13:49,827 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-02-17 13:13:54,469 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:13:54,469 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:13:55,227 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:13:55,227 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:13:59,920 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:13:59,920 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:14:01,232 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-02-17 13:14:01,232 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-02-17 13:14:05,873 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:14:05,873 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:14:06,631 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:14:06,631 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:14:11,272 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:14:11,272 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:14:12,584 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-02-17 13:14:12,585 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-02-17 13:14:17,275 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:14:17,275 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:14:18,032 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:14:18,032 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:14:22,673 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:14:22,673 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:14:23,986 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-02-17 13:14:23,986 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-02-17 13:14:28,628 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:14:28,629 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:14:29,386 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:14:29,387 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:14:34,027 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:14:34,027 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:14:35,340 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 3
+2025-02-17 13:14:35,340 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-02-17 13:14:39,981 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:14:39,981 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:14:40,738 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:14:40,739 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:14:45,379 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:14:45,380 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:14:45,380 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-02-17 13:14:45,380 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-02-17 13:14:45,430 - RiH_Main - INFO - Priming reagent tubing with DYE1 from port 5 into waste on port: 6
+2025-02-17 13:14:45,481 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 6000 ul as 6 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-02-17 13:14:46,794 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 5
+2025-02-17 13:14:46,794 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 5 current valve is 5
+2025-02-17 13:14:51,434 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:14:51,434 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:14:52,192 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:14:52,192 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:14:56,833 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:14:56,833 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:14:58,145 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 5
+2025-02-17 13:14:58,146 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 5 current valve is 5
+2025-02-17 13:15:02,785 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:15:02,786 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:15:03,544 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:15:03,544 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:15:08,186 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:15:08,186 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:15:09,499 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 5
+2025-02-17 13:15:09,499 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 5 current valve is 5
+2025-02-17 13:15:14,141 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:15:14,141 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:15:14,898 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:15:14,899 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:15:19,539 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:15:19,539 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:15:20,903 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 5
+2025-02-17 13:15:20,903 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 5 current valve is 5
+2025-02-17 13:15:25,542 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:15:25,543 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:15:26,300 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:15:26,300 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:15:30,941 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:15:30,941 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:15:32,304 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 5
+2025-02-17 13:15:32,304 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 5 current valve is 5
+2025-02-17 13:15:36,945 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:15:36,945 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:15:37,703 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:15:37,703 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:15:42,344 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:15:42,344 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:15:43,656 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 5
+2025-02-17 13:15:43,657 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 5 current valve is 5
+2025-02-17 13:15:48,297 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:15:48,298 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:15:49,055 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:15:49,056 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:15:53,696 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:15:53,697 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:15:53,697 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-02-17 13:15:53,697 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-02-17 13:15:53,747 - RiH_Main - INFO - Priming reagent tubing with DYE2 from port 7 into waste on port: 6
+2025-02-17 13:15:53,798 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 6000 ul as 6 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-02-17 13:15:54,556 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 7
+2025-02-17 13:15:54,556 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 7 current valve is 7
+2025-02-17 13:15:59,197 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:15:59,197 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:16:00,509 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:16:00,510 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:16:05,150 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:16:05,151 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:16:05,909 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 7
+2025-02-17 13:16:05,909 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 7 current valve is 7
+2025-02-17 13:16:10,549 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:16:10,550 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:16:11,862 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:16:11,863 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:16:16,503 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:16:16,503 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:16:17,261 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 7
+2025-02-17 13:16:17,261 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 7 current valve is 7
+2025-02-17 13:16:21,902 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:16:21,903 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:16:23,215 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:16:23,215 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:16:27,855 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:16:27,855 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:16:28,612 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 7
+2025-02-17 13:16:28,613 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 7 current valve is 7
+2025-02-17 13:16:33,253 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:16:33,253 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:16:34,565 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:16:34,565 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:16:39,205 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:16:39,206 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:16:39,963 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 7
+2025-02-17 13:16:39,963 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 7 current valve is 7
+2025-02-17 13:16:44,605 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:16:44,605 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:16:45,918 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:16:45,918 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:16:50,560 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:16:50,560 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:16:51,318 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 7
+2025-02-17 13:16:51,319 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 7 current valve is 7
+2025-02-17 13:16:55,959 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:16:55,959 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:16:57,322 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:16:57,322 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:17:01,962 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:17:01,962 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:17:01,962 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-02-17 13:17:01,962 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-02-17 13:17:02,013 - RiH_Main - INFO - Priming reagent tubing with DYE3 from port 8 into waste on port: 6
+2025-02-17 13:17:02,064 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 6000 ul as 6 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-02-17 13:17:02,821 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 8
+2025-02-17 13:17:02,822 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 8 current valve is 8
+2025-02-17 13:17:07,463 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:17:07,464 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:17:08,776 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:17:08,776 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:17:13,416 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:17:13,417 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:17:14,174 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 8
+2025-02-17 13:17:14,175 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 8 current valve is 8
+2025-02-17 13:17:18,815 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:17:18,815 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:17:20,127 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:17:20,128 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:17:24,768 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:17:24,769 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:17:25,525 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 8
+2025-02-17 13:17:25,525 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 8 current valve is 8
+2025-02-17 13:17:30,215 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:17:30,216 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:17:31,527 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:17:31,527 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:17:36,167 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:17:36,167 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:17:36,925 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 8
+2025-02-17 13:17:36,925 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 8 current valve is 8
+2025-02-17 13:17:41,566 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:17:41,566 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:17:42,879 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:17:42,879 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:17:47,519 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:17:47,519 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:17:48,277 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 8
+2025-02-17 13:17:48,277 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 8 current valve is 8
+2025-02-17 13:17:52,918 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:17:52,918 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:17:54,229 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:17:54,229 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:17:58,871 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:17:58,871 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:17:59,628 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 8
+2025-02-17 13:17:59,629 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 8 current valve is 8
+2025-02-17 13:18:04,269 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:18:04,270 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:18:05,582 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:18:05,582 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:18:10,223 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:18:10,224 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:18:10,224 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-02-17 13:18:10,224 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-02-17 13:18:10,274 - RiH_Main - INFO - Priming reagent tubing with DYE4 from port 9 into waste on port: 6
+2025-02-17 13:18:10,325 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 6000 ul as 6 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-02-17 13:18:11,083 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 9
+2025-02-17 13:18:11,083 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 9 current valve is 9
+2025-02-17 13:18:15,724 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:18:15,724 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:18:17,037 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:18:17,037 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:18:21,679 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:18:21,679 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:18:22,437 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 9
+2025-02-17 13:18:22,437 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 9 current valve is 9
+2025-02-17 13:18:27,078 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:18:27,079 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:18:28,391 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:18:28,392 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:18:33,084 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:18:33,084 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:18:33,842 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 9
+2025-02-17 13:18:33,842 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 9 current valve is 9
+2025-02-17 13:18:38,482 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:18:38,483 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:18:39,795 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:18:39,795 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:18:44,437 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:18:44,437 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:18:45,194 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 9
+2025-02-17 13:18:45,195 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 9 current valve is 9
+2025-02-17 13:18:49,885 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:18:49,886 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:18:51,198 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:18:51,198 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:18:55,838 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:18:55,839 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:18:56,596 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 9
+2025-02-17 13:18:56,596 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 9 current valve is 9
+2025-02-17 13:19:01,237 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:19:01,237 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:19:02,600 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:19:02,600 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:19:07,241 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:19:07,241 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:19:07,999 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 9
+2025-02-17 13:19:07,999 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 9 current valve is 9
+2025-02-17 13:19:12,640 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:19:12,668 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:19:14,003 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:19:14,003 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:19:18,644 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:19:18,644 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:19:18,644 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-02-17 13:19:18,644 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-02-17 13:19:18,695 - RiH_Main - INFO - Priming reagent tubing with DYE5 from port 11 into waste on port: 6
+2025-02-17 13:19:18,745 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 6000 ul as 6 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-02-17 13:19:19,503 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 11
+2025-02-17 13:19:19,503 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 11 current valve is 11
+2025-02-17 13:19:24,194 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:19:24,195 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:19:24,952 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:19:24,953 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:19:29,594 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:19:29,594 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:19:30,351 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 11
+2025-02-17 13:19:30,351 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 11 current valve is 11
+2025-02-17 13:19:35,042 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:19:35,043 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:19:35,800 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:19:35,800 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:19:40,441 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:19:40,441 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:19:41,198 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 11
+2025-02-17 13:19:41,198 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 11 current valve is 11
+2025-02-17 13:19:45,839 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:19:45,839 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:19:46,596 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:19:46,596 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:19:51,237 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:19:51,238 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:19:51,995 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 11
+2025-02-17 13:19:51,995 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 11 current valve is 11
+2025-02-17 13:19:56,637 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:19:56,637 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:19:57,395 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:19:57,395 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:20:02,037 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:20:02,037 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:20:02,845 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 11
+2025-02-17 13:20:02,845 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 11 current valve is 11
+2025-02-17 13:20:07,487 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:20:07,487 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:20:08,245 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:20:08,245 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:20:12,885 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:20:12,886 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:20:13,643 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 11
+2025-02-17 13:20:13,643 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 11 current valve is 11
+2025-02-17 13:20:18,284 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:20:18,285 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:20:19,042 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:20:19,042 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:20:23,683 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:20:23,683 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:20:23,684 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-02-17 13:20:23,684 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-02-17 13:20:23,734 - RiH_Main - INFO - Priming reagent tubing with DYE6 from port 12 into waste on port: 6
+2025-02-17 13:20:23,785 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing 6000 ul as 6 full dispenses of the 1.0mL and 0 ul remaining volume
+2025-02-17 13:20:24,543 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 12
+2025-02-17 13:20:24,543 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 12 current valve is 12
+2025-02-17 13:20:29,185 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:20:29,185 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:20:29,942 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:20:29,942 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:20:34,581 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:20:34,581 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:20:35,339 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 12
+2025-02-17 13:20:35,339 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 12 current valve is 12
+2025-02-17 13:20:39,979 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:20:39,979 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:20:40,737 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:20:40,737 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:20:45,378 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:20:45,378 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:20:46,136 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 12
+2025-02-17 13:20:46,136 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 12 current valve is 12
+2025-02-17 13:20:50,777 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:20:50,777 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:20:51,535 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:20:51,535 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:20:56,177 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:20:56,177 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:20:56,986 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 12
+2025-02-17 13:20:56,986 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 12 current valve is 12
+2025-02-17 13:21:01,627 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:21:01,627 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:21:02,436 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:21:02,437 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:21:07,077 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:21:07,077 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:21:07,834 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 12
+2025-02-17 13:21:07,835 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 12 current valve is 12
+2025-02-17 13:21:12,476 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:21:12,476 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:21:13,284 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:21:13,284 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:21:17,925 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:21:17,925 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:21:18,683 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 12
+2025-02-17 13:21:18,683 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 12 current valve is 12
+2025-02-17 13:21:23,325 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 3000
+2025-02-17 13:21:23,325 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 3000 current position is 3000
+2025-02-17 13:21:24,083 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Valve position is: 6
+2025-02-17 13:21:24,084 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested valve was 6 current valve is 6
+2025-02-17 13:21:28,725 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Plunger position is 0
+2025-02-17 13:21:28,726 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:21:28,726 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Remaining volume 0 ul is 0.0 rounded to 0
+2025-02-17 13:21:28,726 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Dispensing complete
+2025-02-17 13:21:28,776 - RiH_Filtration_System - INFO - E stop is off - checking pump is ready
+2025-02-17 13:21:28,830 - RiH_Filtration_System - INFO - pump is idle running command
+2025-02-17 13:21:28,830 - RiH_Filtration_System - INFO - Priming system solvent Water(DI) (port: 7) to system waste
+2025-02-17 13:21:28,881 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Dispensing 2000 ul as 0 full dispenses of the 5.0mL and 2000 ul remaining volume
+2025-02-17 13:21:28,881 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Remaining volume 2000 ul is 1200.0 rounded to 1200
+2025-02-17 13:21:29,639 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Valve position is: 7
+2025-02-17 13:21:29,639 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Requested valve was 7 current valve is 7
+2025-02-17 13:21:32,616 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Plunger position is 1200
+2025-02-17 13:21:32,616 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Requested increment position was 1200 current position is 1200
+2025-02-17 13:21:33,374 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Valve position is: 3
+2025-02-17 13:21:33,374 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Requested valve was 3 current valve is 3
+2025-02-17 13:21:36,350 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Plunger position is 0
+2025-02-17 13:21:36,351 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Requested increment position was 0 current position is 0
+2025-02-17 13:21:36,351 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Dispensing complete

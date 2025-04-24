@@ -1,0 +1,422 @@
+2024-12-09 12:50:29,852 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-12-09 12:50:29,852 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-12-09 12:50:33,869 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 12:50:33,869 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 12:50:33,870 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-12-09 12:50:33,872 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 12:50:33,872 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-12-09 12:50:33,873 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 12:50:34,480 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-12-09 12:50:34,481 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 12:50:37,751 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-12-09 12:50:37,754 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 12:50:37,754 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-12-09 12:50:37,755 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-12-09 12:50:39,822 - RiH_Main - INFO - IKA RCT digital connected.
+2024-12-09 12:50:41,330 - RiH_Main - INFO - Stiring velocity set to 200.
+2024-12-09 12:50:42,898 - RiH_Main - INFO - Current temperature: 0.0.
+2024-12-09 12:50:42,898 - RiH_Main - INFO - Connecting Pump..
+2024-12-09 12:50:42,900 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 12:50:42,901 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2024-12-09 12:50:42,901 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2024-12-09 12:50:43,458 - RiH_Main - INFO - Pump connected.
+2024-12-09 12:50:44,012 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2024-12-09 12:50:44,013 - RiH_Main - INFO - Pump initialised.
+2024-12-09 12:50:44,515 - RiH_Main - INFO - Checking for pump errors
+2024-12-09 12:50:44,516 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-12-09 12:50:51,016 - RiH_Main - INFO - Quantos connected..
+2024-12-09 12:50:51,016 - RiH_Main - INFO - Initialising the filter machine
+2024-12-09 12:50:51,016 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-12-09 12:50:54,032 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 12:50:54,036 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 12:50:54,036 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-12-09 12:50:54,037 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-12-09 12:50:54,088 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-12-09 12:50:56,913 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-12-09 12:50:56,914 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-12-09 12:50:57,519 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-12-09 12:50:57,528 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-12-09 12:50:57,529 - RiH_Main - ERROR - Capper camera is not available.
+2024-12-09 12:50:57,530 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 12:50:58,033 - Timer - INFO - Setting timer to 0 h 1 m 59 s
+2024-12-09 12:50:58,033 - Timer - INFO - Timer set to 119
+2024-12-09 12:50:58,034 - Timer - INFO - Elapsed time: 0 h 0 m 0 s
+2024-12-09 12:50:59,040 - Timer - INFO - Elapsed time: 0 h 0 m 1 s
+2024-12-09 12:51:00,045 - Timer - INFO - Elapsed time: 0 h 0 m 2 s
+2024-12-09 12:51:01,051 - Timer - INFO - Elapsed time: 0 h 0 m 3 s
+2024-12-09 12:51:02,056 - Timer - INFO - Elapsed time: 0 h 0 m 4 s
+2024-12-09 12:51:03,058 - Timer - INFO - Elapsed time: 0 h 0 m 5 s
+2024-12-09 12:51:04,063 - Timer - INFO - Elapsed time: 0 h 0 m 6 s
+2024-12-09 12:51:05,069 - Timer - INFO - Elapsed time: 0 h 0 m 7 s
+2024-12-09 12:51:06,074 - Timer - INFO - Elapsed time: 0 h 0 m 8 s
+2024-12-09 12:51:07,080 - Timer - INFO - Elapsed time: 0 h 0 m 9 s
+2024-12-09 12:51:08,086 - Timer - INFO - Elapsed time: 0 h 0 m 10 s
+2024-12-09 12:51:09,091 - Timer - INFO - Elapsed time: 0 h 0 m 11 s
+2024-12-09 12:51:10,097 - Timer - INFO - Elapsed time: 0 h 0 m 12 s
+2024-12-09 12:51:11,102 - Timer - INFO - Elapsed time: 0 h 0 m 13 s
+2024-12-09 12:51:12,108 - Timer - INFO - Elapsed time: 0 h 0 m 14 s
+2024-12-09 12:51:13,114 - Timer - INFO - Elapsed time: 0 h 0 m 15 s
+2024-12-09 12:51:14,119 - Timer - INFO - Elapsed time: 0 h 0 m 16 s
+2024-12-09 12:51:15,125 - Timer - INFO - Elapsed time: 0 h 0 m 17 s
+2024-12-09 12:51:16,130 - Timer - INFO - Elapsed time: 0 h 0 m 18 s
+2024-12-09 12:51:17,136 - Timer - INFO - Elapsed time: 0 h 0 m 19 s
+2024-12-09 12:51:18,140 - Timer - INFO - Elapsed time: 0 h 0 m 20 s
+2024-12-09 12:51:19,146 - Timer - INFO - Elapsed time: 0 h 0 m 21 s
+2024-12-09 12:51:20,152 - Timer - INFO - Elapsed time: 0 h 0 m 22 s
+2024-12-09 12:51:21,157 - Timer - INFO - Elapsed time: 0 h 0 m 23 s
+2024-12-09 12:51:22,163 - Timer - INFO - Elapsed time: 0 h 0 m 24 s
+2024-12-09 12:51:23,164 - Timer - INFO - Elapsed time: 0 h 0 m 25 s
+2024-12-09 12:51:24,170 - Timer - INFO - Elapsed time: 0 h 0 m 26 s
+2024-12-09 12:51:25,175 - Timer - INFO - Elapsed time: 0 h 0 m 27 s
+2024-12-09 12:51:26,181 - Timer - INFO - Elapsed time: 0 h 0 m 28 s
+2024-12-09 12:51:27,187 - Timer - INFO - Elapsed time: 0 h 0 m 29 s
+2024-12-09 12:51:28,192 - Timer - INFO - Elapsed time: 0 h 0 m 30 s
+2024-12-09 12:51:29,198 - Timer - INFO - Elapsed time: 0 h 0 m 31 s
+2024-12-09 12:51:30,203 - Timer - INFO - Elapsed time: 0 h 0 m 32 s
+2024-12-09 12:51:31,209 - Timer - INFO - Elapsed time: 0 h 0 m 33 s
+2024-12-09 12:51:32,214 - Timer - INFO - Elapsed time: 0 h 0 m 34 s
+2024-12-09 12:51:33,220 - Timer - INFO - Elapsed time: 0 h 0 m 35 s
+2024-12-09 12:51:34,224 - Timer - INFO - Elapsed time: 0 h 0 m 36 s
+2024-12-09 12:51:35,230 - Timer - INFO - Elapsed time: 0 h 0 m 37 s
+2024-12-09 12:51:36,236 - Timer - INFO - Elapsed time: 0 h 0 m 38 s
+2024-12-09 12:51:37,241 - Timer - INFO - Elapsed time: 0 h 0 m 39 s
+2024-12-09 12:51:38,247 - Timer - INFO - Elapsed time: 0 h 0 m 40 s
+2024-12-09 12:51:39,252 - Timer - INFO - Elapsed time: 0 h 0 m 41 s
+2024-12-09 12:51:40,257 - Timer - INFO - Elapsed time: 0 h 0 m 42 s
+2024-12-09 12:51:41,262 - Timer - INFO - Elapsed time: 0 h 0 m 43 s
+2024-12-09 12:51:42,268 - Timer - INFO - Elapsed time: 0 h 0 m 44 s
+2024-12-09 12:51:43,273 - Timer - INFO - Elapsed time: 0 h 0 m 45 s
+2024-12-09 12:51:44,279 - Timer - INFO - Elapsed time: 0 h 0 m 46 s
+2024-12-09 12:51:45,284 - Timer - INFO - Elapsed time: 0 h 0 m 47 s
+2024-12-09 12:51:46,290 - Timer - INFO - Elapsed time: 0 h 0 m 48 s
+2024-12-09 12:51:47,294 - Timer - INFO - Elapsed time: 0 h 0 m 49 s
+2024-12-09 12:51:48,299 - Timer - INFO - Elapsed time: 0 h 0 m 50 s
+2024-12-09 12:51:49,305 - Timer - INFO - Elapsed time: 0 h 0 m 51 s
+2024-12-09 12:51:50,306 - Timer - INFO - Elapsed time: 0 h 0 m 52 s
+2024-12-09 12:51:51,308 - Timer - INFO - Elapsed time: 0 h 0 m 53 s
+2024-12-09 12:51:52,313 - Timer - INFO - Elapsed time: 0 h 0 m 54 s
+2024-12-09 12:51:53,319 - Timer - INFO - Elapsed time: 0 h 0 m 55 s
+2024-12-09 12:51:54,324 - Timer - INFO - Elapsed time: 0 h 0 m 56 s
+2024-12-09 12:51:55,330 - Timer - INFO - Elapsed time: 0 h 0 m 57 s
+2024-12-09 12:51:56,336 - Timer - INFO - Elapsed time: 0 h 0 m 58 s
+2024-12-09 12:51:57,341 - Timer - INFO - Elapsed time: 0 h 0 m 59 s
+2024-12-09 12:51:58,347 - Timer - INFO - Elapsed time: 0 h 1 m 0 s
+2024-12-09 12:51:59,348 - Timer - INFO - Elapsed time: 0 h 1 m 1 s
+2024-12-09 12:52:00,354 - Timer - INFO - Elapsed time: 0 h 1 m 2 s
+2024-12-09 12:52:01,359 - Timer - INFO - Elapsed time: 0 h 1 m 3 s
+2024-12-09 12:52:02,365 - Timer - INFO - Elapsed time: 0 h 1 m 4 s
+2024-12-09 12:52:03,370 - Timer - INFO - Elapsed time: 0 h 1 m 5 s
+2024-12-09 12:52:04,374 - Timer - INFO - Elapsed time: 0 h 1 m 6 s
+2024-12-09 12:52:05,379 - Timer - INFO - Elapsed time: 0 h 1 m 7 s
+2024-12-09 12:52:06,385 - Timer - INFO - Elapsed time: 0 h 1 m 8 s
+2024-12-09 12:52:07,391 - Timer - INFO - Elapsed time: 0 h 1 m 9 s
+2024-12-09 12:52:08,396 - Timer - INFO - Elapsed time: 0 h 1 m 10 s
+2024-12-09 12:52:09,402 - Timer - INFO - Elapsed time: 0 h 1 m 11 s
+2024-12-09 12:52:10,407 - Timer - INFO - Elapsed time: 0 h 1 m 12 s
+2024-12-09 12:52:11,413 - Timer - INFO - Elapsed time: 0 h 1 m 13 s
+2024-12-09 12:52:12,418 - Timer - INFO - Elapsed time: 0 h 1 m 14 s
+2024-12-09 12:52:13,424 - Timer - INFO - Elapsed time: 0 h 1 m 15 s
+2024-12-09 12:52:14,425 - Timer - INFO - Elapsed time: 0 h 1 m 16 s
+2024-12-09 12:52:15,431 - Timer - INFO - Elapsed time: 0 h 1 m 17 s
+2024-12-09 12:52:16,436 - Timer - INFO - Elapsed time: 0 h 1 m 18 s
+2024-12-09 12:52:17,442 - Timer - INFO - Elapsed time: 0 h 1 m 19 s
+2024-12-09 12:52:18,447 - Timer - INFO - Elapsed time: 0 h 1 m 20 s
+2024-12-09 12:52:19,453 - Timer - INFO - Elapsed time: 0 h 1 m 21 s
+2024-12-09 12:52:20,458 - Timer - INFO - Elapsed time: 0 h 1 m 22 s
+2024-12-09 12:52:21,464 - Timer - INFO - Elapsed time: 0 h 1 m 23 s
+2024-12-09 12:52:22,464 - Timer - INFO - Elapsed time: 0 h 1 m 24 s
+2024-12-09 12:52:23,470 - Timer - INFO - Elapsed time: 0 h 1 m 25 s
+2024-12-09 12:52:24,475 - Timer - INFO - Elapsed time: 0 h 1 m 26 s
+2024-12-09 12:52:25,481 - Timer - INFO - Elapsed time: 0 h 1 m 27 s
+2024-12-09 12:52:26,486 - Timer - INFO - Elapsed time: 0 h 1 m 28 s
+2024-12-09 12:52:27,492 - Timer - INFO - Elapsed time: 0 h 1 m 29 s
+2024-12-09 12:52:28,497 - Timer - INFO - Elapsed time: 0 h 1 m 30 s
+2024-12-09 12:52:29,503 - Timer - INFO - Elapsed time: 0 h 1 m 31 s
+2024-12-09 12:52:30,508 - Timer - INFO - Elapsed time: 0 h 1 m 32 s
+2024-12-09 12:52:31,514 - Timer - INFO - Elapsed time: 0 h 1 m 33 s
+2024-12-09 12:52:32,520 - Timer - INFO - Elapsed time: 0 h 1 m 34 s
+2024-12-09 12:52:33,525 - Timer - INFO - Elapsed time: 0 h 1 m 35 s
+2024-12-09 12:52:34,531 - Timer - INFO - Elapsed time: 0 h 1 m 36 s
+2024-12-09 12:52:35,536 - Timer - INFO - Elapsed time: 0 h 1 m 37 s
+2024-12-09 12:52:36,542 - Timer - INFO - Elapsed time: 0 h 1 m 38 s
+2024-12-09 12:52:37,547 - Timer - INFO - Elapsed time: 0 h 1 m 39 s
+2024-12-09 12:52:38,553 - Timer - INFO - Elapsed time: 0 h 1 m 40 s
+2024-12-09 12:52:39,558 - Timer - INFO - Elapsed time: 0 h 1 m 41 s
+2024-12-09 12:52:40,564 - Timer - INFO - Elapsed time: 0 h 1 m 42 s
+2024-12-09 12:52:41,569 - Timer - INFO - Elapsed time: 0 h 1 m 43 s
+2024-12-09 12:52:42,574 - Timer - INFO - Elapsed time: 0 h 1 m 44 s
+2024-12-09 12:52:43,580 - Timer - INFO - Elapsed time: 0 h 1 m 45 s
+2024-12-09 12:52:44,585 - Timer - INFO - Elapsed time: 0 h 1 m 46 s
+2024-12-09 12:52:45,591 - Timer - INFO - Elapsed time: 0 h 1 m 47 s
+2024-12-09 12:52:46,596 - Timer - INFO - Elapsed time: 0 h 1 m 48 s
+2024-12-09 12:52:47,597 - Timer - INFO - Elapsed time: 0 h 1 m 49 s
+2024-12-09 12:52:48,603 - Timer - INFO - Elapsed time: 0 h 1 m 50 s
+2024-12-09 12:52:49,608 - Timer - INFO - Elapsed time: 0 h 1 m 51 s
+2024-12-09 12:52:50,612 - Timer - INFO - Elapsed time: 0 h 1 m 52 s
+2024-12-09 12:52:51,614 - Timer - INFO - Elapsed time: 0 h 1 m 53 s
+2024-12-09 12:52:52,618 - Timer - INFO - Elapsed time: 0 h 1 m 54 s
+2024-12-09 12:52:53,624 - Timer - INFO - Elapsed time: 0 h 1 m 55 s
+2024-12-09 12:52:54,628 - Timer - INFO - Elapsed time: 0 h 1 m 56 s
+2024-12-09 12:52:55,634 - Timer - INFO - Elapsed time: 0 h 1 m 57 s
+2024-12-09 12:52:56,639 - Timer - INFO - Elapsed time: 0 h 1 m 58 s
+2024-12-09 12:52:57,643 - Timer - INFO - Elapsed time: 0 h 1 m 59 s
+2024-12-09 12:52:58,648 - Timer - INFO - [INFO] Waiting finished....
+2024-12-09 12:52:58,649 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 12:53:00,655 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-12-09 12:53:00,656 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-12-09 12:53:04,678 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 12:53:04,678 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 12:53:04,679 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-12-09 12:53:04,681 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 12:53:04,682 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-12-09 12:53:04,682 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 12:53:05,289 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-12-09 12:53:05,289 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 12:53:08,507 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-12-09 12:53:08,510 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 12:53:08,510 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-12-09 12:53:08,511 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-12-09 12:53:10,578 - RiH_Main - INFO - IKA RCT digital connected.
+2024-12-09 12:53:12,087 - RiH_Main - INFO - Stiring velocity set to 200.
+2024-12-09 12:53:13,654 - RiH_Main - INFO - Current temperature: 0.0.
+2024-12-09 12:53:13,654 - RiH_Main - INFO - Connecting Pump..
+2024-12-09 12:53:13,656 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 12:53:13,656 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2024-12-09 12:53:13,657 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2024-12-09 12:53:14,212 - RiH_Main - INFO - Pump connected.
+2024-12-09 12:53:14,767 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2024-12-09 12:53:14,767 - RiH_Main - INFO - Pump initialised.
+2024-12-09 12:53:15,270 - RiH_Main - INFO - Checking for pump errors
+2024-12-09 12:53:15,270 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-12-09 12:53:21,922 - RiH_Main - INFO - Quantos connected..
+2024-12-09 12:53:21,923 - RiH_Main - INFO - Initialising the filter machine
+2024-12-09 12:53:21,923 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-12-09 12:53:24,939 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 12:53:24,943 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 12:53:24,943 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-12-09 12:53:24,944 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-12-09 12:53:24,995 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-12-09 12:53:27,821 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-12-09 12:53:27,821 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-12-09 12:53:28,427 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-12-09 12:53:28,436 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-12-09 12:53:28,436 - RiH_Main - ERROR - Capper camera is not available.
+2024-12-09 14:06:48,979 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-12-09 14:06:48,979 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-12-09 14:06:53,035 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 14:06:53,035 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 14:06:53,036 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-12-09 14:06:53,039 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 14:06:53,039 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-12-09 14:06:53,040 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 14:06:53,646 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-12-09 14:06:53,647 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 14:06:56,908 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-12-09 14:06:56,911 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 14:06:56,911 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-12-09 14:06:56,912 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-12-09 14:06:58,979 - RiH_Main - INFO - IKA RCT digital connected.
+2024-12-09 14:07:00,484 - RiH_Main - INFO - Stiring velocity set to 200.
+2024-12-09 14:07:02,054 - RiH_Main - INFO - Current temperature: 0.0.
+2024-12-09 14:07:02,054 - RiH_Main - INFO - Connecting Pump..
+2024-12-09 14:07:02,056 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 14:07:02,056 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2024-12-09 14:07:02,057 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2024-12-09 14:07:02,612 - RiH_Main - INFO - Pump connected.
+2024-12-09 14:07:03,167 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2024-12-09 14:07:03,167 - RiH_Main - INFO - Pump initialised.
+2024-12-09 14:07:03,669 - RiH_Main - INFO - Checking for pump errors
+2024-12-09 14:07:03,670 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-12-09 14:07:10,230 - RiH_Main - INFO - Quantos connected..
+2024-12-09 14:07:10,230 - RiH_Main - INFO - Initialising the filter machine
+2024-12-09 14:07:10,230 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-12-09 14:07:13,246 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 14:07:13,249 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 14:07:13,250 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-12-09 14:07:13,250 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-12-09 14:07:13,302 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-12-09 14:07:16,127 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-12-09 14:07:16,128 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-12-09 14:07:16,733 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-12-09 14:07:16,742 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-12-09 14:07:16,742 - RiH_Main - ERROR - Capper camera is not available.
+2024-12-09 14:07:16,743 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 14:07:17,246 - Timer - INFO - Setting timer to 0 h 1 m 59 s
+2024-12-09 14:07:17,247 - Timer - INFO - Timer set to 119
+2024-12-09 14:07:17,247 - Timer - INFO - Elapsed time: 0 h 0 m 0 s
+2024-12-09 14:07:18,253 - Timer - INFO - Elapsed time: 0 h 0 m 1 s
+2024-12-09 14:07:19,257 - Timer - INFO - Elapsed time: 0 h 0 m 2 s
+2024-12-09 14:07:20,263 - Timer - INFO - Elapsed time: 0 h 0 m 3 s
+2024-12-09 14:07:21,268 - Timer - INFO - Elapsed time: 0 h 0 m 4 s
+2024-12-09 14:07:22,272 - Timer - INFO - Elapsed time: 0 h 0 m 5 s
+2024-12-09 14:07:23,278 - Timer - INFO - Elapsed time: 0 h 0 m 6 s
+2024-12-09 14:07:24,282 - Timer - INFO - Elapsed time: 0 h 0 m 7 s
+2024-12-09 14:07:25,288 - Timer - INFO - Elapsed time: 0 h 0 m 8 s
+2024-12-09 14:07:26,293 - Timer - INFO - Elapsed time: 0 h 0 m 9 s
+2024-12-09 14:07:27,299 - Timer - INFO - Elapsed time: 0 h 0 m 10 s
+2024-12-09 14:07:28,304 - Timer - INFO - Elapsed time: 0 h 0 m 11 s
+2024-12-09 14:07:29,310 - Timer - INFO - Elapsed time: 0 h 0 m 12 s
+2024-12-09 14:07:30,315 - Timer - INFO - Elapsed time: 0 h 0 m 13 s
+2024-12-09 14:07:31,321 - Timer - INFO - Elapsed time: 0 h 0 m 14 s
+2024-12-09 14:07:32,327 - Timer - INFO - Elapsed time: 0 h 0 m 15 s
+2024-12-09 14:07:33,332 - Timer - INFO - Elapsed time: 0 h 0 m 16 s
+2024-12-09 14:07:34,335 - Timer - INFO - Elapsed time: 0 h 0 m 17 s
+2024-12-09 14:07:35,340 - Timer - INFO - Elapsed time: 0 h 0 m 18 s
+2024-12-09 14:07:36,346 - Timer - INFO - Elapsed time: 0 h 0 m 19 s
+2024-12-09 14:07:37,351 - Timer - INFO - Elapsed time: 0 h 0 m 20 s
+2024-12-09 14:07:38,357 - Timer - INFO - Elapsed time: 0 h 0 m 21 s
+2024-12-09 14:07:39,362 - Timer - INFO - Elapsed time: 0 h 0 m 22 s
+2024-12-09 14:07:40,368 - Timer - INFO - Elapsed time: 0 h 0 m 23 s
+2024-12-09 14:07:41,373 - Timer - INFO - Elapsed time: 0 h 0 m 24 s
+2024-12-09 14:07:42,379 - Timer - INFO - Elapsed time: 0 h 0 m 25 s
+2024-12-09 14:07:43,383 - Timer - INFO - Elapsed time: 0 h 0 m 26 s
+2024-12-09 14:07:44,388 - Timer - INFO - Elapsed time: 0 h 0 m 27 s
+2024-12-09 14:07:45,394 - Timer - INFO - Elapsed time: 0 h 0 m 28 s
+2024-12-09 14:07:46,399 - Timer - INFO - Elapsed time: 0 h 0 m 29 s
+2024-12-09 14:07:47,400 - Timer - INFO - Elapsed time: 0 h 0 m 30 s
+2024-12-09 14:07:48,405 - Timer - INFO - Elapsed time: 0 h 0 m 31 s
+2024-12-09 14:07:49,411 - Timer - INFO - Elapsed time: 0 h 0 m 32 s
+2024-12-09 14:07:50,416 - Timer - INFO - Elapsed time: 0 h 0 m 33 s
+2024-12-09 14:07:51,422 - Timer - INFO - Elapsed time: 0 h 0 m 34 s
+2024-12-09 14:07:52,427 - Timer - INFO - Elapsed time: 0 h 0 m 35 s
+2024-12-09 14:07:53,433 - Timer - INFO - Elapsed time: 0 h 0 m 36 s
+2024-12-09 14:07:54,438 - Timer - INFO - Elapsed time: 0 h 0 m 37 s
+2024-12-09 14:07:55,444 - Timer - INFO - Elapsed time: 0 h 0 m 38 s
+2024-12-09 14:07:56,449 - Timer - INFO - Elapsed time: 0 h 0 m 39 s
+2024-12-09 14:07:57,455 - Timer - INFO - Elapsed time: 0 h 0 m 40 s
+2024-12-09 14:07:58,460 - Timer - INFO - Elapsed time: 0 h 0 m 41 s
+2024-12-09 14:07:59,466 - Timer - INFO - Elapsed time: 0 h 0 m 42 s
+2024-12-09 14:08:00,469 - Timer - INFO - Elapsed time: 0 h 0 m 43 s
+2024-12-09 14:08:01,472 - Timer - INFO - Elapsed time: 0 h 0 m 44 s
+2024-12-09 14:08:02,478 - Timer - INFO - Elapsed time: 0 h 0 m 45 s
+2024-12-09 14:08:03,483 - Timer - INFO - Elapsed time: 0 h 0 m 46 s
+2024-12-09 14:08:04,489 - Timer - INFO - Elapsed time: 0 h 0 m 47 s
+2024-12-09 14:08:05,494 - Timer - INFO - Elapsed time: 0 h 0 m 48 s
+2024-12-09 14:08:06,500 - Timer - INFO - Elapsed time: 0 h 0 m 49 s
+2024-12-09 14:08:07,506 - Timer - INFO - Elapsed time: 0 h 0 m 50 s
+2024-12-09 14:08:08,511 - Timer - INFO - Elapsed time: 0 h 0 m 51 s
+2024-12-09 14:08:09,516 - Timer - INFO - Elapsed time: 0 h 0 m 52 s
+2024-12-09 14:08:10,522 - Timer - INFO - Elapsed time: 0 h 0 m 53 s
+2024-12-09 14:08:11,528 - Timer - INFO - Elapsed time: 0 h 0 m 54 s
+2024-12-09 14:08:12,533 - Timer - INFO - Elapsed time: 0 h 0 m 55 s
+2024-12-09 14:08:13,539 - Timer - INFO - Elapsed time: 0 h 0 m 56 s
+2024-12-09 14:08:14,544 - Timer - INFO - Elapsed time: 0 h 0 m 57 s
+2024-12-09 14:08:15,550 - Timer - INFO - Elapsed time: 0 h 0 m 58 s
+2024-12-09 14:08:16,555 - Timer - INFO - Elapsed time: 0 h 0 m 59 s
+2024-12-09 14:08:17,561 - Timer - INFO - Elapsed time: 0 h 1 m 0 s
+2024-12-09 14:08:18,566 - Timer - INFO - Elapsed time: 0 h 1 m 1 s
+2024-12-09 14:08:19,572 - Timer - INFO - Elapsed time: 0 h 1 m 2 s
+2024-12-09 14:08:20,578 - Timer - INFO - Elapsed time: 0 h 1 m 3 s
+2024-12-09 14:08:21,583 - Timer - INFO - Elapsed time: 0 h 1 m 4 s
+2024-12-09 14:08:22,589 - Timer - INFO - Elapsed time: 0 h 1 m 5 s
+2024-12-09 14:08:23,594 - Timer - INFO - Elapsed time: 0 h 1 m 6 s
+2024-12-09 14:08:24,600 - Timer - INFO - Elapsed time: 0 h 1 m 7 s
+2024-12-09 14:08:25,605 - Timer - INFO - Elapsed time: 0 h 1 m 8 s
+2024-12-09 14:08:26,611 - Timer - INFO - Elapsed time: 0 h 1 m 9 s
+2024-12-09 14:08:27,616 - Timer - INFO - Elapsed time: 0 h 1 m 10 s
+2024-12-09 14:08:28,622 - Timer - INFO - Elapsed time: 0 h 1 m 11 s
+2024-12-09 14:08:29,627 - Timer - INFO - Elapsed time: 0 h 1 m 12 s
+2024-12-09 14:08:30,633 - Timer - INFO - Elapsed time: 0 h 1 m 13 s
+2024-12-09 14:08:31,636 - Timer - INFO - Elapsed time: 0 h 1 m 14 s
+2024-12-09 14:08:32,641 - Timer - INFO - Elapsed time: 0 h 1 m 15 s
+2024-12-09 14:08:33,647 - Timer - INFO - Elapsed time: 0 h 1 m 16 s
+2024-12-09 14:08:34,650 - Timer - INFO - Elapsed time: 0 h 1 m 17 s
+2024-12-09 14:08:35,652 - Timer - INFO - Elapsed time: 0 h 1 m 18 s
+2024-12-09 14:08:36,657 - Timer - INFO - Elapsed time: 0 h 1 m 19 s
+2024-12-09 14:08:37,663 - Timer - INFO - Elapsed time: 0 h 1 m 20 s
+2024-12-09 14:08:38,668 - Timer - INFO - Elapsed time: 0 h 1 m 21 s
+2024-12-09 14:08:39,674 - Timer - INFO - Elapsed time: 0 h 1 m 22 s
+2024-12-09 14:08:40,680 - Timer - INFO - Elapsed time: 0 h 1 m 23 s
+2024-12-09 14:08:41,682 - Timer - INFO - Elapsed time: 0 h 1 m 24 s
+2024-12-09 14:08:42,688 - Timer - INFO - Elapsed time: 0 h 1 m 25 s
+2024-12-09 14:08:43,693 - Timer - INFO - Elapsed time: 0 h 1 m 26 s
+2024-12-09 14:08:44,699 - Timer - INFO - Elapsed time: 0 h 1 m 27 s
+2024-12-09 14:08:45,705 - Timer - INFO - Elapsed time: 0 h 1 m 28 s
+2024-12-09 14:08:46,710 - Timer - INFO - Elapsed time: 0 h 1 m 29 s
+2024-12-09 14:08:47,716 - Timer - INFO - Elapsed time: 0 h 1 m 30 s
+2024-12-09 14:08:48,721 - Timer - INFO - Elapsed time: 0 h 1 m 31 s
+2024-12-09 14:08:49,727 - Timer - INFO - Elapsed time: 0 h 1 m 32 s
+2024-12-09 14:08:50,732 - Timer - INFO - Elapsed time: 0 h 1 m 33 s
+2024-12-09 14:08:51,738 - Timer - INFO - Elapsed time: 0 h 1 m 34 s
+2024-12-09 14:08:52,744 - Timer - INFO - Elapsed time: 0 h 1 m 35 s
+2024-12-09 14:08:53,749 - Timer - INFO - Elapsed time: 0 h 1 m 36 s
+2024-12-09 14:08:54,755 - Timer - INFO - Elapsed time: 0 h 1 m 37 s
+2024-12-09 14:08:55,760 - Timer - INFO - Elapsed time: 0 h 1 m 38 s
+2024-12-09 14:08:56,765 - Timer - INFO - Elapsed time: 0 h 1 m 39 s
+2024-12-09 14:08:57,771 - Timer - INFO - Elapsed time: 0 h 1 m 40 s
+2024-12-09 14:08:58,772 - Timer - INFO - Elapsed time: 0 h 1 m 41 s
+2024-12-09 14:08:59,777 - Timer - INFO - Elapsed time: 0 h 1 m 42 s
+2024-12-09 14:09:00,783 - Timer - INFO - Elapsed time: 0 h 1 m 43 s
+2024-12-09 14:09:01,788 - Timer - INFO - Elapsed time: 0 h 1 m 44 s
+2024-12-09 14:09:02,794 - Timer - INFO - Elapsed time: 0 h 1 m 45 s
+2024-12-09 14:09:03,799 - Timer - INFO - Elapsed time: 0 h 1 m 46 s
+2024-12-09 14:09:04,801 - Timer - INFO - Elapsed time: 0 h 1 m 47 s
+2024-12-09 14:09:05,806 - Timer - INFO - Elapsed time: 0 h 1 m 48 s
+2024-12-09 14:09:06,812 - Timer - INFO - Elapsed time: 0 h 1 m 49 s
+2024-12-09 14:09:07,816 - Timer - INFO - Elapsed time: 0 h 1 m 50 s
+2024-12-09 14:09:08,821 - Timer - INFO - Elapsed time: 0 h 1 m 51 s
+2024-12-09 14:09:09,827 - Timer - INFO - Elapsed time: 0 h 1 m 52 s
+2024-12-09 14:09:10,832 - Timer - INFO - Elapsed time: 0 h 1 m 53 s
+2024-12-09 14:09:11,838 - Timer - INFO - Elapsed time: 0 h 1 m 54 s
+2024-12-09 14:09:12,843 - Timer - INFO - Elapsed time: 0 h 1 m 55 s
+2024-12-09 14:09:13,849 - Timer - INFO - Elapsed time: 0 h 1 m 56 s
+2024-12-09 14:09:14,851 - Timer - INFO - Elapsed time: 0 h 1 m 57 s
+2024-12-09 14:09:15,857 - Timer - INFO - Elapsed time: 0 h 1 m 58 s
+2024-12-09 14:09:16,862 - Timer - INFO - Elapsed time: 0 h 1 m 59 s
+2024-12-09 14:09:17,868 - Timer - INFO - [INFO] Waiting finished....
+2024-12-09 14:09:17,869 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 14:09:19,762 - Workflow_Config_Helper - INFO - All solids and liquids requested in sample list are in the workflow
+2024-12-09 14:09:19,762 - Workflow_Config_Helper - INFO - No errors in workflow detected
+2024-12-09 14:09:23,787 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '', 'port': '/dev/ttyUSB0', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 7, 'parity': 'E', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 14:09:23,788 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB1', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 14:09:23,789 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': None, 'port': '/dev/ttyUSB2', 'encoding': 'UTF-8', 'command_delay': 0.5, 'receive_buffer_size': 128, 'receive_timeout': 1, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': True, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False, 'timeout': 0.1}
+2024-12-09 14:09:23,791 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 14:09:23,792 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB2 opened.
+2024-12-09 14:09:23,792 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 14:09:24,399 - pylabware.controllers.QuantosQB1.QUANTOS - INFO - No carousel/autosampler connected
+2024-12-09 14:09:24,399 - pylabware.connections.SerialConnection - WARNING - Command rate too high! Delaying next command for 0.5 seconds
+2024-12-09 14:09:27,666 - RiH_Main - INFO - Connecting IKA RCT digital..
+2024-12-09 14:09:27,668 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 14:09:27,669 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB0 opened.
+2024-12-09 14:09:27,669 - pylabware.controllers.RCTDigitalHotplate.IKA - INFO - Opened connection.
+2024-12-09 14:09:29,736 - RiH_Main - INFO - IKA RCT digital connected.
+2024-12-09 14:09:31,244 - RiH_Main - INFO - Stiring velocity set to 200.
+2024-12-09 14:09:32,811 - RiH_Main - INFO - Current temperature: 0.0.
+2024-12-09 14:09:32,812 - RiH_Main - INFO - Connecting Pump..
+2024-12-09 14:09:32,849 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 14:09:32,850 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB1 opened.
+2024-12-09 14:09:32,851 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Opened connection.
+2024-12-09 14:09:33,406 - RiH_Main - INFO - Pump connected.
+2024-12-09 14:09:33,961 - pylabware.controllers.XCalibur.DISPENSE_PUMP - INFO - Device initialized.
+2024-12-09 14:09:33,961 - RiH_Main - INFO - Pump initialised.
+2024-12-09 14:09:34,464 - RiH_Main - INFO - Checking for pump errors
+2024-12-09 14:09:34,464 - RiH_Main - INFO - Connecting to the Quantos - opening doors
+2024-12-09 14:09:41,135 - RiH_Main - INFO - Quantos connected..
+2024-12-09 14:09:41,136 - RiH_Main - INFO - Initialising the filter machine
+2024-12-09 14:09:41,136 - RiH_Filtration_System - INFO - Initialising filtration system pump
+2024-12-09 14:09:44,149 - pylabware.connections.SerialConnection - INFO - Creating connection object with the following settings: 
+{'address': '1', 'port': '/dev/ttyUSB3', 'encoding': 'UTF-8', 'command_delay': 0, 'receive_buffer_size': 128, 'receive_timeout': 10, 'transmit_timeout': 1, 'receiving_interval': 0.05, 'write_timeout': 0.5, 'baudrate': 9600, 'bytesize': 8, 'parity': 'N', 'stopbits': 1, 'xonxoff': False, 'rtscts': False, 'dsrdtr': False, 'inter_byte_timeout': False}
+2024-12-09 14:09:44,152 - pylabware.connections.SerialConnection - INFO - Starting connection listener...
+2024-12-09 14:09:44,153 - pylabware.connections.SerialConnection - INFO - Port /dev/ttyUSB3 opened.
+2024-12-09 14:09:44,153 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Opened connection.
+2024-12-09 14:09:44,203 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Device initialized.
+2024-12-09 14:09:47,028 - pylabware.controllers.XCalibur.FILT_PUMP - INFO - Reply was <Invalid command! Pump Ready.>
+2024-12-09 14:09:47,029 - pylabware.controllers.XCalibur.FILT_PUMP - WARNING - A non-fatal error was recieved resending command - errors occured: 1
+2024-12-09 14:09:47,634 - RiH_Filtration_System - INFO - Initialising the filtration system arduino
+2024-12-09 14:09:47,645 - RiH_Main - INFO - Panda robot connected to 172.16.0.2
+2024-12-09 14:09:47,645 - RiH_Main - ERROR - Capper camera is not available.
