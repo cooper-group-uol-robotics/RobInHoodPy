@@ -1,3 +1,6 @@
-data/*
-log/*
-workflows/*
+/data/*
+/log/*
+/workflows/*
+/build
+/__pycache__
+/robinhood.egg-info
