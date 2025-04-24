@@ -1,6 +1,0 @@
-sample_name:	material weight (g):	dye (type):	Time 
-sample_name:	material weight (g):	dye (type):	Time 
-TEST1	 -0.1107	 Water (DI)	 Tue Apr 30 14:41:37 2024:
-sample_name:	material weight (g):	dye (type):	Time 
-TEST1	 0.0062	 Water (DI)	 Tue Apr 30 15:07:38 2024:
-TEST2	 0.0065	 DYE_6	 Tue Apr 30 15:24:52 2024:

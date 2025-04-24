@@ -1,9 +1,0 @@
-Meta-data file for Robinhood workflow configuration
-File written at 2025-04-23 14:14:47.303109
-######
-Dispense Dictionary:
-{'port': {'Dispense': 1, 'Air': 2, 'Water(DI)': 3, 'None': 17, 'Waste': 6, 'NotInUse': 10, 'Acid_Dispense': 13, 'Water(DI)_acid_pump': 14, 'Acid_Air': 15, 'Acid_Waste': 18}, 'meta': {'Dispense': 'dispense', 'Air': 'dispense', 'Water(DI)': 'dispense', 'None': 'acid_dispense', 'Waste': 'dispense', 'NotInUse': 'dispense', 'Acid_Dispense': 'acid_dispense', 'Water(DI)_acid_pump': 'acid_dispense', 'Acid_Air': 'acid_dispense', 'Acid_Waste': 'acid_dispense'}}
- Quantos Dictionary:
-{'position': {'TT': 2}, 'meta': {'TT': 'Amine'}}
- Filtration Dictionary:
-{'port': {'Receiving_Flask': 1, 'Priming_Waste': 2, 'Waste': 3, 'Output_Needle': 4, 'Air': 5, 'None': 12, 'Water(DI)': 7}, 'meta': {'Receiving_Flask': 'None', 'Priming_Waste': 'None', 'Waste': 'None', 'Output_Needle': 'None', 'Air': 'None', 'None': 'None', 'Water(DI)': 'None'}}
