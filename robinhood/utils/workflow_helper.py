@@ -11,7 +11,8 @@ import logging
 import sys
 import datetime
 
-from config.workflow_config import FILTRATION_HARDCODES, DISPENSE_HARCDCODES
+
+from config.workflow_config import FILTRATION_HARDCODES, DISPENSE_HARDCODES, ACID_DISPENSE_HARDCODES
 
 class Workflow_Helper:
     
@@ -58,9 +59,10 @@ class Workflow_Helper:
 
 
 
-        #replace these with a relative import from the config file
-        self.dispense_hardcodes = DISPENSE_HARCDCODES
+    
+        self.dispense_hardcodes = DISPENSE_HARDCODES
         self.filtration_hardcodes = FILTRATION_HARDCODES
+        self.acid_hardcodes = ACID_DISPENSE_HARDCODES
 
 
 
@@ -156,7 +158,7 @@ class Workflow_Helper:
             dispense_df = pandas.read_csv(self.config_path + "/dispense.csv", usecols = ["ID","port", "meta"])
             dispense_dict = dispense_df.fillna(value = "None").set_index("ID").to_dict()
             print("make config csv")
-            print(dispense_dict)
+            
            
         
         except Exception as e:
@@ -193,6 +195,8 @@ class Workflow_Helper:
             samples_df = pandas.read_excel(io=self.config_path + "/" + samples_name, usecols = ["vial","liquid", "volume (ml)", "solid", "mass (mg)", "meta"])
             samples_dict = samples_df.fillna(value = "None").to_dict('index')
         
+            
+
         except Exception as e:
             self._logger.error(f"An error occured in the samples list {e}")
             exit()
@@ -210,7 +214,14 @@ class Workflow_Helper:
             samples_df = pandas.read_csv(self.config_path + "/" + samples_name, usecols = ["vial","liquid", "volume (ml)", "solid", "mass (mg)", "meta"])
             samples_dict = samples_df.fillna(value = "None").to_dict('index')
 
+            for entry in samples_dict:
+                print(samples_dict[entry])
+                samples_dict[entry]["liquid"] = str(samples_dict[entry]["liquid"]).split(":")
+                samples_dict[entry]["volume (ml)"] = str(samples_dict[entry]["volume (ml)"]).split(":")
+                samples_dict[entry]["solid"] = str(samples_dict[entry]["solid"]).split(":")
+                samples_dict[entry]["mass (mg)"] = str(samples_dict[entry]["mass (mg)"]).split(":")
 
+          
         
         except Exception as e:
             self._logger.error(f"An error occured in the samples list {e}")

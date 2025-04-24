@@ -9,4 +9,4 @@ logname= datetime.now().strftime("%d_%m_%Y")
 station=RobInHood(logname+"_log", sim=False,vel=0.05)
 
 
-station.infuse_position()
+print(station.sample_dict)

@@ -6,7 +6,7 @@ sys.path.insert(1, os.path.dirname(os.path.abspath(__file__))+'/..')
 
 import math
 import time
-from rob_in_hood import RobInHood
+from robinhood import RobInHood
 from config.configuration import *
 
 

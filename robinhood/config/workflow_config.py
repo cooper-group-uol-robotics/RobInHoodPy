@@ -6,7 +6,7 @@
 #If changed by the user in software corresponding changes must be made in hardware
 #Key - Liquid name
 #Value - Port
-DISPENSE_HARCDCODES = {
+DISPENSE_HARDCODES = {
 "Dispense": 1,
 "Air": 2,
 "Waste": 6,

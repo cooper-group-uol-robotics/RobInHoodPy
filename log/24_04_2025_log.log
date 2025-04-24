@@ -65,3 +65,26 @@
 2025-04-24 14:18:45,017 - PumpHolder - INFO - Moving to holding/wash position
 2025-04-24 14:18:51,048 - RiH_Main - INFO - Moving holder to infusing position...
 2025-04-24 14:18:51,048 - PumpHolder - INFO - Moving to dispensing position
+2025-04-24 15:44:16,212 - Workflow_Config_Helper - ERROR - No config directory found, creating empty directory and exiting
+2025-04-24 15:44:16,213 - Workflow_Config_Helper - ERROR - An error occured in the dispense config [Errno 2] No such file or directory: '/home/panda1/RobInHoodPy/RobInHoodPy/setup/dispense.csv'
+2025-04-24 15:45:19,774 - Workflow_Config_Helper - ERROR - Liquid requested water(DI) is not connected to the pump
+2025-04-24 15:45:19,774 - Workflow_Config_Helper - ERROR - Liquids available: dict_keys(['Dispense', 'Air', 'Water(DI)', 'None', 'Waste', 'NotInUse', 'Acid_Dispense', 'Water(DI)_acid_pump', 'Acid_Air', 'Acid_Waste'])
+2025-04-24 15:45:19,774 - Workflow_Config_Helper - ERROR - Solid requested TT:TA is not in a Loaded Quantos Cartridge
+2025-04-24 15:45:19,774 - Workflow_Config_Helper - ERROR - Errors found between chemicals requested and those in workflow configuration - Liquid Errors: ['water(DI)'] Solid Errors: ['TT:TA']
+2025-04-24 15:47:17,654 - Workflow_Config_Helper - ERROR - Liquid requested water(DI) is not connected to the pump
+2025-04-24 15:47:17,654 - Workflow_Config_Helper - ERROR - Liquids available: dict_keys(['Dispense', 'Air', 'Water(DI)', 'None', 'Waste', 'NotInUse', 'Acid_Dispense', 'Water(DI)_acid_pump', 'Acid_Air', 'Acid_Waste'])
+2025-04-24 15:47:17,654 - Workflow_Config_Helper - ERROR - Solid requested TT:TA is not in a Loaded Quantos Cartridge
+2025-04-24 15:47:17,655 - Workflow_Config_Helper - ERROR - Errors found between chemicals requested and those in workflow configuration - Liquid Errors: ['water(DI)'] Solid Errors: ['TT:TA']
+2025-04-24 15:49:47,350 - Workflow_Config_Helper - ERROR - Liquid requested water(DI) is not connected to the pump
+2025-04-24 15:49:47,350 - Workflow_Config_Helper - ERROR - Liquids available: dict_keys(['Dispense', 'Air', 'Water(DI)', 'None', 'Waste', 'NotInUse', 'Acid_Dispense', 'Water(DI)_acid_pump', 'Acid_Air', 'Acid_Waste'])
+2025-04-24 15:49:47,350 - Workflow_Config_Helper - ERROR - Errors found between chemicals requested and those in workflow configuration - Liquid Errors: ['water(DI)'] Solid Errors: []
+2025-04-24 15:50:54,436 - Workflow_Config_Helper - ERROR - Liquid requested water(DI) is not connected to the pump
+2025-04-24 15:50:54,436 - Workflow_Config_Helper - ERROR - Liquids available: dict_keys(['Dispense', 'Air', 'Water(DI)', 'None', 'Waste', 'NotInUse', 'Acid_Dispense', 'Water(DI)_acid_pump', 'Acid_Air', 'Acid_Waste'])
+2025-04-24 15:50:54,437 - Workflow_Config_Helper - ERROR - Solid requested TT:TA is not in a Loaded Quantos Cartridge
+2025-04-24 15:50:54,437 - Workflow_Config_Helper - ERROR - Errors found between chemicals requested and those in workflow configuration - Liquid Errors: ['water(DI)'] Solid Errors: ['TT:TA']
+2025-04-24 16:00:16,233 - Workflow_Config_Helper - ERROR - An error occured in the samples list 'int' object is not subscriptable
+2025-04-24 16:00:32,657 - Workflow_Config_Helper - ERROR - An error occured in the samples list 'int' object is not subscriptable
+2025-04-24 16:01:25,621 - Workflow_Config_Helper - ERROR - An error occured in the samples list 'int' object is not subscriptable
+2025-04-24 16:02:00,158 - Workflow_Config_Helper - ERROR - An error occured in the samples list 'int' object is not subscriptable
+2025-04-24 16:02:58,599 - Workflow_Config_Helper - ERROR - An error occured in the samples list 'int' object is not subscriptable
+2025-04-24 16:03:18,324 - Workflow_Config_Helper - ERROR - An error occured in the samples list 'int' object is not subscriptable

@@ -4,7 +4,7 @@ FILENAME='conf/json/rih_robot_motion_positions.json'
 IMGS_PATH='imgs/dye_run_1/'
 
 LOG_PATH = "/home/panda1/RobInHoodPy/RobInHoodPy/log"
-SETUP_PATH ="/home/panda1/RobInHoodPy/RobInHoodPy/setup"
+SETUP_PATH ="/home/panda1/RobInHoodPy/RobInHoodPy/robinhood/setup"
 DATA_PATH = "/home/panda1/RobInHoodPy/RobInHoodPy/data"
 
 
