@@ -1,6 +1,5 @@
 data/*
-logs/*
-!logs
+
 workflows/*
 build
 __pycache__
