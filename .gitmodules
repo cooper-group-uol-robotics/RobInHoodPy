@@ -1,3 +1,6 @@
 [submodule "Filtbot"]
     path = robinhood/drivers/Filtbot
     url = https://github.com/cooper-group-uol-robotics/Filtbot.git
+[submodule "robinhood/drivers/Filtbot"]
+	path = robinhood/drivers/Filtbot
+	url = https://github.com/cooper-group-uol-robotics/Filtbot.git
