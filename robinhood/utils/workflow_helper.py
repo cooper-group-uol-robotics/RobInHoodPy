@@ -12,7 +12,7 @@ import sys
 import datetime
 
 
-from config.workflow_config import FILTRATION_HARDCODES, DISPENSE_HARDCODES, ACID_DISPENSE_HARDCODES
+from robinhood.config.workflow_config import FILTRATION_HARDCODES, DISPENSE_HARDCODES, PUMP_PORT_ASSIGNMENTS
 
 class Workflow_Helper:
     
@@ -45,11 +45,12 @@ class Workflow_Helper:
 
         self.config_path =  config_path
 
-        if os.path.isdir(self.config_path):
+        try:
+            os.path.isdir(self.config_path)
             self._logger.debug(f"Config folder found: {self.config_path}")
         
-        else: 
-            self._logger.error("No config directory found, creating empty directory and exiting")
+        except FileNotFoundError: 
+            self._logger.error(f"No config directory found at {self.config_path}")
             os.mkdir(self.config_path)
         
 
@@ -57,13 +58,9 @@ class Workflow_Helper:
         self.sample_type = sample_type
 
 
-
-
-    
         self.dispense_hardcodes = DISPENSE_HARDCODES
         self.filtration_hardcodes = FILTRATION_HARDCODES
-        self.acid_hardcodes = ACID_DISPENSE_HARDCODES
-
+     
 
 
     def workflow_setup(self) -> dict:
@@ -157,8 +154,8 @@ class Workflow_Helper:
         try:
             dispense_df = pandas.read_csv(self.config_path + "/dispense.csv", usecols = ["ID","port", "meta"])
             dispense_dict = dispense_df.fillna(value = "None").set_index("ID").to_dict()
-            print("make config csv")
-            
+         
+
            
         
         except Exception as e:
@@ -183,6 +180,9 @@ class Workflow_Helper:
            self._logger.error(f"An error occured in the filtering config {e}")
            exit()
 
+
+
+
         return dispense_dict, quantos_dict, filt_dict
 
     def make_samples_excel(self, samples_name:str = "samples.xlsx") -> dict:
@@ -194,12 +194,19 @@ class Workflow_Helper:
         try:
             samples_df = pandas.read_excel(io=self.config_path + "/" + samples_name, usecols = ["vial","liquid", "volume (ml)", "solid", "mass (mg)", "meta"])
             samples_dict = samples_df.fillna(value = "None").to_dict('index')
+            
+            for entry in samples_dict:
+                samples_dict[entry]["liquid"] = str(samples_dict[entry]["liquid"]).split(":")
+                samples_dict[entry]["volume (ml)"] = str(samples_dict[entry]["volume (ml)"]).split(":")
+                samples_dict[entry]["solid"] = str(samples_dict[entry]["solid"]).split(":")
+                samples_dict[entry]["mass (mg)"] = str(samples_dict[entry]["mass (mg)"]).split(":")
         
             
 
         except Exception as e:
             self._logger.error(f"An error occured in the samples list {e}")
             exit()
+
 
         return samples_dict 
     
@@ -215,14 +222,16 @@ class Workflow_Helper:
             samples_dict = samples_df.fillna(value = "None").to_dict('index')
 
             for entry in samples_dict:
-                print(samples_dict[entry])
                 samples_dict[entry]["liquid"] = str(samples_dict[entry]["liquid"]).split(":")
                 samples_dict[entry]["volume (ml)"] = str(samples_dict[entry]["volume (ml)"]).split(":")
                 samples_dict[entry]["solid"] = str(samples_dict[entry]["solid"]).split(":")
                 samples_dict[entry]["mass (mg)"] = str(samples_dict[entry]["mass (mg)"]).split(":")
+                samples_dict[entry]["meta"] = str(samples_dict[entry]["meta"]).split(":") 
 
-          
-        
+
+
+
+
         except Exception as e:
             self._logger.error(f"An error occured in the samples list {e}")
             exit()
@@ -296,14 +305,19 @@ class Workflow_Helper:
         solid_errors = []
 
         for id in samples_dict:
-            if samples_dict[id]["liquid"] not in dispense_dict["port"].keys() and samples_dict[id]["liquid"] != "None":    
-                self._logger.error(f"Liquid requested {samples_dict[id]['liquid']} is not connected to the pump")
-                self._logger.error(f"Liquids available: {dispense_dict['port'].keys()}")
-                liquid_errors.append(samples_dict[id]['liquid'])
+
+            for liquid in samples_dict[id]["liquid"]:
+              
+                if liquid not in dispense_dict["port"].keys() and samples_dict[id]["liquid"] != "None":    
+                    self._logger.error(f"Liquid requested {samples_dict[id]['liquid']} is not connected to the pump")
+                    self._logger.error(f"Liquids available: {dispense_dict['port'].keys()}")
+                    liquid_errors.append(samples_dict[id]['liquid'])
                 
-            if samples_dict[id]["solid"] not in quantos_dict["position"].keys() and samples_dict[id]["solid"] != "None":
-                self._logger.error(f"Solid requested {samples_dict[id]['solid']} is not in a Loaded Quantos Cartridge")
-                solid_errors.append(samples_dict[id]["solid"])
+            for solid in samples_dict[id]["solid"]:
+            
+                if solid not in quantos_dict["position"].keys() and samples_dict[id]["solid"] != "None":
+                    self._logger.error(f"Solid requested {samples_dict[id]['solid']} is not in a Loaded Quantos Cartridge")
+                    solid_errors.append(samples_dict[id]["solid"])
 
         try:
             
@@ -317,37 +331,6 @@ class Workflow_Helper:
             self._logger.info("All solids and liquids requested in sample list are in the workflow")
 
 
-    def write_workflow_metadata(self, dispense: dict, quantos: dict, filtration: dict):
-        """
-        Writes the dictionaries from the workflow configuration to the data folder.
-        Limit of 1000 metadata files in each folder.
-
-        Input: workflow configuration dictionaries.  
-    
-        """        
-
-        for n in range(1, 1001):
-            meta_file_path = self.data_path + "workflow_metadata_" +  str(n) + ".txt"
-            
-            if os.path.exists(meta_file_path):
-                self._logger.debug(f"{meta_file_path} exists")
-
-            else: 
-                with open(meta_file_path, 'w') as f:
-                    f.write(f"Meta-data file for Robinhood workflow configuration\nFile written at {datetime.datetime.now()}\n")
-                    f.write("######\n")
-                    f.write("Dispense Dictionary:\n")
-                    f.write(str(dispense))
-                    f.write("\n Quantos Dictionary:\n")
-                    f.write(str(quantos))
-                    f.write("\n Filtration Dictionary:\n")
-                    f.write(str(filtration))
-                
-                return
-
-        self._logger.error("Could not write workflow meta data file - 1000 such files exist in current directory!")
-        exit()
-                
     def log_workflow_metadata(self, dispense: dict, quantos: dict, filtration: dict):
 
         self._logger.info("Writing setup dictionaries")
@@ -358,15 +341,18 @@ class Workflow_Helper:
         self._logger.info("Filtration Dictionary")
         self._logger.info(filtration)
 
-                
-        
-
 
 
 if __name__ == "__main__":
    test_handler = logging.StreamHandler(sys.stdout)
    logging.basicConfig(format= "%(asctime)s - %(name)s - %(levelname)s - %(message)s", level = "DEBUG", handlers = [test_handler])
    
-   test = Workflow_Helper()
+   config_path = "C:\\Users\\Louis_Work\\documents\\pythonscripts\\Robinhood\\RobInHoodPy\\robinhood\\setup"
+   data_path = "C:\\Users\\Louis_Work\\documents\\pythonscripts\\Robinhood\\RobInHoodPy\\data"
+
+
+   test = Workflow_Helper(config_path=config_path, data_path=data_path, config_type="csv", sample_type="csv")
    test.workflow_setup()
-  
+   
+   print("done")
+

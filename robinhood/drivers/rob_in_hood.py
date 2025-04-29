@@ -1,18 +1,18 @@
 
-####################TODO remove when making this a pip package
-import sys
-import os 
-file_path = sys.path.insert(1, os.path.dirname(os.path.abspath(__file__))+'/..')
+
+
 ####################
 
 import math
 import logging
 import time
 import datetime
+from typing import Union
 from frankx import Affine, LinearRelativeMotion, Robot, Gripper
 from ..utils.frankx_helpers import FrankxHelpers
 from ..config.configuration import *
 from ..config.workflow_config import *
+from ..config.configuration import *
 from pylabware import RCTDigitalHotplate,XCalibur,QuantosQB1,C3000SyringePump
 from ..drivers.camera import CameraCapper, RSCamera
 from ..utils.timer import Timer
@@ -22,6 +22,13 @@ from ..drivers.shaker import Shaker
 from ..drivers.lightbox import LightBox
 from ..drivers.Filtbot.filt_machine import FiltMachine
 from ..utils.workflow_helper import Workflow_Helper
+
+from ..config.workflow_config import PUMP_PORT_ASSIGNMENTS
+####################TODO remove when making this a pip package
+import sys
+import os 
+file_path = sys.path.insert(1, os.path.dirname(os.path.abspath(__file__))+'/..')
+
 
 
 class RobInHood():
@@ -48,10 +55,11 @@ class RobInHood():
         self.sim=sim
         self.vel=vel
 
-        self._primed_solvent = None #port number of solvent primed in dispense line of the dispense pump
-        self._acid_primed_solvent = None #port nummber of the solvent primed in the dispense line of the acid pump
+        self._pump_1_primed_solvent = None #port number of solvent primed in dispense line of the dispense pump_1
+        self._pump_2_primed_solvent = None #port nummber of the solvent primed in the dispense line of dispense pump_2
         self._cartridge_in_quantos = None #cartridge position on rack of cartridge currently on the quantos
         
+        self.pump_port_assignments = PUMP_PORT_ASSIGNMENTS #dictionary with the ports of the dispense pumps
 
         self.start_system_logger(inst_logger)
 
@@ -61,20 +69,30 @@ class RobInHood():
             self.dispense_dict,self.dispense_dict_meta, self.quantos_dict, self.filt_dict, self.sample_dict = self.workflow_helper.workflow_setup()
         else:
              self.dispense_dict, self.quantos_dict, self.filt_dict, self.sample_dict= {},{},{},{} 
+        
         self.capper=Capper(camera_id=CAPPER_CAMERA_ID)
         self.holder=Holder()
         #self.shaker=Shaker()
+        
         self.filt_machine = FiltMachine(machine_port=FILTERINGSTATION_PORT, pump_port=FILTRATIONPUMP_PORT, switch_address="1", port_config=self.filt_dict)
         self.ika=RCTDigitalHotplate(device_name="IKA", connection_mode='serial', address='', port= IKA_PORT)
-        self.pump = XCalibur('DISPENSE_PUMP', 'serial', port = PUMP_PORT, switch_address="0",address="1", syringe_size= "1.0mL")
-        self.acid_pump = C3000SyringePump("ACID_DISPENSE_PUMP",port = ACID_PUMP_PORT, connection_mode="serial", address="1", switch_address="0", valve_type="6PORT_DISTR", syringe_size="12.5mL")
+        
+        
+        
+        
+        self.pump = XCalibur(self.pump_port_assignments["Dispense_1"]["name"], 'serial', port = PUMP_PORT, switch_address="0",address="1", syringe_size= "1.0mL")
+        self.pump_2 = C3000SyringePump(self.pump_port_assignments["Dispense_2"]["name"],"serial", port = ACID_PUMP_PORT, connection_mode="serial", address="1", switch_address="0", valve_type="6PORT_DISTR", syringe_size="12.5mL")
+        
+        
         self.quantos=QuantosQB1(device_name="QUANTOS", connection_mode="serial", port=QUANTOS_PORT)
+        
         self.timer=Timer()
         self.lightbox=LightBox(camera_id=LIGHTBOX_CAMERA_ID)
+
         self.camera_connected=self.init_camera()
         self.ika_connected=self.init_ika()
         self.pump_connected=self.init_pump()
-        self.acid_pump_connected =self.init_acid_pump()
+        self.pump2_connected =self.init_acid_pump()
         self.quantos_connected=self.init_quantos()
         self.filt_machine_connected = self.init_filt_machine()
         self.robot_connected=self.init_robot()
@@ -797,6 +815,8 @@ class RobInHood():
         except:
             self._logger.error(f'Vial {vial_number} not available.')
             #exit()
+
+
     def vial_rack_to_ika(self, vial_number=1, ika_slot_number=1):
         """
         Moves a vial from the rack to the IKA station.
@@ -813,6 +833,7 @@ class RobInHood():
             self._logger.error(f'Vial {vial_number} or IKA slot {ika_slot_number} not available.')
             #self.camera.stop_streaming() #TODO fix
             exit()
+
     def vial_rack_to_quantos(self, vial_number=1):
         """
         Moves a vial from the rack to the quantos mettler. 
@@ -1265,10 +1286,13 @@ class RobInHood():
     #   Dispense Pump methods   #
     ####################
 
-    def init_pump(self):
+    def init_pumps(self):
         """
         Starts serial connection to the pump. Initialises the pump by force stalling. During initialisation valve connected to 
         waste port specified in the workflow configuration file.
+
+        All ports for pump 2 are saved as 12 greater than they should be to avoid confusion
+        with the dispense pump so 12 is automatically subtracted in the function calls.
         
         Returns True when connected to the XCalibur pump, False otherwise.
 
@@ -1287,11 +1311,34 @@ class RobInHood():
             self.pump.check_errors() #logger in pump code will respond.
     
             #TODO adding microstepping option
-            return True
+          
+       
         except Exception as e:
             self._logger.error("Pump not connected.")
             self._logger.error(e)
             return False
+
+        self._logger.info("Connecting Dispense Pump 2..") 
+        try:
+            self.pump_2.connect()
+            time.sleep(0.5)
+            self.pump_2.is_connected()
+            self._logger.info("Dispense Pump 2 connected.")
+            time.sleep(0.5)
+            self.pump_2.initialize_device(input_port=(self.dispense_dict["Waste_2"]-12),output_port=(self.dispense_dict["Waste_2"]-12))
+            self._logger.info("Dispense Pump 2 initialised.")
+            time.sleep(0.5)
+            self._logger.info("Checking for pump errors")
+            self.pump_2.check_errors() #logger in pump code will respond.
+    
+            #TODO adding microstepping option
+            
+        except Exception as e:
+            self._logger.error("Dispense Pump 2 not connected.")
+            self._logger.error(e)
+            return False
+        
+        return True
 
 
     def pump_prime_reagent_tubing(self, chemical:str, prime_volume:float= 6000):
@@ -1300,195 +1347,169 @@ class RobInHood():
         solvent of chosen chemical to waste port specified in workflow config file
 
         """
-        self._logger.info(f'Priming reagent tubing with {chemical} from port {self.dispense_dict[chemical]} into waste on port: {self.dispense_dict["Waste"]}')
-        self.pump.dispense(prime_volume, source_port = self.dispense_dict[chemical], destination_port = self.dispense_dict["Waste"])
-        self.pump.is_idle()
+
+        if self.dispense_dict[chemical] <= 12:
+            self._logger.info((f"{chemical} is on pump: {self.pump.device_name}"))
+            self._logger.info(f'Priming reagent tubing with {chemical} from port {self.dispense_dict[chemical]} into waste on port: {self.dispense_dict["Waste"]}')
+            self.pump.dispense(prime_volume, source_port = self.dispense_dict[chemical], destination_port = self.dispense_dict["Waste"])
+            self.pump.is_idle()
+
+        elif self.dispense_dict[chemical] > 12:
+            self._logger.info((f"{chemical} is on pump: {self.pump_2.device_name}"))
+            chemical_port = "I" + str(self.dispense_dict[chemical]-12)
+            waste_port = "I" + str(self.dispense_dict["Waste_2"]-12)
+            self._logger.info(f'Pump priming reagent tubing with {chemical} from port {self.dispense_dict[chemical]} into waste on port: {self.dispense_dict["Waste_2"]}')
+            self.pump_2.dispense(prime_volume, source_port = chemical_port, destination_port = waste_port)
+            self.pump_2.is_idle()
+
 
     def pump_expel_reagent_tubing(self, chemical:str, expel_volume:float = 6000):
         """
         Removes solvent in reagent tubing using air to push it back into storage vessels. Default volume is 6 ml. 
 
         """
-        self._logger.info(f'Expelling reagent tubing with chemical: {chemical} from port {self.dispense_dict[chemical]} back into its container')
-        self.pump.dispense(expel_volume, source_port = self.dispense_dict["Air"], destination_port = self.dispense_dict[chemical])
-        self.pump.is_idle()
+        if self.dispense_dict[chemical] <= 12:
+            self._logger.info((f"{chemical} is on pump: {self.pump.device_name}"))
+            self._logger.info(f'Expelling reagent tubing with chemical: {chemical} from port {self.dispense_dict[chemical]} back into its container')
+            self.pump.dispense(expel_volume, source_port = self.dispense_dict["Air"], destination_port = self.dispense_dict[chemical])
+            self.pump.is_idle()
+
+        elif self.dispense_dict[chemical] > 12:
+            self._logger.info((f"{chemical} is on pump: {self.pump_2.device_name}"))
+            chemical_port = "I" + str(self.dispense_dict[chemical]-12)
+            air_port = "I" + str(self.dispense_dict["Air_2"]-12)
+
+            self._logger.info(f'Expelling reagent tubing with chemical: {chemical} from port {self.dispense_dict[chemical]} back into its container')
+            self.pump_2.dispense(expel_volume, source_port = air_port, destination_port = chemical_port)
+            self.pump_2.is_idle()
     
-    def pump_prime_dispense_tubing(self,chemical:str, cycle_number:int = 2):
+    
+    def pump_prime_dispense_tubing(self, chemical:str, cycle_number:int = 2):
         """
         Primes dispense line of the pump with solvent from chosen port.
         cycle_number (default 2) cycles of 1 ml washing are followed by a 1 ml prime
         
         """
-        if chemical == self._primed_solvent:
-            self._logger.info(f"Dispense line already primed with {chemical} from port : {self.dispense_dict[chemical]}")
-        else:
-            self._logger.info(f"Priming dispense line with {chemical} from port: {self.dispense_dict[chemical]}")
-            self._logger.info(f"Emptying 2 ml volume from dispense line port {self.dispense_dict['Dispense']} into waste on port '{self.dispense_dict['Waste']}")    
-            self.pump.dispense(2000, source_port=self.dispense_dict["Dispense"], destination_port=self.dispense_dict["Waste"])
-            cycle = 0 
-            while cycle < cycle_number:
-                self._logger.info(f"Starting {cycle+1} backward washing cycle")
-                self._logger.info(f"Dispensing 1 mL {chemical} from port: {self.dispense_dict[chemical]} - overspill into waste vial")
-                self.pump.dispense(volume = 1000, source_port=self.dispense_dict[chemical], destination_port=self.dispense_dict["Dispense"])
-                self._logger.info(f"Aspirating 2 mL volume from dispense line (port: {self.dispense_dict['Dispense']}) to waste (port: {self.dispense_dict['Waste']})")
-                self.pump.dispense(volume =2000, source_port=self.dispense_dict["Dispense"], destination_port=self.dispense_dict["Waste"])
-                cycle = cycle + 1
-            self._logger.info(f"Priming the dispense line (port: {self.dispense_dict['Dispense']}) with {chemical} port {self.dispense_dict[chemical]}")
-            self.pump.dispense(volume = 1000, source_port=self.dispense_dict[chemical], destination_port= self.dispense_dict['Dispense'])
+        if self.dispense_dict[chemical] <= 12:
+            self._logger.info((f"{chemical} is on pump: {self.pump.device_name}"))
+            if chemical == self._pump_1_primed_solvent:
+                self._logger.info(f"Dispense line already primed with {chemical} from port : {self.dispense_dict[chemical]}")
+                
+            else:
+                self._logger.info(f"Priming dispense line with {chemical} from port: {self.dispense_dict[chemical]}")
 
-        self._primed_solvent = chemical #update primed solvent
-        self.pump.is_idle()
+                self._logger.info(f"Emptying 2 ml volume from dispense line port {self.dispense_dict['Dispense']} into waste on port '{self.dispense_dict['Waste']}")    
+                self.pump.dispense(2000, source_port=self.dispense_dict["Dispense"], destination_port=self.dispense_dict["Waste"])
+                cycle = 0 
+                while cycle < cycle_number:
+                    self._logger.info(f"Starting {cycle+1} backward washing cycle")
 
-    def dispense_volume(self, vol:float, chemical:str):
-        """
-        Volume dispensing of volume in uL from port specified to Dispense port specified in workflow config (1)
-        
-        """
-        if chemical != self._primed_solvent:
-            raise Exception(f"Need to prime with {chemical} from port {self.dispense_dict[chemical]}")
-        
-        self._logger.info(f"Dispensing {vol} uL of {chemical} from port {self.dispense_dict[chemical]} to dispense port ({self.dispense_dict['Dispense']})")
-        self.pump.dispense(vol, source_port = self.dispense_dict[chemical], destination_port = self.dispense_dict['Dispense'])
-        self.pump.is_idle()
+                    self._logger.info(f"Dispensing 1 mL {chemical} from port: {self.dispense_dict[chemical]} - overspill into waste vial")
+                    self.pump.dispense(volume = 1000, source_port=self.dispense_dict[chemical], destination_port=self.dispense_dict["Dispense"])
 
-    def dispense_dropwise(self, vol:float, chemical:str = "Water(DI)" , speed: int =14):
-        """
-        Volume dispensing, but dropwise, of volume in uL from port specified to Dispense port specified in workflow config (1)
-        
-        """
-        self._logger.info(f"Dropwise dispensing {vol} uL of {chemical}")
-        self.pump.set_predefined_speed(speed)
-        self.dispense_volume(vol, chemical)
-        self.pump.set_predefined_speed(11) # resetting to default after dropwise dispensing is done
+                    self._logger.info(f"Aspirating 2 mL volume from dispense line (port: {self.dispense_dict['Dispense']}) to waste (port: {self.dispense_dict['Waste']})")
+                    self.pump.dispense(volume =2000, source_port=self.dispense_dict["Dispense"], destination_port=self.dispense_dict["Waste"])
+                    
+                    cycle = cycle + 1
 
-         
-    #######################
-    # Acid Pump methods #
-    #######################
+                self._logger.info(f"Priming the dispense line (port: {self.dispense_dict['Dispense']}) with {chemical} port {self.dispense_dict[chemical]}")
+                self.pump.dispense(volume = 1000, source_port=self.dispense_dict[chemical], destination_port= self.dispense_dict['Dispense'])
 
-    def init_acid_pump(self):
-        """
-        Starts serial connection to the pump. Initialises the pump by force stalling. During initialisation valve connected to 
-        waste port specified in the workflow configuration file. All ports for the acid pump are saved as 12 greater than they should be to avoid confusion
-        with the dispense pump so 12 is automatically subtracted in the function calls.
-        
-        Returns True when connected to the C3000 pump, False otherwise.
+            self._pump_1_primed_solvent = chemical #update primed solvent
+            self.pump.is_idle()
 
-        """
-        self._logger.info("Connecting Pump..")
-        try:
-            self.acid_pump.connect()
-            time.sleep(0.5)
-            self.acid_pump.is_connected()
-            self._logger.info("Acid Pump connected.")
-            time.sleep(0.5)
-            self.acid_pump.initialize_device(input_port=(self.dispense_dict["Acid_Waste"]-12),output_port=(self.dispense_dict["Acid_Waste"]-12))
-            self._logger.info("Pump initialised.")
-            time.sleep(0.5)
-            self._logger.info("Checking for pump errors")
-            self.acid_pump.check_errors() #logger in pump code will respond.
-    
-            #TODO adding microstepping option
-            return True
-        except Exception as e:
-            self._logger.error("Acid Pump not connected.")
-            self._logger.error(e)
-            return False
+        if self.dispense_dict[chemical] > 12:
+            self._logger.info((f"{chemical} is on pump: {self.pump_2.device_name}"))
+            dispense_port = "I" + str(self.dispense_dict["Dispense_2"]-12)
+            chemical_port = "I" + str(self.dispense_dict[chemical]-12)
+            waste_port = "I" + str(self.dispense_dict["Waste_2"]-12)
 
-
-    def acid_pump_prime_reagent_tubing(self, chemical:str, prime_volume:float= 6000):
-        """
-        Standard reagent tubing prime - sends prime_volume (default = 6 ml)
-        solvent of chosen chemical to waste port specified in workflow config file as Acid_Waste (port 6)
-
-        """
-
-
-        chemical_port = "I" + str(self.dispense_dict[chemical]-12)
-        waste_port = "I" + str(self.dispense_dict["Acid_Waste"]-12)
-
-
-        self._logger.info(f'Acid pump priming reagent tubing with {chemical} from port {self.dispense_dict[chemical]} into waste on port: {self.dispense_dict["Acid_Waste"]}')
-        self.acid_pump.dispense(prime_volume, source_port = chemical_port, destination_port = waste_port)
-        self.acid_pump.is_idle()
-
-    def acid_pump_expel_reagent_tubing(self, chemical:str, expel_volume:float = 6000):
-        """
-        Removes solvent in reagent tubing using air to push it back into storage vessels. Default volume is 6 ml. 
-
-        """
-
-
-        chemical_port = "I" + str(self.dispense_dict[chemical]-12)
-        acid_air_port = "I" + str(self.dispense_dict["Acid_Air"]-12)
-
-        self._logger.info(f'Expelling reagent tubing with chemical: {chemical} from port {self.dispense_dict[chemical]} back into its container')
-        self.acid_pump.dispense(expel_volume, source_port = acid_air_port, destination_port = chemical_port)
-        self.acid_pump.is_idle()
-    
-    def acid_pump_prime_dispense_tubing(self,chemical:str, cycle_number:int = 2):
-        """
-        Primes dispense line of the pump with solvent from chosen port.
-        cycle_number (default 2) cycles of 1 ml washing are followed by a 1 ml prime
-        
-        """
-
-        dispense_port = "I" + str(self.dispense_dict["Acid_Dispense"]-12)
-        chemical_port = "I" + str(self.dispense_dict[chemical]-12)
-        waste_port = "I" + str(self.dispense_dict["Acid_Waste"]-12)
-
-        if chemical == self._acid_primed_solvent:
-            self._logger.info(f"Dispense line already primed with {chemical} from port : {self.dispense_dict[chemical]}")
-        else:
-            self._logger.info(f"Priming dispense line with {chemical} from port: {self.dispense_dict[chemical]}")
-            self._logger.info(f"Emptying 2 ml volume from dispense line port {self.dispense_dict['Acid_Dispense']} into waste on port '{self.dispense_dict['Acid_Waste']}")    
-            self.acid_pump.dispense(2000, source_port=dispense_port, destination_port=waste_port)
+            if chemical == self._pump_2_primed_solvent:
+                self._logger.info(f"Dispense line already primed with {chemical} from port : {self.dispense_dict[chemical]}")
+            else:
+                self._logger.info(f"Priming dispense line with {chemical} from port: {self.dispense_dict[chemical]}")
+                self._logger.info(f"Emptying 2 ml volume from dispense line port {self.dispense_dict['Dispense_2']} into waste on port '{self.dispense_dict['Waste_2']}")    
+                self.pump_2.dispense(2000, source_port=dispense_port, destination_port=waste_port)
            
             cycle = 0 
             while cycle < cycle_number:
                 self._logger.info(f"Starting {cycle+1} backward washing cycle")
+
                 self._logger.info(f"Dispensing 1 mL {chemical} from port: {self.dispense_dict[chemical]} - overspill into waste vial")
-                self.acid_pump.dispense(volume = 1000, source_port= chemical_port, destination_port = dispense_port)
+                self.pump_2.dispense(volume = 1000, source_port= chemical_port, destination_port = dispense_port)
+
                 self._logger.info(f"Aspirating 2 mL volume from dispense line (port: {self.dispense_dict['Acid_Dispense']}) to waste (port: {self.dispense_dict['Acid_Waste']})")
-                self.acid_pump.dispense(volume =2000, source_port=dispense_port, destination_port=waste_port)
+                self.pump_2.dispense(volume =2000, source_port=dispense_port, destination_port=waste_port)
+                
                 cycle = cycle + 1
 
-            self._logger.info(f"Priming the dispense line (port: {self.dispense_dict['Acid_Dispense']}) with {chemical} port {self.dispense_dict[chemical]}")
-            self.acid_pump.dispense(volume = 1000, source_port= chemical_port, destination_port= dispense_port)
+            self._logger.info(f"Priming the dispense line (port: {self.dispense_dict['Dispense_2']}) with {chemical} port {self.dispense_dict[chemical]}")
+            self.pump_2.dispense(volume = 1000, source_port= chemical_port, destination_port= dispense_port)
 
-        self._acid_primed_solvent = chemical #update primed solvent
-        self.acid_pump.is_idle()
+            self._pump_2_primed_solvent = chemical #update primed solvent
+            self.pump_2.is_idle()
 
-    def acid_dispense_volume(self, vol:float, chemical:str, speed:int = 20):
+
+    def dispense_volume(self, pump: Union[XCalibur,C3000SyringePump], vol:float, chemical:str, speed:int=None):
         """
         Volume dispensing of volume in uL from port specified to Dispense port specified in workflow config (1)
-        Speed 20 calibrated to give best results
+
+        For the Tecan Xcalibur pump by default the speed is predefined speed 11 (default speed) and for the C3000 pump the speed is set to 20.
+        These numbers have been meassured to give accurate results for dispensing with water. 
         
         """
+        if self.dispense_dict[chemical] <= 12:
+            self._logger.info((f"{chemical} is on pump: {self.pump.device_name}"))
+           
+            if speed is not None:
+                pump.set_predefined_speed(speed)
 
-
-        if chemical != self._acid_primed_solvent:
-            raise Exception(f"Need to prime with {chemical} from port {self.dispense_dict[chemical]}")
+            if chemical != self._pump_1_primed_solvent:
+                raise Exception(f"Need to prime with {chemical} from port {self.dispense_dict[chemical]}")
         
-        dispense_port = "I" + str(self.dispense_dict["Acid_Dispense"]-12)
-        chemical_port = "I" + str(self.dispense_dict[chemical]-12)
+            self._logger.info(f"Dispensing {vol} uL of {chemical} from port {self.dispense_dict[chemical]} to dispense port ({self.dispense_dict['Dispense']})")
+            pump.dispense(vol, source_port = self.dispense_dict[chemical], destination_port = self.dispense_dict['Dispense'])
+            pump.is_idle()
 
-        self._logger.info(f"setting top pre-defined speed to {speed}")
-        self.acid_pump.set_predefined_speed(speed)
+        elif self.dispense_dict[chemical] > 12:
+            self._logger.info((f"{chemical} is on pump: {self.pump_2.device_name}"))
 
-        self._logger.info(f"Dispensing {vol} uL of {chemical} from port {self.dispense_dict[chemical]} to dispense port ({self.dispense_dict['Acid_Dispense']})")
-        self.acid_pump.dispense(vol, source_port = chemical_port, destination_port = dispense_port)
-        self.acid_pump.is_idle()
+            if speed is None:
+                speed = 20
+            
+            if chemical != self._pump_2_primed_solvent:
+                raise Exception(f"Need to prime with {chemical} from port {self.dispense_dict[chemical]}")
+        
+            dispense_port = "I" + str(self.dispense_dict["Dispense_2"]-12)
+            chemical_port = "I" + str(self.dispense_dict[chemical]-12)
 
-    def acid_dispense_dropwise(self, vol:float, chemical:str = "Water(DI)" , speed: int =16):
+            self._logger.info(f"setting top pre-defined speed to {speed}")
+            self.pump.set_predefined_speed(speed)
+
+            self._logger.info(f"Dispensing {vol} uL of {chemical} from port {self.dispense_dict[chemical]} to dispense port ({self.dispense_dict['Dispense_2']})")
+            self.pump.dispense(vol, source_port = chemical_port, destination_port = dispense_port)
+            self.pump.is_idle()
+
+
+    def dispense_dropwise(self, vol:float, chemical:str = "Water(DI)" ):
         """
         Volume dispensing, but dropwise, of volume in uL from port specified to Dispense port specified in workflow config (1)
         
         """
-        self._logger.info(f"Dropwise dispensing {vol} uL of {chemical}")
-        self.acid_pump.set_predefined_speed(speed)
-        self.acid_dispense_volume(vol, chemical)
+        if self.dispense_dict[chemical] <= 12:
+            self._logger.info(f"Dropwise dispensing {vol} uL of {chemical}")
+            self.pump.set_predefined_speed(speed = 14)
+            self.dispense_volume(vol, chemical)
+            self.pump.set_predefined_speed(11) # resetting to default after dropwise dispensing is done
         
+        elif self.dispense_dict[chemical] > 12:
+            self._logger.info(f"Dropwise dispensing {vol} uL of {chemical}")
+            self.pump_2.set_predefined_speed(speed=27)
+            self.dispense_volume(vol, chemical)
+            self.pump_2.set_predefined_speed(20)
+        
+
+
 
     #######################
     # Pump holder methods #

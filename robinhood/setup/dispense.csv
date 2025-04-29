@@ -11,9 +11,9 @@ Waste,6,dispense
 NotInUse,10,dispense
 ,11,dispense
 ,12,dispense
-Acid_Dispense,13,acid_dispense
+Dispense_2,13,acid_dispense
 Water(DI)_acid_pump,14,acid_dispense
-Acid_Air,15,acid_dispense
+Air_2,15,acid_dispense
 ,16,acid_dispense
 ,17,acid_dispense
-Acid_Waste,18,acid_dispense
+Waste_2,18,acid_dispense
