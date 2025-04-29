@@ -91,8 +91,7 @@ class RobInHood():
 
         self.camera_connected=self.init_camera()
         self.ika_connected=self.init_ika()
-        self.pump_connected=self.init_pump()
-        self.pump2_connected =self.init_acid_pump()
+        self.pump_connected,self.pump2_connected =self.init_pumps()
         self.quantos_connected=self.init_quantos()
         self.filt_machine_connected = self.init_filt_machine()
         self.robot_connected=self.init_robot()
@@ -1305,14 +1304,12 @@ class RobInHood():
             self._logger.info("Pump connected.")
             time.sleep(0.5)
             self.pump.initialize_device(input_port=self.dispense_dict["Waste"],output_port=self.dispense_dict["Waste"])
-            self._logger.info("Pump initialised.")
+            self._logger.info(f" Pump, {self.pump.device_name} initialised.")
             time.sleep(0.5)
             self._logger.info("Checking for pump errors")
             self.pump.check_errors() #logger in pump code will respond.
     
             #TODO adding microstepping option
-          
-       
         except Exception as e:
             self._logger.error("Pump not connected.")
             self._logger.error(e)
@@ -1325,8 +1322,10 @@ class RobInHood():
             self.pump_2.is_connected()
             self._logger.info("Dispense Pump 2 connected.")
             time.sleep(0.5)
-            self.pump_2.initialize_device(input_port=(self.dispense_dict["Waste_2"]-12),output_port=(self.dispense_dict["Waste_2"]-12))
-            self._logger.info("Dispense Pump 2 initialised.")
+            waste_port = "I" + str(self.dispense_dict["Waste_2"]-12)
+            self.pump_2.initialize_device(input_port=waste_port,output_port=(self.dispense_dict["Waste_2"]-12))
+            self._logger.info(f" Pump, {self.pump_2.device_name} initialised.")
+    
             time.sleep(0.5)
             self._logger.info("Checking for pump errors")
             self.pump_2.check_errors() #logger in pump code will respond.
@@ -1338,7 +1337,7 @@ class RobInHood():
             self._logger.error(e)
             return False
         
-        return True
+        return True, True
 
 
     def pump_prime_reagent_tubing(self, chemical:str, prime_volume:float= 6000):
@@ -1369,7 +1368,7 @@ class RobInHood():
 
         """
         if self.dispense_dict[chemical] <= 12:
-            self._logger.info((f"{chemical} is on pump: {self.pump.device_name}"))
+            self._logger.info((f"{chemical} is on pump: {self.pump.device_name}"))   
             self._logger.info(f'Expelling reagent tubing with chemical: {chemical} from port {self.dispense_dict[chemical]} back into its container')
             self.pump.dispense(expel_volume, source_port = self.dispense_dict["Air"], destination_port = self.dispense_dict[chemical])
             self.pump.is_idle()
@@ -1401,6 +1400,7 @@ class RobInHood():
                 self._logger.info(f"Emptying 2 ml volume from dispense line port {self.dispense_dict['Dispense']} into waste on port '{self.dispense_dict['Waste']}")    
                 self.pump.dispense(2000, source_port=self.dispense_dict["Dispense"], destination_port=self.dispense_dict["Waste"])
                 cycle = 0 
+
                 while cycle < cycle_number:
                     self._logger.info(f"Starting {cycle+1} backward washing cycle")
 
@@ -1450,7 +1450,7 @@ class RobInHood():
             self.pump_2.is_idle()
 
 
-    def dispense_volume(self, pump: Union[XCalibur,C3000SyringePump], vol:float, chemical:str, speed:int=None):
+    def dispense_volume(self, vol:float, chemical:str, speed:int=None):
         """
         Volume dispensing of volume in uL from port specified to Dispense port specified in workflow config (1)
 
@@ -1462,14 +1462,16 @@ class RobInHood():
             self._logger.info((f"{chemical} is on pump: {self.pump.device_name}"))
            
             if speed is not None:
-                pump.set_predefined_speed(speed)
+                self.pump.set_predefined_speed(speed)
 
             if chemical != self._pump_1_primed_solvent:
                 raise Exception(f"Need to prime with {chemical} from port {self.dispense_dict[chemical]}")
         
             self._logger.info(f"Dispensing {vol} uL of {chemical} from port {self.dispense_dict[chemical]} to dispense port ({self.dispense_dict['Dispense']})")
-            pump.dispense(vol, source_port = self.dispense_dict[chemical], destination_port = self.dispense_dict['Dispense'])
-            pump.is_idle()
+            self.pump.dispense(vol, source_port = self.dispense_dict[chemical], destination_port = self.dispense_dict['Dispense'])
+            
+            self.pump.set_predefined_speed(11) # resetting to default after dispensing is done
+            self.pump.is_idle()
 
         elif self.dispense_dict[chemical] > 12:
             self._logger.info((f"{chemical} is on pump: {self.pump_2.device_name}"))
@@ -1484,11 +1486,11 @@ class RobInHood():
             chemical_port = "I" + str(self.dispense_dict[chemical]-12)
 
             self._logger.info(f"setting top pre-defined speed to {speed}")
-            self.pump.set_predefined_speed(speed)
+            self.pump_2.set_predefined_speed(speed)
 
             self._logger.info(f"Dispensing {vol} uL of {chemical} from port {self.dispense_dict[chemical]} to dispense port ({self.dispense_dict['Dispense_2']})")
-            self.pump.dispense(vol, source_port = chemical_port, destination_port = dispense_port)
-            self.pump.is_idle()
+            self.pump_2.dispense(vol, source_port = chemical_port, destination_port = dispense_port)
+            self.pump_2.is_idle()
 
 
     def dispense_dropwise(self, vol:float, chemical:str = "Water(DI)" ):
