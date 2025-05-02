@@ -22,6 +22,7 @@ from ..drivers.shaker import Shaker
 from ..drivers.lightbox import LightBox
 from ..drivers.Filtbot.filt_machine import FiltMachine
 from ..utils.workflow_helper import Workflow_Helper
+import json
 
 from ..config.workflow_config import PUMP_PORT_ASSIGNMENTS
 ####################TODO remove when making this a pip package
@@ -35,7 +36,7 @@ class RobInHood():
     """
     This class connects with Panda robot.
     """
-    def __init__(self, inst_logger = "test_logger", conf_path=FILENAME, ip=PANDA_IP, sim=False, vel=0.05):
+    def __init__(self, inst_logger = "test_logger", data_path: str = DATA_PATH, conf_path=FILENAME, ip=PANDA_IP, sim=False, vel=0.05):
         """
         This constructor takes as input the filename, ip and sim.
         : param inst_logger: str name for the instrument logger file.
@@ -55,9 +56,11 @@ class RobInHood():
         self.sim=sim
         self.vel=vel
 
-        self._pump_1_primed_solvent = None #port number of solvent primed in dispense line of the dispense pump_1
-        self._pump_2_primed_solvent = None #port nummber of the solvent primed in the dispense line of dispense pump_2
-        self._cartridge_in_quantos = None #cartridge position on rack of cartridge currently on the quantos
+
+        saved_variables = self.load_running_variables()
+        self._pump_1_primed_solvent = saved_variables["pump_1_primed_solvent"] #port number of solvent primed in dispense line of the dispense pump_1
+        self._pump_2_primed_solvent = saved_variables["pump_2_primed_solvent"] #port nummber of the solvent primed in the dispense line of dispense pump_2
+        self._cartridge_in_quantos = saved_variables["cartridge_in_quantos"] #cartridge position on rack of cartridge currently on the quantos
         
         self.pump_port_assignments = PUMP_PORT_ASSIGNMENTS #dictionary with the ports of the dispense pumps
 
@@ -65,7 +68,7 @@ class RobInHood():
 
         if not sim:
             #Runs workflow config helper object - looks for config in relevant files, creates output path for data (not logs)
-            self.workflow_helper = Workflow_Helper(config_path=SETUP_PATH, data_path=DATA_PATH)
+            self.workflow_helper = Workflow_Helper(config_path=SETUP_PATH, data_path=data_path)
             self.dispense_dict,self.dispense_dict_meta, self.quantos_dict, self.filt_dict, self.sample_dict = self.workflow_helper.workflow_setup()
         else:
              self.dispense_dict, self.quantos_dict, self.filt_dict, self.sample_dict= {},{},{},{} 
@@ -360,7 +363,9 @@ class RobInHood():
             self._cartridge_in_quantos = cartridge_number
             
             self._logger.info(f"Cartridge now at position: {self._cartridge_in_quantos} now in Quantos")
-           
+
+            self.load_running_variables()
+
             return 
         except:
             self._logger.error("Cartridge not available.")
@@ -464,10 +469,46 @@ class RobInHood():
             
             self._logger.info(f"Cartridge at position {self._cartridge_in_quantos} now removed" )
             self._cartridge_in_quantos = None
+
+            self.load_running_variables()
             return
         except:
             self._logger.error(f'Cartridge {cartridge_number} is not available.')
             exit()
+    
+    def quantos_cartridge_handling_logic(self, solid_name:Union[str,None]):
+        """
+        Handles the cartridge logic for the quantos. It checks if the cartridge is in the quantos and if not it picks it up.
+        If the cartridge is in the quantos but not the one requested it removes it and picks up the requested cartridge.
+        If the cartridge is already in the quantos it does nothing.
+
+        """
+        
+        if solid_name is None:
+            self._logger.info("No solid requested skipping solid dispensing")
+        
+        cartridge_number = self.quantos_dict[solid_name]
+
+        self._logger.info(f"Cartridge in quatos: {self._cartridge_in_quantos}")
+
+        if self._cartridge_in_quantos is None:
+            self._logger.info(f"No cartridge in quantos, picking up cartridge {cartridge_number} containing {solid_name}")
+            self.pick_and_place_cartridge_in_quantos(cartridge_number)
+
+        
+        elif self._cartridge_in_quantos != cartridge_number:
+            self._logger.info(f"""Cartridge in quantos is {self._cartridge_in_quantos} containing {self.quantos_dict[self._cartridge_in_quantos]}, removing cartridge {self._cartridge_in_quantos}
+                               and picking up cartridge {cartridge_number} containing {solid_name}""")
+            self.remove_cartridge_from_quantos(self._cartridge_in_quantos)
+            self.pick_and_place_cartridge_in_quantos(cartridge_number)
+
+        elif self._cartridge_in_quantos == cartridge_number:
+            self._logger.info(f"Cartridge {cartridge_number} containing {solid_name} is already in quantos, no action needed")
+
+        else:
+            raise Exception(f"Unhandled cartridge logigs, cartridge {cartridge_number} not found in quantos")
+
+
 
 	################### Vial Manipulation methods ######################################
     def vial_capper_to_ika(self,ika_slot=1):
@@ -1449,6 +1490,8 @@ class RobInHood():
             self._pump_2_primed_solvent = chemical #update primed solvent
             self.pump_2.is_idle()
 
+        self.load_running_variables()
+
 
     def dispense_volume(self, vol:float, chemical:str, speed:int=None):
         """
@@ -1600,7 +1643,7 @@ class RobInHood():
         self._logger.info(f"Stable weight is: {weight}")
         return weight['outcomes'][1]
     
-    def record_weight(self, sample_name, file_name, weight):
+    def record_weight(self, sample_name, file_name, weight, file_path = "data/results/"):
         """
         Records a weight to a results file with an associated time the mass was logged,
         
@@ -1609,7 +1652,7 @@ class RobInHood():
         weightL mass in grams
         
         """
-        path = "data/results/"+file_name
+        path = file_path+file_name
         if os.path.exists(path):
             self._logger.debug("Results file exists - writing to it")
             f = open(path, "a+") 
@@ -1948,5 +1991,167 @@ class RobInHood():
         self.linear_motion([0.022258, -0.467369, 0.398940, -1.595905, 0.0, 0.0])
         self.robot.open_gripper_set_width(0.03)
         
+
+    def filter_sample_collect_filtrate(self,sample_vial_number:int,sample_vial_volume:int, filtrate_vial_number:int, cleaning_vial_number:int,
+                                        cleaning_solvent:str, cleaning_solvent_volume:float, filter_time: Union[int, None] = None):
+
+        self._logger.info("Washing the filter and funnel prior to filtration")
         
+        self._logger.info(f"Priming the dispense station with {cleaning_solvent} solvent")
+        self.hold_position()
+        self.pump_prime_dispense_tubing(chemical=cleaning_solvent)
+        self.infuse_position()
+
+        self.robot.open_gripper_set_width(0.03)
+        self.vial_rack_to_pump(vial_number=cleaning_vial_number)
+        self.dispense_volume(vol = cleaning_solvent_volume, chemical=cleaning_solvent)
+        self.hold_position()
+        self.vial_pump_to_rack(vial_number=cleaning_vial_number)
+
+        self._logger.info("Placing filter cartridge")
+
+        self.quantos.close_front_door()
+        self.robot.open_gripper()
+        self.pick_up_filtering_catridge()
+        
+        self.place_pouring_cleaning_vial(vial_number=cleaning_vial_number)
+        self.filt_machine.filter_setup(volume_filtered=cleaning_solvent_volume, filter_time=filter_time)
+        self.remove_pouring_vial(vial_number=cleaning_vial_number)
+
+        self._logger.info("Filtering sample vial")
+
+        self._logger.info(f"Placing sample vial {sample_vial_number} on the filter machine")
+        self.vial_decap(sample_vial_number)
+        self.place_pouring_vial()
+
+        self._logger.info("Placing vial for the filtrate")
+        self.place_filtered_vial(vial_number=filtrate_vial_number)
+
+        self._logger.info(f"Filtering sample vial {sample_vial_number}")
+        self.filt_machine.filter_vial( volume_filtered=sample_vial_volume, filter_time=filter_time, filtrate = True)
+
+        self._logger.info(f"Removing filtered sample vial {sample_vial_number} from the filter machine")
+        self.remove_filtered_vial(vial_number=filtrate_vial_number)
+        self.remove_pouring_vial(vial_number=sample_vial_number)
+
+        self.filt_machine.clean(volume_filtered=sample_vial_volume, wash_solvent= cleaning_solvent)
+
+        self.quantos.open_front_door()
+        self._logger.warning("Please replace the filter cartridge")
+
+        while True:
+            self._logger.warning("Please replace the filter cartridge(y/n)?")
+            yn = input()
+            if yn =='y' or yn =='Y':
+                self._logger.info("Resuming workflow.")
+                break
+            elif yn == 'n' or yn == 'N':
+                self._logger.warning("Please replace the cartridge.")
+        
+        return 
+
+    def filter_sample_disgard_filtrate(self,sample_vial_number:int,sample_vial_volume:int,  cleaning_vial_number:int,
+                                        cleaning_solvent:str, cleaning_solvent_volume:float, filter_time: Union[int, None] = None):
+
+        self._logger.info("Washing the filter and funnel prior to filtration")
+        
+        self._logger.info(f"Priming the dispense station with {cleaning_solvent} solvent")
+        self.hold_position()
+        self.pump_prime_dispense_tubing(chemical=cleaning_solvent)
+        self.infuse_position()
+
+        self.robot.open_gripper_set_width(0.03)
+        self.vial_rack_to_pump(vial_number=cleaning_vial_number)
+        self.dispense_volume(vol = cleaning_solvent_volume, chemical=cleaning_solvent)
+        self.hold_position()
+        self.vial_pump_to_rack(vial_number=cleaning_vial_number)
+
+        self._logger.info("Placing filter cartridge")
+
+        self.quantos.close_front_door()
+        self.robot.open_gripper()
+        self.pick_up_filtering_catridge()
+        
+        self.place_pouring_cleaning_vial(vial_number=cleaning_vial_number)
+        self.filt_machine.filter_setup(volume_filtered=cleaning_solvent_volume, filter_time=filter_time)
+        self.remove_pouring_vial(vial_number=cleaning_vial_number)
+
+        self._logger.info("Filtering sample vial")
+
+        self._logger.info(f"Placing sample vial {sample_vial_number} on the filter machine")
+        self.vial_decap(sample_vial_number)
+        self.place_pouring_vial()
+
+
+        self._logger.info(f"Filtering sample vial {sample_vial_number}")
+
+        self.filt_machine.filter_vial( volume_filtered=sample_vial_volume, filter_time=filter_time, filtrate = False)
+
+
+        self._logger.info(f"Removing filtered sample vial {sample_vial_number} from the filter machine")
+      
+        self.remove_pouring_vial(vial_number=sample_vial_number)
+
+        self.filt_machine.clean(volume_filtered=sample_vial_volume, wash_solvent= cleaning_solvent)
+
+        self.quantos.open_front_door()
+        self._logger.warning("Please replace the filter cartridge")
+
+        while True:
+            self._logger.warning("Please replace the filter cartridge(y/n)?")
+            yn = input()
+            if yn =='y' or yn =='Y':
+                self._logger.info("Resuming workflow.")
+                break
+            elif yn == 'n' or yn == 'N':
+                self._logger.warning("Please replace the cartridge.")
+        
+        return 
+
+
+
+    #############################
+    # json method #
+    ############################# 
+
+    def load_running_variables(self, json_file_path: str = "running_variables.json") -> dict:
+        """Load a JSON file and return its content as a dictionary.
+
+        Args:
+            json_file_path (str): Path to the JSON file.
+
+        Returns:
+            dict: Content of the JSON file.
+        """
+        
+        try:
+            with open(json_file_path, 'r') as f:
+                variable_dict = json.load(f)
+                return variable_dict
+        except FileNotFoundError:
+            self._logger.warning(f"File {json_file_path} not found. Setting primed solvents and quantos cartridge to None values")
+            return {
+                'pump_1_primed_solvent': None,
+                'pump_2_primed_solvent': None,
+                'cartridge_in_quantos': None,
+            }
     
+
+    def save__running_variables(self, json_file_path: str) -> None: 
+        """Save a dictionary to a JSON file.
+
+        Args:
+            json_file_path (str): Path to the JSON file.
+            data (dict): Data to save.
+        """
+
+        data = {
+
+            'pump_1_primed_solvent': self._pump_1_primed_solvent,
+            'pump_2_primed_solvent': self._pump_2_primed_solvent,
+            'cartridge_in_quantos': self._cartridge_in_quantos,
+
+        }
+
+        with open(json_file_path, 'w') as f:
+            json.dump(data, f, indent=4)

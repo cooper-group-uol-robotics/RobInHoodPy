@@ -7,7 +7,7 @@ sys.path.insert(1, main_path)
 
 import serial
 import time
-from config.configuration import *
+from ..config.configuration import *
 import logging
 import cv2
 import threading
