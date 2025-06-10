@@ -38,7 +38,20 @@ class Timer():
         :param sec: integer
         """
         self._logger.info(f'Setting timer to {hours} h {min} m {sec} s')
-        self.seconds=(hours%24)*3600+(min%60)*60+sec%60
+        self.seconds = 0
+        if hours%24==0:
+            self.seconds =+ hours*3600
+        else:
+            self.seconds =(hours%24)*3600
+        if min%60 == 0:
+            self.seconds =+  min*60
+        else:
+            self.seconds = (min%60)*60
+        if sec%60 == 0:
+            self.seconds =+ sec
+        else:
+            self.seconds =+ sec%60
+        #self.seconds=(hours%24)*3600+(min%60)*60+sec%60
         self._logger.info(f'Timer set to {self.seconds}')
         return
     def start_timer(self):

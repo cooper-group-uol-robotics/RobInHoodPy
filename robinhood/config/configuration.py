@@ -3,7 +3,7 @@ import json
 FILENAME='conf/json/rih_robot_motion_positions.json'
 IMGS_PATH='imgs/dye_run_1/'
 
-LOG_PATH = "/home/panda1/RobInHoodPy/RobInHoodPy/log"
+LOG_PATH = "/home/panda1/RobInHoodPy/RobInHoodPy/logs"
 SETUP_PATH ="/home/panda1/RobInHoodPy/RobInHoodPy/robinhood/setup"
 DATA_PATH = "/home/panda1/RobInHoodPy/RobInHoodPy/data"
 
@@ -15,11 +15,11 @@ DATA_PATH = "/home/panda1/RobInHoodPy/RobInHoodPy/data"
 # The UBS cables have a tag with the name of the device they belong.
 
 #When restarting, Unplug all and then plug in in the following order:
-STIRRER_BARS_DISPENSER = '/dev/ttyACM0'
-HOLDER_PORT='/dev/ttyACM1' ### 
-LIGHTBOX_PORT='/dev/ttyACM2' ### 
-CAPPER_PORT='/dev/ttyACM3' ###
-FILTERINGSTATION_PORT='/dev/ttyACM4' ### 
+STIRRER_BARS_DISPENSER = '/dev/sb_dispenser' #'/dev/ttyACM3'
+HOLDER_PORT= '/dev/holder' #'/dev/ttyACM2' ### 
+LIGHTBOX_PORT='/dev/lightbox'#'/dev/ttyACM4' ### 
+CAPPER_PORT='/dev/capper'#'/dev/ttyACM1' ###
+FILTERINGSTATION_PORT='/dev/filt'#'/dev/ttyACM0' ### 
 
 #When restarting, Unplug all and then plug in in the following order:
 IKA_PORT = '/dev/ttyUSB0' ###
