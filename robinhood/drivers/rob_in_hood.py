@@ -851,7 +851,7 @@ class RobInHood():
         try:
             self.vial_rack_to_pump(vial_number=vial_number)
             self.vial_pump_to_capper(to_home=False) #TODO get rid of this step
-            self.vial_capper_to_ika(ika_slot=vial_number)
+            self.vial_capper_to_ika(ika_slot=ika_slot_number)
 
             return
         except:
@@ -870,14 +870,14 @@ class RobInHood():
         self.vial_pump_to_quantos()
         return
     
-    def vial_ika_to_rack(self, ika_slot=1):
+    def vial_ika_to_rack(self, ika_slot, vial_number):
         """
         Moves a vial from the ika station to the rack.
         :param vial_number: an integer which possible values go from 1 to 22 
         :param ika_slot_number: an integer which possible values go from 1 to 12
         """
         self.vial_ika_to_pump(ika_slot=ika_slot)
-        self.vial_pump_to_rack(vial_number=ika_slot)
+        self.vial_pump_to_rack(vial_number=vial_number)
         return
     
     def vial_ika_to_quantos(self, ika_slot_number=1):
