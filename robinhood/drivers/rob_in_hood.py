@@ -2010,6 +2010,7 @@ class RobInHood():
         """Takes a decapped vial at sample_vial number on the rack and places it on the filtration machine. ALso takes a decapped filtrate vial from the rack and places
          it on the filtration machine """
         
+        self.quantos.close_front_door()
         self._logger.info(f"Placing sample vial {sample_vial_number} on the filter machine")
         self.vial_rack_to_pump(vial_number=sample_vial_number)
         self.place_pouring_vial()
