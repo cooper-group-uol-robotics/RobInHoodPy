@@ -223,10 +223,30 @@ class Workflow_Helper:
 
             for entry in samples_dict:
                 samples_dict[entry]["liquid"] = str(samples_dict[entry]["liquid"]).split(":")
+                if len(samples_dict[entry]["liquid"]) == 1:
+                    samples_dict[entry]["liquid"]  = str(samples_dict[entry]["liquid"][0])
+               
                 samples_dict[entry]["volume (ml)"] = str(samples_dict[entry]["volume (ml)"]).split(":")
+                if len(samples_dict[entry]["volume (ml)"]) == 1:
+                    samples_dict[entry]["volume (ml)"] = float(samples_dict[entry]["volume (ml)"][0])
+               
                 samples_dict[entry]["solid"] = str(samples_dict[entry]["solid"]).split(":")
+
+
+                if len(samples_dict[entry]["solid"]) == 1:
+                
+                    
+                    samples_dict[entry]["solid"] = str(samples_dict[entry]["solid"][0])
+                
                 samples_dict[entry]["mass (mg)"] = str(samples_dict[entry]["mass (mg)"]).split(":")
+                if len(samples_dict[entry]["mass (mg)"]) == 1:
+                    samples_dict[entry]["mass (mg)"] = float(samples_dict[entry]["mass (mg)"][0])
+
+               
                 samples_dict[entry]["meta"] = str(samples_dict[entry]["meta"]).split(":") 
+                if len(samples_dict[entry]["meta"]) == 1:
+        
+                    samples_dict[entry]["meta"]   = str(samples_dict[entry]["meta"][0])
 
 
 
@@ -236,6 +256,7 @@ class Workflow_Helper:
             self._logger.error(f"An error occured in the samples list {e}")
             exit()
 
+       
         return samples_dict 
     
     
@@ -305,20 +326,40 @@ class Workflow_Helper:
         solid_errors = []
 
         for id in samples_dict:
+            
+            liquid = samples_dict[id]["liquid"]
+            
+            if type(liquid) == list:
 
-            for liquid in samples_dict[id]["liquid"]:
-              
+                for entry in samples_dict[id]["liquid"]:
+               
+                    if entry not in dispense_dict["port"].keys() and samples_dict[id]["liquid"] != "None":    
+                        self._logger.error(f"Liquid requested {samples_dict[id]['liquid']} is not connected to the pump")
+                        self._logger.error(f"Liquids available: {dispense_dict['port'].keys()}")
+                        liquid_errors.append(samples_dict[id]['liquid'])
+            
+            else:
+                
                 if liquid not in dispense_dict["port"].keys() and samples_dict[id]["liquid"] != "None":    
                     self._logger.error(f"Liquid requested {samples_dict[id]['liquid']} is not connected to the pump")
                     self._logger.error(f"Liquids available: {dispense_dict['port'].keys()}")
                     liquid_errors.append(samples_dict[id]['liquid'])
-                
-            for solid in samples_dict[id]["solid"]:
+
+            solid = samples_dict[id]["solid"]
             
+            if type(solid) == list:
+                for entry in samples_dict[id]["solid"]:
+            
+                    if entry not in quantos_dict["position"].keys() and samples_dict[id]["solid"] != "None":
+                        self._logger.error(f"Solid requested {samples_dict[id]['solid']} is not in a Loaded Quantos Cartridge")
+                        solid_errors.append(samples_dict[id]["solid"])
+
+            else:
                 if solid not in quantos_dict["position"].keys() and samples_dict[id]["solid"] != "None":
                     self._logger.error(f"Solid requested {samples_dict[id]['solid']} is not in a Loaded Quantos Cartridge")
                     solid_errors.append(samples_dict[id]["solid"])
-
+       
+       
         try:
             
             assert  len(liquid_errors) == 0 and len(solid_errors) == 0, "Errors found between chemicals requested and those in workflow configuration"

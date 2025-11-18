@@ -56,6 +56,10 @@ class RobInHood():
         self.sim=sim
         self.vel=vel
 
+        
+
+        self.start_system_logger(inst_logger)
+
 
         saved_variables = self.load_running_variables()
         self._pump_1_primed_solvent = saved_variables["pump_1_primed_solvent"] #port number of solvent primed in dispense line of the dispense pump_1
@@ -64,8 +68,7 @@ class RobInHood():
         
         self.pump_port_assignments = PUMP_PORT_ASSIGNMENTS #dictionary with the ports of the dispense pumps
 
-        self.start_system_logger(inst_logger)
-
+   
         if not sim:
             #Runs workflow config helper object - looks for config in relevant files, creates output path for data (not logs)
             self.workflow_helper = Workflow_Helper(config_path=SETUP_PATH, data_path=data_path)
@@ -84,7 +87,7 @@ class RobInHood():
         
         
         self.pump = XCalibur(self.pump_port_assignments["Dispense_1"]["name"], 'serial', port = PUMP_PORT, switch_address="0",address="1", syringe_size= "1.0mL")
-        self.pump_2 = C3000SyringePump(self.pump_port_assignments["Dispense_2"]["name"],"serial", port = ACID_PUMP_PORT, connection_mode="serial", address="1", switch_address="0", valve_type="6PORT_DISTR", syringe_size="12.5mL")
+        self.pump_2 = C3000SyringePump(self.pump_port_assignments["Dispense_2"]["name"], port = ACID_PUMP_PORT, connection_mode="serial", address="1", switch_address="0", valve_type="6PORT_DISTR", syringe_size="12.5mL")
         
         
         self.quantos=QuantosQB1(device_name="QUANTOS", connection_mode="serial", port=QUANTOS_PORT)
@@ -102,11 +105,9 @@ class RobInHood():
         self.hold_position()
     
     def linear_motion(self,pose):
-        state=self.robot.robot.read_once()
-        state=self.robot.robot.read_once()
-        state=self.robot.robot.read_once()
-        #self._logger.info('Pose: ', self.robot.robot.current_pose())
-        #self._logger.info('Joints: ', state.q)
+        self.robot.robot.read_once()
+        self.robot.robot.read_once()
+        self.robot.robot.read_once()
         self.robot.move_robot_x(pose)
         return
     def devices_connected_report(self): #TODO init filt machine
@@ -183,9 +184,9 @@ class RobInHood():
    
 
     ###### IKA control methods ###################################
-    def init_ika(self,default_speed=200):
+    def init_ika(self):
         """
-        Connects to IKA and initialises at stirring speed 100. 
+        Connects to IKA and initialises.
         
         Returns True when IKA has been connected, False otherwise.
         """
@@ -196,10 +197,7 @@ class RobInHood():
             self.ika.is_connected()
             self._logger.info("IKA RCT digital connected.")
             time.sleep(1.5)
-            self.ika.set_speed(default_speed)
-            self._logger.info(f'Stiring velocity set to {default_speed}.')
-            time.sleep(1.5)
-            temperature=self.ika.get_temperature()
+            temperature=self.ika.get_temperature(sensor=0)
             self._logger.info(f'Current temperature: {temperature}.')
             return True
         except:
@@ -218,6 +216,7 @@ class RobInHood():
                 self.robot = FrankxHelpers(self.ip,self.vel)
                 self.state = self.robot.robot.read_once()
                 self._logger.info(f'Panda robot connected to {self.ip}')
+                self.robot.open_gripper_set_width(0.03)
                 #self._logger.info('Current Pose: ', self.robot.robot.current_pose())
                 #self._logger.info('O_TT_E: ', self.state.O_T_EE)
                 #self._logger.info('Joints: ', self.state.q)
@@ -230,6 +229,7 @@ class RobInHood():
             self._logger.warning("Robot running in testing mode.")
             return True
 	
+
     ##################################
 	# Cartridge Manipulation methods #
     ##################################	
@@ -305,7 +305,7 @@ class RobInHood():
                 self.linear_motion([-0.059, 0.1885,0.480905, 3.1414, 0.0, 0.0])
                 self.linear_motion([0.0, 0.1885,0.480905, 3.1414, 0.0, 0.0])
             if cartridge_number==5:
-                self.linear_motion([0.0, 0.1885,0.406705, 3.1414, 0.0, 0.0])
+                self.linear_motion([0.0, 0.1885, 0.406705, 3.1414, 0.0, 0.0])
                 self.linear_motion([-0.058, 0.1885, 0.406705, 3.1414, 0.0, 0.0])
                 self.robot.gripper.clamp()
                 self.linear_motion([-0.058, 0.1885,0.408705, 3.1414, 0.0, 0.0])
@@ -362,9 +362,9 @@ class RobInHood():
             
             self._cartridge_in_quantos = cartridge_number
             
-            self._logger.info(f"Cartridge now at position: {self._cartridge_in_quantos} now in Quantos")
+            self._logger.info(f"Cartridge now at position {self._cartridge_in_quantos}")
 
-            self.load_running_variables()
+            self.save_running_variables()
 
             return 
         except:
@@ -470,7 +470,7 @@ class RobInHood():
             self._logger.info(f"Cartridge at position {self._cartridge_in_quantos} now removed" )
             self._cartridge_in_quantos = None
 
-            self.load_running_variables()
+            self.save_running_variables()
             return
         except:
             self._logger.error(f'Cartridge {cartridge_number} is not available.')
@@ -489,6 +489,8 @@ class RobInHood():
         
         cartridge_number = self.quantos_dict[solid_name]
 
+ 
+
         self._logger.info(f"Cartridge in quatos: {self._cartridge_in_quantos}")
 
         if self._cartridge_in_quantos is None:
@@ -497,7 +499,7 @@ class RobInHood():
 
         
         elif self._cartridge_in_quantos != cartridge_number:
-            self._logger.info(f"""Cartridge in quantos is {self._cartridge_in_quantos} containing {self.quantos_dict[self._cartridge_in_quantos]}, removing cartridge {self._cartridge_in_quantos}
+            self._logger.info(f"""Cartridge in quantos is {self._cartridge_in_quantos}, removing cartridge {self._cartridge_in_quantos}
                                and picking up cartridge {cartridge_number} containing {solid_name}""")
             self.remove_cartridge_from_quantos(self._cartridge_in_quantos)
             self.pick_and_place_cartridge_in_quantos(cartridge_number)
@@ -513,7 +515,7 @@ class RobInHood():
 	################### Vial Manipulation methods ######################################
     def vial_capper_to_ika(self,ika_slot=1):
         '''
-        
+        [WARNING] Set self.vial_pump_to_capper(to_home=False) when the next instruction is self.vial_capper_to_ika() otherwise the robot will hit the windows
         '''
         #self.robot.move_robot_j([-1.631004642562126, 0.28467839003864087, 0.4286281546751658, -2.2697788718374152, -0.1717695542342133, 2.482683498965369, 1.3954791999037066])
         #self.robot.move_robot_j([-1.6059555230467388, 0.29961175878591256, 0.40966219290934097, -2.2882557112375896, -0.28129480303982085, 2.5347412309148454, 1.4626395472064615])
@@ -635,23 +637,17 @@ class RobInHood():
         self.robot.move_robot_j([1.5492889621634232, -0.5542586173091019, -0.20297696281315983, -1.420489975134414, -0.06660811346107058, 0.7777394136852687, 0.733804698007802])
     def vial_pump_to_capper(self,to_home=True):    
         '''
-        
+        [WARNING] Set self.vial_pump_to_capper(to_home=False) when the next instruction is self.vial_capper_to_ika() otherwise the robot will hit the windows lol
+        and Set self.vial_pump_to_capper(to_home=True) when the next instruction is self.vial_capper_to_rack(rack_number=x) otherwise the robot will crash against the stirrer bar dispenser.
         '''
+   
         self.linear_motion([0.021236, -0.465330, 0.394236, -1.571787, 0.0, 0.0])
         self.robot.gripper.clamp()
         self.linear_motion([0.021236, -0.465330, 0.434236, -1.571787, 0.0, 0.0])
         self.robot.move_robot_j([-1.7136670180538245, -0.5689924604683757, 0.10537462299434762, -2.2986901622571443, 0.05726123642330354, 1.7045236183332284, 0.7697684820666909])
         self.robot.move_robot_j([-1.5371494567770707, -0.8286127007634791, 0.32445757481586696, -2.725710542377673, 0.2266123803324169, 1.8949780377811856, 0.9430858572489685])
         self.robot.move_robot_j([-1.557104405286019, -0.13233281780195513, 0.436899661101793, -2.4847547997943162, 0.03855509165591663, 2.3825743986235723, 1.1308030216072997])
-        #self.robot.move_robot_j([])
-        #self.robot.move_robot_j([])
-        #self.robot.move_robot_j([])
-        #self.robot.move_robot_j([-1.7434511746189032, -0.30624892114940766, 0.19484101154929712, -2.118301702708177, 0.06236463957693841, 1.8054099711842007, 0.7798532573547629])
-        #self.robot.move_robot_j([-1.6909784942091555, -0.2595396553926301, 0.43057283601844515, -2.061603377961276, 0.0694774820274777, 1.8100709510339699, 1.072042746132835])
-        #self.robot.move_robot_j([-1.6604464185614336, -0.1482172403888285, 0.4934075346874524, -2.3698480366489343, 0.06369039563669099, 2.2450472729470996, 1.179624890639691])
-        #self.robot.move_robot_j([-1.6474544434128433, 0.0955002395594329, 0.4768271105163976, -2.419614062192014, -0.08921113154951907, 2.4903134943134324, 1.2940314740996903])
         self.robot.move_robot_j([-1.6309107643429097, 0.2406991912000892, 0.44632846840267143, -2.304063950277352, -0.157368533031808, 2.5017716337309945, 1.3200139085605669])
-        #self.robot.move_robot_j([-1.6362446678061235, 0.2812291292474981, 0.439157401243395, -2.288910242115921, -0.25358857851889394, 2.520420757240719, 1.422063902752844])
         self.robot.move_robot_j([-1.5684631792026085, 0.34770166642714384, 0.42795830030774223, -2.1893241288378986, -0.20302263963551162, 2.5031534219847784, 1.9735260637574934])
         self.robot.move_robot_j([-1.5667437001445836, 0.33464824626536266, 0.39512410021246525, -2.2757827378657827, -0.24780863948891418, 2.599961003568437, 1.7159009337599078])
         self.robot.open_gripper()
@@ -666,42 +662,31 @@ class RobInHood():
     
     def vial_capper_to_pump(self):
         '''
-        
+        [WARNING] This moves the robot from home to the capper 
+        [WARNING] Set self.vial_pump_to_capper(to_home=True) when the next instruction is self.vial_capper_to_pump() otherwise the robot will crash against the stirrer bar dispenser.
         '''
-        ## moving from home to the capper TODO
-        #self.robot.move_robot_j([1.4590764963210017, -0.3678046862366173, -0.2696941103265997, -2.7311696465102444, -0.1572924031651551, 2.347920595116085, 0.47549712705500874])
-        #self.robot.move_robot_j([1.5492889621634232, -0.5542586173091019, -0.20297696281315983, -1.420489975134414, -0.06660811346107058, 0.7777394136852687, 0.733804698007802])
         self.robot.move_robot_j([-1.759874905553229, -0.6764247191579719, 0.2556986531929781, -1.5075261749803028, 0.07029177997968157, 0.8591582140392726, 0.7754334529414771])
         self.robot.move_robot_j([-1.7351949474435657, -1.180955665220294, 0.14509397850213226, -2.571729930543063, 0.06623638577273916, 1.3931682261890832, 0.7017415762121477])
         self.robot.move_robot_j([-1.5880930238192676, -0.5781302808293178, 0.37144537852108234, -2.345866105398888, 0.1367536832925524, 1.7822089331414963, 1.1019700488167175])
         self.robot.move_robot_j([-1.589136447900504, -0.08009124733690691, 0.45393646842732716, -2.2618028237192256, 0.04403724707212665, 2.194333258948699, 1.271420738713609])
         self.robot.move_robot_j([-1.588050496302153, 0.23802719115331047, 0.4130570925273032, -2.2655216583118105, -0.28090555198589, 2.4344173424508835, 1.4987858605558673])
-        #self.robot.move_robot_j([-1.6059555230467388, 0.29961175878591256, 0.40966219290934097, -2.2882557112375896, -0.28129480303982085, 2.5347412309148454, 1.4626395472064615])
-        #input("3")
         self.robot.move_robot_j([-1.5684631792026085, 0.34770166642714384, 0.42795830030774223, -2.1893241288378986, -0.20302263963551162, 2.5031534219847784, 1.9735260637574934])
         self.robot.move_robot_j([-1.5667437001445836, 0.33464824626536266, 0.39512410021246525, -2.2757827378657827, -0.24780863948891418, 2.599961003568437, 1.7159009337599078])
         self.robot.gripper.clamp()
         self.robot.move_robot_j([-1.5667437001445836, 0.33464824626536266, 0.39512410021246525, -2.2757827378657827, -0.24780863948891418, 2.599961003568437, 1.7159009337599078])
         self.robot.move_robot_j([-1.5684631792026085, 0.34770166642714384, 0.42795830030774223, -2.1893241288378986, -0.20302263963551162, 2.5031534219847784, 1.9735260637574934])
-        #self.robot.move_robot_j([-1.6403582514545372, 0.30725608892031353, 0.43641001606682794, -2.2875380253274535, -0.25359014151131926, 2.5353142922189496, 1.4220420811714016])
-        #self.robot.move_robot_j([-1.6362446678061235, 0.2812291292474981, 0.439157401243395, -2.288910242115921, -0.25358857851889394, 2.520420757240719, 1.422063902752844])
         self.robot.move_robot_j([-1.6385354666077911, 0.2752530936525579, 0.4484024262835129, -2.290046701732434, -0.159073760220551, 2.5323927586343555, 1.3208766644728673])
         self.robot.move_robot_j([-1.8042963885452152, -0.8104631285918386, 0.7506233098622437, -2.6818241853663936, 0.45941034520506363, 2.00530636400654, 0.9124445720584017])
         self.robot.move_robot_j([-1.8673497444591318, -0.8604081446481199, 0.23389602297525025, -2.4771717399926976, 0.17391716161039142, 1.5993189661767746, 0.7278961102341611])
         self.robot.move_robot_j([-1.8714251921637015, -0.3732063998688628, 0.2661084838038997, -2.1345591327265683, 0.13079034563347144, 1.7676654745207891, 0.735445656750812])
-        #self.robot.move_robot_j([-1.6474544434128433, 0.0955002395594329, 0.4768271105163976, -2.419614062192014, -0.08921113154951907, 2.4903134943134324, 1.2940314740996903])
-        #self.robot.move_robot_j([-1.6604464185614336, -0.1482172403888285, 0.4934075346874524, -2.3698480366489343, 0.06369039563669099, 2.2450472729470996, 1.179624890639691])
-        #self.robot.move_robot_j([-1.6909784942091555, -0.2595396553926301, 0.43057283601844515, -2.061603377961276, 0.0694774820274777, 1.8100709510339699, 1.072042746132835])
-        #input()
         self.robot.move_robot_j([-1.7434511746189032, -0.30624892114940766, 0.19484101154929712, -2.118301702708177, 0.06236463957693841, 1.8054099711842007, 0.7798532573547629])
-        #input()
         self.linear_motion([0.021236, -0.465330, 0.434236, -1.571787, 0.0, 0.0])
         self.linear_motion([0.021236, -0.465330, 0.394236, -1.571787, 0.0, 0.0])
         self.robot.open_gripper_set_width(0.03)
-        #self.robot.move_robot_j([-1.7018724064408683, -0.6934047432546074, 0.2276472941156037, -1.554785427316593, 0.054903464623532364, 0.8587326710877167, 0.7673473637652249])
     def vial_capper_to_rack(self, rack_number=1):
         '''
-        
+        [WARNING] This moves the robot from home to the capper 
+        [WARNING] Set self.vial_pump_to_capper(to_home=True) when the next instruction is self.vial_capper_to_rack() otherwise the robot will crash against the stirrer bar dispenser.
         '''
         self.vial_capper_to_pump()
         self.vial_pump_to_rack(vial_number=rack_number)
@@ -866,7 +851,7 @@ class RobInHood():
         try:
             self.vial_rack_to_pump(vial_number=vial_number)
             self.vial_pump_to_capper(to_home=False) #TODO get rid of this step
-            self.vial_capper_to_ika(ika_slot=vial_number)
+            self.vial_capper_to_ika(ika_slot=ika_slot_number)
 
             return
         except:
@@ -885,14 +870,14 @@ class RobInHood():
         self.vial_pump_to_quantos()
         return
     
-    def vial_ika_to_rack(self, ika_slot=1):
+    def vial_ika_to_rack(self, ika_slot, vial_number):
         """
         Moves a vial from the ika station to the rack.
         :param vial_number: an integer which possible values go from 1 to 22 
         :param ika_slot_number: an integer which possible values go from 1 to 12
         """
         self.vial_ika_to_pump(ika_slot=ika_slot)
-        self.vial_pump_to_rack(vial_number=ika_slot)
+        self.vial_pump_to_rack(vial_number=vial_number)
         return
     
     def vial_ika_to_quantos(self, ika_slot_number=1):
@@ -912,9 +897,6 @@ class RobInHood():
         :param from_home: bool when set to True, the robot executes this method from its home position. When is set to False, the robot executes its movements from a position close to the pump.
         """
         try:
-             
-            ##start
-            #self.robot.gripper.clamp()
             self.robot.move_robot_j([-1.7496210484086416, -0.27930905445416765, 0.19761741688988496, -2.171783759620725, 0.06241802596383625, 1.8665404551294116, 0.7710181514596273])
             self.robot.gripper.clamp()
             self.robot.move_robot_j([-1.750921373616417, -0.28819621214300506, 0.19862928508042696, -2.1684026530545992, 0.06158574515249994, 1.8673437302377487, 0.7740015745337558])
@@ -1172,12 +1154,10 @@ class RobInHood():
                 self.linear_motion([0.148, 0.344, 0.14, math.pi/2, 0.0, 0.0])
             #self.linear_motion([0.148, 0.344, 0.22, math.pi/2, 0.0, 0.0]) #TODO change
             self.robot.move_robot_j([1.417212652725086, -0.3701414478774185, -0.2697282641770565, -2.7568747279183903, -0.14130196021942054, 2.3940143196847705, 0.48386919909351966])
-            #input('aqui')
             ####
             self.robot.move_robot_j([1.4590764963210017, -0.3678046862366173, -0.2696941103265997, -2.7311696465102444, -0.1572924031651551, 2.347920595116085, 0.47549712705500874])
             self.robot.move_robot_j([1.5492889621634232, -0.5542586173091019, -0.20297696281315983, -1.420489975134414, -0.06660811346107058, 0.7777394136852687, 0.733804698007802])
             self.robot.move_robot_j([-1.759874905553229, -0.6764247191579719, 0.2556986531929781, -1.5075261749803028, 0.07029177997968157, 0.8591582140392726, 0.7754334529414771])
-
             self.robot.move_robot_j([-1.7125169298272385, -0.9589622717991378, 0.22067854790161406, -2.60667933711671, 0.12227936733431286, 1.6349339764383102, 0.8318518518476216])
             self.robot.move_robot_j([-1.7459924050548619, -0.6597527398045244, 0.1841714407644774, -2.3162459762974787, 0.07382472326404896, 1.658117745740659, 0.8202390908916841])
             self.robot.move_robot_j([-1.749480187366384, -0.29367109431908056, 0.19448403653483382, -2.1096611268365324, 0.06114327257563501, 1.7995932398619674, 0.7559862168803811])
@@ -1241,7 +1221,7 @@ class RobInHood():
             return
         except:
             self._logger.error(f'Robot not available, terminating program...')
-            self.camera.stop_streaming()
+            #self.camera.stop_streaming()
             exit()
 
 
@@ -1344,17 +1324,21 @@ class RobInHood():
             self.pump.is_connected()
             self._logger.info("Pump connected.")
             time.sleep(0.5)
+            self.pump.is_idle()
+            self.pump.check_errors()
             self.pump.initialize_device(input_port=self.dispense_dict["Waste"],output_port=self.dispense_dict["Waste"])
             self._logger.info(f" Pump, {self.pump.device_name} initialised.")
             time.sleep(0.5)
             self._logger.info("Checking for pump errors")
             self.pump.check_errors() #logger in pump code will respond.
+            _tecan_error_flag = True
     
             #TODO adding microstepping option
         except Exception as e:
             self._logger.error("Pump not connected.")
             self._logger.error(e)
-            return False
+            
+            _tecan_error_flag = False
 
         self._logger.info("Connecting Dispense Pump 2..") 
         try:
@@ -1363,22 +1347,23 @@ class RobInHood():
             self.pump_2.is_connected()
             self._logger.info("Dispense Pump 2 connected.")
             time.sleep(0.5)
-            waste_port = "I" + str(self.dispense_dict["Waste_2"]-12)
+            waste_port = str(self.dispense_dict["Waste_2"]-12)
             self.pump_2.initialize_device(input_port=waste_port,output_port=(self.dispense_dict["Waste_2"]-12))
             self._logger.info(f" Pump, {self.pump_2.device_name} initialised.")
     
             time.sleep(0.5)
             self._logger.info("Checking for pump errors")
             self.pump_2.check_errors() #logger in pump code will respond.
+            _tricont_error_flag = True
     
             #TODO adding microstepping option
             
         except Exception as e:
             self._logger.error("Dispense Pump 2 not connected.")
             self._logger.error(e)
-            return False
+            _tricont_error_flag = False
         
-        return True, True
+        return _tecan_error_flag, _tricont_error_flag
 
 
     def pump_prime_reagent_tubing(self, chemical:str, prime_volume:float= 6000):
@@ -1401,6 +1386,7 @@ class RobInHood():
             self._logger.info(f'Pump priming reagent tubing with {chemical} from port {self.dispense_dict[chemical]} into waste on port: {self.dispense_dict["Waste_2"]}')
             self.pump_2.dispense(prime_volume, source_port = chemical_port, destination_port = waste_port)
             self.pump_2.is_idle()
+        
 
 
     def pump_expel_reagent_tubing(self, chemical:str, expel_volume:float = 6000):
@@ -1472,27 +1458,27 @@ class RobInHood():
                 self._logger.info(f"Emptying 2 ml volume from dispense line port {self.dispense_dict['Dispense_2']} into waste on port '{self.dispense_dict['Waste_2']}")    
                 self.pump_2.dispense(2000, source_port=dispense_port, destination_port=waste_port)
            
-            cycle = 0 
-            while cycle < cycle_number:
-                self._logger.info(f"Starting {cycle+1} backward washing cycle")
+                cycle = 0 
+                while cycle < cycle_number:
+                    self._logger.info(f"Starting {cycle+1} backward washing cycle")
 
-                self._logger.info(f"Dispensing 1 mL {chemical} from port: {self.dispense_dict[chemical]} - overspill into waste vial")
-                self.pump_2.dispense(volume = 1000, source_port= chemical_port, destination_port = dispense_port)
+                    self._logger.info(f"Dispensing 1 mL {chemical} from port: {self.dispense_dict[chemical]} - overspill into waste vial")
+                    self.pump_2.dispense(volume = 1000, source_port= chemical_port, destination_port = dispense_port)
 
-                self._logger.info(f"Aspirating 2 mL volume from dispense line (port: {self.dispense_dict['Acid_Dispense']}) to waste (port: {self.dispense_dict['Acid_Waste']})")
-                self.pump_2.dispense(volume =2000, source_port=dispense_port, destination_port=waste_port)
+                    self._logger.info(f"Aspirating 2 mL volume from dispense line (port: {dispense_port}) to waste (port: {waste_port})")
+                    self.pump_2.dispense(volume =2000, source_port=dispense_port, destination_port=waste_port)
                 
-                cycle = cycle + 1
+                    cycle = cycle + 1
 
-            self._logger.info(f"Priming the dispense line (port: {self.dispense_dict['Dispense_2']}) with {chemical} port {self.dispense_dict[chemical]}")
-            self.pump_2.dispense(volume = 1000, source_port= chemical_port, destination_port= dispense_port)
+                self._logger.info(f"Priming the dispense line (port: {self.dispense_dict['Dispense_2']}) with {chemical} port {self.dispense_dict[chemical]}")
+                self.pump_2.dispense(volume = 1000, source_port= chemical_port, destination_port= dispense_port)
 
-            self._pump_2_primed_solvent = chemical #update primed solvent
-            self.pump_2.is_idle()
+                self._pump_2_primed_solvent = chemical #update primed solvent
+                self.pump_2.is_idle()
 
-        self.load_running_variables()
+        self.save_running_variables()
 
-
+    
     def dispense_volume(self, vol:float, chemical:str, speed:int=None):
         """
         Volume dispensing of volume in uL from port specified to Dispense port specified in workflow config (1)
@@ -1532,6 +1518,9 @@ class RobInHood():
             self.pump_2.set_predefined_speed(speed)
 
             self._logger.info(f"Dispensing {vol} uL of {chemical} from port {self.dispense_dict[chemical]} to dispense port ({self.dispense_dict['Dispense_2']})")
+          
+
+        
             self.pump_2.dispense(vol, source_port = chemical_port, destination_port = dispense_port)
             self.pump_2.is_idle()
 
@@ -1652,7 +1641,9 @@ class RobInHood():
         weightL mass in grams
         
         """
-        path = file_path+file_name
+        path = str(file_path)+str(file_name)
+        path = f"{file_path}/{file_name}.txt"
+
         if os.path.exists(path):
             self._logger.debug("Results file exists - writing to it")
             f = open(path, "a+") 
@@ -1744,7 +1735,7 @@ class RobInHood():
         if not (front['outcomes'][0]=='Open position' and side['outcomes'][0] == True):
             self._logger.error("[ERROR] The quantos front door is closed, this may lead to collitions.")
             self._logger.error("[ERROR] Terminating program.")
-            self.camera.stop_streaming()
+            #self.camera.stop_streaming()
             exit()
         else:
             self._logger.info("Door is open - check is passed")
@@ -1832,16 +1823,9 @@ class RobInHood():
         self.robot.move_robot_j([1.4025843011956465, -0.7236015141422236, -0.20296927823843228, -2.3376190340811744, -0.07817199697564226, 1.5571044008783577, 0.4598264976516365])
         self.robot.move_robot_j([1.4551312539545598, -0.4365661676557441, -0.21932228113610006, -1.3286644837396187, 0.024738479376876267, 0.8042131334707229, 0.39049909235785407])
         self.robot.move_robot_j([-0.050447479366976446, -0.47775928589335653, 0.01790303542896321, -1.2537099689851727, 0.02443178229839522, 0.719573510593838, 0.8102711208835244]) 
-        #self.robot.move_robot_j([1.6719688030542637, -0.8834351108366983, -0.26671000717412824, -2.2992954718941134, -0.21853025324254666, 1.4411707397379108, 1.4808894478894459]) 
-        #self.robot.move_robot_j() 
 
     def place_pouring_vial(self):
         self.robot.open_gripper()
-        #self.robot.move_robot_j([-0.05020420201233077, -0.4773133730470087, 0.01744419895303219, -1.2543397719901905, 0.02371481578714317, 0.7202882735994127, 0.8095652515489441])
-        #self.robot.move_robot_j([-1.6873949912723742, -0.6481646969415631, 0.17068669062539152, -1.5021913855719906, -0.017016506136498518, 0.8197445568508572, 0.9085084088042592])
-        #self.robot.move_robot_j([-1.6641150814357553, -0.9656199755166707, 0.1150808939664439, -2.631869816296348, 0.07034483932520205, 1.6645764294422867, 0.7613252695575357])
-        #self.robot.move_robot_j([-1.6667833183522565, -0.41091312391725665, 0.13329024939710454, -2.307009343369095, 0.06706399340099758, 1.895795737698075, 0.8152373406402784])
-        #self.linear_motion([0.022258, -0.427369, 0.398940, -1.595905, 0.0, 0.0])
         self.linear_motion([0.022258, -0.467369, 0.398940, -1.595905, 0.0, 0.0])
         self.robot.gripper.clamp()
         self.linear_motion([0.022258, -0.467369, 0.418940, -1.595905, 0.0, 0.0])
@@ -1948,6 +1932,7 @@ class RobInHood():
         self.vial_pump_to_rack(vial_number=vial_number)
 
     def vial_decap(self,vial_number):
+        """Moves the vial from the rack to the decapper and then from the decapper to the liquid handling station"""
         self.vial_rack_to_pump(vial_number=vial_number)
         self.linear_motion([0.022258, -0.467369, 0.398940, -1.595905, 0.0, 0.0])
         self.robot.gripper.clamp()
@@ -1969,7 +1954,6 @@ class RobInHood():
         self.linear_motion([-0.092258, -0.397369, 0.144940, -1.595905, 0.0, 0.0])
         self.linear_motion([-0.092258, -0.407369, 0.144940, -1.595905, 0.0, 0.0])
         self.robot.gripper.clamp()
-        #self.robot.open_gripper_set_width(0.025)
         self.linear_motion([-0.092258, -0.407369, 0.174940, -1.595905, 0.0, 0.0])
         self.linear_motion([-0.092258, -0.337369, 0.174940, -1.595905, 0.0, 0.0])
         self.capper.left()
@@ -1992,18 +1976,21 @@ class RobInHood():
         self.robot.open_gripper_set_width(0.03)
         
 
-    def filter_sample_collect_filtrate(self,sample_vial_number:int,sample_vial_volume:int, filtrate_vial_number:int, cleaning_vial_number:int,
-                                        cleaning_solvent:str, cleaning_solvent_volume:float, filter_time: Union[int, None] = None):
 
+    def filtration_prep(self, cleaning_vial_number:int, cleaning_solvent: str, cleaning_solvent_volume: int, filter_time: Union[int, None] = None):
+        """Prepares the filtration system by placing the filter cartridge and pouring a cleaning vial over it to wet the filter and wash the funnel"""
+
+        
         self._logger.info("Washing the filter and funnel prior to filtration")
         
         self._logger.info(f"Priming the dispense station with {cleaning_solvent} solvent")
         self.hold_position()
         self.pump_prime_dispense_tubing(chemical=cleaning_solvent)
-        self.infuse_position()
+        
 
         self.robot.open_gripper_set_width(0.03)
         self.vial_rack_to_pump(vial_number=cleaning_vial_number)
+        self.infuse_position()
         self.dispense_volume(vol = cleaning_solvent_volume, chemical=cleaning_solvent)
         self.hold_position()
         self.vial_pump_to_rack(vial_number=cleaning_vial_number)
@@ -2015,7 +2002,87 @@ class RobInHood():
         self.pick_up_filtering_catridge()
         
         self.place_pouring_cleaning_vial(vial_number=cleaning_vial_number)
-        self.filt_machine.filter_setup(volume_filtered=cleaning_solvent_volume, filter_time=filter_time)
+        self.filt_machine.filter_setup(volume_filtered=cleaning_solvent_volume, wait_time=filter_time)
+        self.remove_pouring_vial(vial_number=cleaning_vial_number)
+
+
+    def just_filter_sample_collect_filtrate(self, sample_vial_number:int, sample_vial_volume:float, filtrate_vial_number:int, filter_time:Union[int, None]=None):
+        """Takes a decapped vial at sample_vial number on the rack and places it on the filtration machine. ALso takes a decapped filtrate vial from the rack and places
+         it on the filtration machine """
+        
+        self.quantos.close_front_door()
+        self._logger.info(f"Placing sample vial {sample_vial_number} on the filter machine")
+        self.vial_rack_to_pump(vial_number=sample_vial_number)
+        self.place_pouring_vial()
+
+        self._logger.info("Placing vial for the filtrate")
+        self.place_filtered_vial(vial_number=filtrate_vial_number)
+
+
+        self._logger.info(f"Filtering sample vial {sample_vial_number}")
+        self.filt_machine.filter_vial( volume_filtered=sample_vial_volume, wait_time=filter_time, filtrate = True)
+
+        self._logger.info(f"Removing filtered sample vial {sample_vial_number} from the filter machine")
+        self.remove_filtered_vial(vial_number=filtrate_vial_number)
+        self.remove_pouring_vial(vial_number=sample_vial_number)
+
+    def just_filter_sample_disgard_filtrate(self, sample_vial_number:int, sample_vial_volume:float, filter_time:Union[int, None]=None):
+        """Takes a decapped vial at sample_vial number on the rack and places it on the filtration machine.  The filtrate is disgarded to waste.
+        
+        """
+        self._logger.info(f"Placing sample vial {sample_vial_number} on the filter machine")
+        self.vial_rack_to_pump(vial_number=sample_vial_number)
+        self.place_pouring_vial()
+
+        self._logger.info(f"Filtering sample vial {sample_vial_number}")
+        self.filt_machine.filter_vial( volume_filtered=sample_vial_volume, wait_time=filter_time, filtrate = False)
+
+        self._logger.info(f"Removing filtered sample vial {sample_vial_number} from the filter machine")
+        self.remove_pouring_vial(vial_number=sample_vial_number)
+
+    def filter_cleaning_packdown(self, cleaning_solvent:str, cleaning_solvent_volume:float):
+        """Cleans the filtration machine after filtering a vial"""
+        self.filt_machine.clean(volume_filtered=cleaning_solvent_volume, wash_solvent= cleaning_solvent)
+
+        self.quantos.open_front_door()
+        self._logger.warning("Please replace the filter cartridge")
+
+        while True:
+            self._logger.warning("Please replace the filter cartridge(y/n)?")
+            yn = input()
+            if yn =='y' or yn =='Y':
+                self._logger.info("Resuming workflow.")
+                break
+            elif yn == 'n' or yn == 'N':
+                self._logger.warning("Please replace the cartridge.")
+        
+
+
+    def filter_sample_collect_filtrate(self,sample_vial_number:int,sample_vial_volume:int, filtrate_vial_number:int, cleaning_vial_number:int,
+                                        cleaning_solvent:str, cleaning_solvent_volume:float, filter_time: Union[int, None] = None):
+
+        self._logger.info("Washing the filter and funnel prior to filtration")
+        
+        self._logger.info(f"Priming the dispense station with {cleaning_solvent} solvent")
+        self.hold_position()
+        self.pump_prime_dispense_tubing(chemical=cleaning_solvent)
+        
+
+        self.robot.open_gripper_set_width(0.03)
+        self.vial_rack_to_pump(vial_number=cleaning_vial_number)
+        self.infuse_position()
+        self.dispense_volume(vol = cleaning_solvent_volume, chemical=cleaning_solvent)
+        self.hold_position()
+        self.vial_pump_to_rack(vial_number=cleaning_vial_number)
+
+        self._logger.info("Placing filter cartridge")
+
+        self.quantos.close_front_door()
+        self.robot.open_gripper()
+        self.pick_up_filtering_catridge()
+        
+        self.place_pouring_cleaning_vial(vial_number=cleaning_vial_number)
+        self.filt_machine.filter_setup(volume_filtered=cleaning_solvent_volume, wait_time=filter_time)
         self.remove_pouring_vial(vial_number=cleaning_vial_number)
 
         self._logger.info("Filtering sample vial")
@@ -2028,7 +2095,7 @@ class RobInHood():
         self.place_filtered_vial(vial_number=filtrate_vial_number)
 
         self._logger.info(f"Filtering sample vial {sample_vial_number}")
-        self.filt_machine.filter_vial( volume_filtered=sample_vial_volume, filter_time=filter_time, filtrate = True)
+        self.filt_machine.filter_vial( volume_filtered=sample_vial_volume, wait_time=filter_time, filtrate = True)
 
         self._logger.info(f"Removing filtered sample vial {sample_vial_number} from the filter machine")
         self.remove_filtered_vial(vial_number=filtrate_vial_number)
@@ -2050,7 +2117,7 @@ class RobInHood():
         
         return 
 
-    def filter_sample_disgard_filtrate(self,sample_vial_number:int,sample_vial_volume:int,  cleaning_vial_number:int,
+    def filter_sample_disgard_filtrate(self,sample_vial_number:int, sample_vial_volume:int,  cleaning_vial_number:int,
                                         cleaning_solvent:str, cleaning_solvent_volume:float, filter_time: Union[int, None] = None):
 
         self._logger.info("Washing the filter and funnel prior to filtration")
@@ -2058,10 +2125,13 @@ class RobInHood():
         self._logger.info(f"Priming the dispense station with {cleaning_solvent} solvent")
         self.hold_position()
         self.pump_prime_dispense_tubing(chemical=cleaning_solvent)
-        self.infuse_position()
+
 
         self.robot.open_gripper_set_width(0.03)
         self.vial_rack_to_pump(vial_number=cleaning_vial_number)
+        self.infuse_position()
+
+
         self.dispense_volume(vol = cleaning_solvent_volume, chemical=cleaning_solvent)
         self.hold_position()
         self.vial_pump_to_rack(vial_number=cleaning_vial_number)
@@ -2073,19 +2143,20 @@ class RobInHood():
         self.pick_up_filtering_catridge()
         
         self.place_pouring_cleaning_vial(vial_number=cleaning_vial_number)
-        self.filt_machine.filter_setup(volume_filtered=cleaning_solvent_volume, filter_time=filter_time)
+        self.filt_machine.filter_setup(volume_filtered=cleaning_solvent_volume, wait_time=filter_time)
         self.remove_pouring_vial(vial_number=cleaning_vial_number)
 
         self._logger.info("Filtering sample vial")
 
         self._logger.info(f"Placing sample vial {sample_vial_number} on the filter machine")
         self.vial_decap(sample_vial_number)
+        #TODO add logic here
         self.place_pouring_vial()
 
 
         self._logger.info(f"Filtering sample vial {sample_vial_number}")
 
-        self.filt_machine.filter_vial( volume_filtered=sample_vial_volume, filter_time=filter_time, filtrate = False)
+        self.filt_machine.filter_vial( volume_filtered=sample_vial_volume, wait_time=filter_time, filtrate = False)
 
 
         self._logger.info(f"Removing filtered sample vial {sample_vial_number} from the filter machine")
@@ -2107,8 +2178,6 @@ class RobInHood():
                 self._logger.warning("Please replace the cartridge.")
         
         return 
-
-
 
     #############################
     # json method #
@@ -2137,7 +2206,7 @@ class RobInHood():
             }
     
 
-    def save__running_variables(self, json_file_path: str) -> None: 
+    def save_running_variables(self, json_file_path: str = "running_variables.json") -> None: 
         """Save a dictionary to a JSON file.
 
         Args:
@@ -2153,5 +2222,5 @@ class RobInHood():
 
         }
 
-        with open(json_file_path, 'w') as f:
+        with open(json_file_path, 'w+') as f:
             json.dump(data, f, indent=4)

@@ -1,4 +1,4 @@
-from config.configuration import *
+from ..config.configuration import *
 import cv2
 import threading
 import time
