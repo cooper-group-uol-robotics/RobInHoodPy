@@ -1,18 +1,20 @@
 # RobInHood
 
 This package integrates laboratory equipment, including an IKA station, a Quantos Mettler, an xCalibur pump, and a Panda robot, all placed in a fume hood.
-
-<img src="docs/imgs/robinhood.png" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/robinhood.png" alt="alt text" width="60%"></p>
 
 ## Launching real-time kernel
 
 In the boot menu, select  Advanced options for Ubuntu.
 
-<img src="docs/imgs/kernel_1.png" alt="alt text" width="30%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/kernel_1.png" alt="alt text" width="60%"></p>
 
 In the new menu, select 5.9.1-rt20. This is necessary for the computer to control the Panda robot.
 
-<img src="docs/imgs/kernel_2.png" alt="alt text" width="30%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/kernel_2.png" alt="alt text" width="60%"></p>
 
 To verify that the correct kernel was selected,  type: 
 ```  
@@ -23,24 +25,28 @@ uname -r
 ## Panda robot
 
 Turn on the switch of the station.
-
-<img src="docs/imgs/panda_00.png" alt="alt text" width="30%">
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/panda_00.png" alt="alt text" width="60%"></p>
+  
 Open a browser, and go to "HTTP://172.16.0.2" in a new tab.
 
 Click the unlock button and then click Open.
 
-<img src="docs/imgs/panda_1.png" alt="alt text" width="30%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/panda_1.png" alt="alt text" width="60%"></p>
 
-<img src="docs/imgs/panda_2.png" alt="alt text" width="30%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/panda_2.png" alt="alt text" width="60%"></p>
 
 Once the robot breaks have been unlocked, the robot's light will change to purple if the emergency button is active and to blue if the emergency button is unpressed.  
 
-<img src="docs/imgs/panda_3.png" alt="alt text" width="30%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/panda_3.png" alt="alt text" width="60%"></p>
 
 Emergency stop button:
 
-<img src="docs/imgs/panda_01.png" alt="alt text" width="30%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/panda_01.png" alt="alt text" width="60%"></p>
 
 To turn off the robot, it is necessary first to click the lock button. 
 Then, click the shutdown button and click Yes. Finally, wait until a pop-up window indicates that it is safe to turn off the system.
@@ -62,13 +68,15 @@ It is necessary to activate a conda environment. To do so, type:
 
 Open main.py
 
-<img src="docs/imgs/working_space.png" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/working_space.png" alt="alt text" width="60%"></p>
 
 ## Manipulating vials
 
 The current setup supports the storage of up to 22 vials. The robot can take the vial to the vial holder of the xCalibur pump, the plate of the IKA station, the Quantos station, and the other way around for all the cases.
 
-<img src="docs/imgs/rack.png" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/rack.png" alt="alt text" width="60%"></p>
 
 These are some of the instructions that can be executed:
 
@@ -82,7 +90,8 @@ station.vial_ika_to_rack(ika_slot_number=6, vial_number=22)
 
 Currently, the setup supports up to three cartridges. 
 
-<img src="docs/imgs/cartridges.png" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/cartridges.png" alt="alt text" width="60%"></p>
 
 These are some of the instructions that can be executed:
 
@@ -102,7 +111,8 @@ station.pick_and_place_cartridge_in_holder(cartridge_number= 1)
 
 The IKA station place can contain up to 12 vials.
 
-<img src="docs/imgs/ika.png" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/ika.png" alt="alt text" width="60%"></p>
 
 These are some of the instructions that can be executed: 
 
@@ -117,11 +127,13 @@ station.ika.stop_stirring()
 
 The inputs and outputs of the xCalibur pump are as follows:
 
-<img src="docs/imgs/pump_1.png" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/pump_1.png" alt="alt text" width="60%"></p>
 
 Before launching a program, make sure that the holder is in the following position: 
 
-<img src="docs/imgs/pump_2.png" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/pump_2.png" alt="alt text" width="60%"></p>
 
 
 These are some of the instructions that can be executed: 
@@ -136,11 +148,13 @@ station.pull_pump()
 
 The robot can take pictures of the racks, which are enumerated from 1 to 3 as follows:
 
-<img src="docs/imgs/rack_numbering.png" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/numbering.png" alt="alt text" width="60%"></p>
 
 Photo taken with the camera of the robot:
 
-<img src="imgs/rack_3_998316.jpg" alt="alt text" width="60%">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/rack_3_998316.png" alt="alt text" width="60%"></p>
 
 These are some of the instructions that can be executed:
 
