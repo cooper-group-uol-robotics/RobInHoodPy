@@ -1,4 +1,5 @@
 data/*
+workflows/
 workflows/*
 build
 __pycache__
