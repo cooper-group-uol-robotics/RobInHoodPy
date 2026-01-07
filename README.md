@@ -20,7 +20,8 @@ To verify that the correct kernel was selected,  type:
 ```  
 uname -r
 ```
-![alt text](docs/imgs/kernel_3.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/kernel_3.png" alt="alt text" width="60%"></p>
 
 ## Panda robot
 
@@ -143,18 +144,6 @@ station.pump_inyect(input_source="I3",output="I2",quantity=2000,repeat=2)
 station.pump_inyect(input_source="I3",output="I1",quantity=2000,repeat=2)
 station.pull_pump()
 ```
-
-## Saving Pictures of the vials
-
-The robot can take pictures of the racks, which are enumerated from 1 to 3 as follows:
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/numbering.png" alt="alt text" width="60%"></p>
-
-Photo taken with the camera of the robot:
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/rack_3_998316.png" alt="alt text" width="60%"></p>
 
 These are some of the instructions that can be executed:
 
