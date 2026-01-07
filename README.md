@@ -6,15 +6,7 @@ RobInHood is an open-source software framework for running automated chemistry e
 
 The software is written in Python and acts as the central coordinator for all hardware components, including laboratory instruments, robotic motion, and custom-built devices. By providing a flexible and extensible architecture, RobInHood enables complex experimental workflows to be automated, reproduced, and adapted to new chemical processes.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/d83860dc0c4db4c357c87538e46461c3c9a04604/imgs/robinhood.png" alt="alt text" width="100%"></p>
-
-Overview of the RobInHood platform.
-- Left-hand side: liquid reagent reservoirs; a module for dispensing magnetic stir bars; syringe pump assemblies with a dispensing nozzle; and a motorized vial holder positioned above a protective drip tray.
--  Central section: an automated capping and decapping unit; vial storage racks; an imaging and illumination enclosure; the Panda robotic arm; storage for solid-dispensing cartridges used by the Quantos system; filtration cartridge storage; a heating and stirring hotplate; and the Quantos solid dispensing unit.
-- Right-hand side: the filtration station, comprising a receiving funnel and flask, a robotic pouring arm, and a vial holder with an associated dispensing head.
-
-## Key Features
+### Key Features
 
 1. 🧪 Fume-hood–compatible automation
 Designed to operate entirely within a standard laboratory fume hood.
@@ -33,14 +25,55 @@ Modular, readable, and extensible workflow control written entirely in Python.
 
 6. 🔁 Reproducible workflows
 Enables repeatable and automated execution of complex chemical procedures.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/d83860dc0c4db4c357c87538e46461c3c9a04604/imgs/robinhood.png" alt="alt text" width="100%"></p>
+
+### Overview of the RobInHood platform.
+- Left-hand side: liquid reagent reservoirs; a module for dispensing magnetic stir bars; syringe pump assemblies with a dispensing nozzle; and a motorized vial holder positioned above a protective drip tray.
+-  Central section: an automated capping and decapping unit; vial storage racks; an imaging and illumination enclosure; the Panda robotic arm; storage for solid-dispensing cartridges used by the Quantos system; filtration cartridge storage; a heating and stirring hotplate; and the Quantos solid dispensing unit.
+- Right-hand side: the filtration station, comprising a receiving funnel and flask, a robotic pouring arm, and a vial holder with an associated dispensing head.
+
+
 ## Software Architecture 
+
+RobInHood uses a Python-based control stack to coordinate robotic motion, commercial laboratory instruments, and custom hardware modules. Python serves as the central orchestration layer due to its flexibility and strong support for scientific and hardware-control libraries.
+
+Commercial devices (e.g. IKA hotplates, Tecan XCalibur pumps, and the Mettler Toledo Quantos) are integrated via drivers built on the PyLabware framework. Custom electronic, pneumatic, and motorized components are controlled through serial communication with embedded Arduino microcontrollers. The robotic arm is operated using the FrankaX Python library.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/1539644cdfc47cc909d748a841c5aea4363c5222/imgs/software.png" alt="alt text" width="80%"></p>
 
+### Configuration and Workflows
+
+Reagents and system configuration are defined using simple .csv files:
+
+- dispense.csv — liquid dispensing module
+
+- filt.csv — filtration module liquids
+
+- quantos.csv — solid dispensing cartridges
+
+These files store reagent identities, locations, and metadata, and are automatically cross-checked at runtime to prevent setup errors. Active reagent states are cached as JSON files to reduce setup time between runs.
+
+Experimental workflows are defined by combining reusable Python methods provided by the central RobInHood class. Sample-specific parameters (e.g. reagent amounts or vial positions) can be supplied via samples.csv files or directly in workflow scripts. This modular design allows new workflows to be created or modified by updating configuration files rather than rewriting control code.
+
 ## Demo
 
-[![Alt Text](http://img.youtube.com/vi/VVtX8a-V6tc/0.jpg)](https://www.youtube.com/watch?v=VVtX8a-V6tc)
+This demo shows an end-to-end automated mock workflow executed by the RobInHood platform inside a standard laboratory fume hood, aiming to show all the features available in RobInHood.
+
+The system begins with sample preparation, where a solid reagent is dispensed into a vial with repeated weighing for accuracy, followed by automated addition of liquids and a stir bar. The vial is then capped and stirred.
+
+Next, the platform performs automated filtration. The filtration system is conditioned with water, the sample vial is decapped and transferred to a pouring arm, and the contents are poured through a filter into a fresh vial. The filtered sample is capped and stored, and the filtration setup is rinsed for reuse.
+
+Finally, the sample analysis stage places the filtered vial into a lightbox for imaging before returning it to storage.
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=VVtX8a-V6tc">
+    <img src="http://img.youtube.com/vi/VVtX8a-V6tc/0.jpg" alt="RobInHood Demo Video">
+  </a>
+</p>
+
 
 ## Setup
 
@@ -54,6 +87,17 @@ RobInHood has been used for several workflows, including porosity screning, the 
 2. CC3
 3. Phthalimide
 
+## Acknowledgment
+<details>
+  <summary><b>Paper</b></summary>
 
-## Paper
+  Longley et al. .[RobInHood: A Robotic Chemist in a Fume Hood](https://arxiv.org/abs). *arXiv preprint arXiv:xxxx.xxxx*.
+
+  ```bibtex
+  @article{longley2025RobInHood,
+    title={RobInHood: A Robotic Chemist in a Fume Hood},
+    author={Longley et al.},
+    journal={arXiv preprint arXiv:xxxx.xxxx},
+    year={225}
+  }
 
