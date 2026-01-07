@@ -1,10 +1,58 @@
 # RobInHood
 
-This package integrates laboratory equipment, including an IKA station, a Quantos Mettler, an xCalibur pump, and a Panda robot, all placed in a fume hood.
+RobInHood is an open-source software framework for running automated chemistry experiments inside a standard laboratory fume hood. Traditional fume hoods are designed for human chemists, which makes automation in these spaces challenging. RobInHood addresses this by combining a robotic arm with modular hardware stations and a unified Python control layer.
+
+The software is written in Python and acts as the central coordinator for all hardware components, including laboratory instruments, robotic motion, and custom-built devices. By providing a flexible and extensible architecture, RobInHood enables complex experimental workflows to be automated, reproduced, and adapted to new chemical processes.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/robinhood.png" alt="alt text" width="60%"></p>
 
-## Launching real-time kernel
+Overview of the RobInHood platform.
+(A) Left-hand side: liquid reagent reservoirs; a module for dispensing magnetic stir bars; syringe pump assemblies with a dispensing nozzle; and a motorized vial holder positioned above a protective drip tray.
+(B) Central section: an automated capping and decapping unit; vial storage racks; an imaging and illumination enclosure; the Panda robotic arm; storage for solid-dispensing cartridges used by the Quantos system; filtration cartridge storage; a heating and stirring hotplate; and the Quantos solid dispensing unit.
+(C) Right-hand side: the filtration station, comprising a receiving funnel and flask, a robotic pouring arm, and a vial holder with an associated dispensing head.
+
+## Features
+
+1. 🧪 Fume-hood–compatible automation
+Designed to operate entirely within a standard laboratory fume hood.
+
+2. 🤖 Robotic manipulation
+Precise control of a robotic arm for handling vessels, tools, and samples.
+
+3. ⚙️ Integrated laboratory hardware
+Native support for commercial instruments such as pumps, hotplates, and powder dispensers.
+
+4. 🔌 Custom hardware control
+Serial communication with Arduino-based electronic and pneumatic systems.
+
+5. 🧠 Python-based orchestration
+Modular, readable, and extensible workflow control written entirely in Python.
+
+6. 🔁 Reproducible workflows
+Enables repeatable and automated execution of complex chemical procedures.
+## Software Architecture 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/software.png" alt="alt text" width="60%"></p>
+
+## Demo
+
+[![Alt Text](http://img.youtube.com/vi/VVtX8a-V6tc/0.jpg)](https://www.youtube.com/watch?v=VVtX8a-V6tc)
+
+## Intalation
+
+
+
+## Examples
+
+RobInHood has been used for several workflows, including porosity screning, the synthesis of CC3, and Phthalimide, which can be a accesed here: 
+
+1. Posority
+2. CC3
+3. Phthalimide
+
+## Platform Operation Manual
 
 In the boot menu, select  Advanced options for Ubuntu.
 
@@ -67,14 +115,9 @@ It is necessary to activate a conda environment. To do so, type:
 
 ```conda activate robostackenv38```
 
-Open main.py
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/working_space.png" alt="alt text" width="60%"></p>
-
 ## Manipulating vials
 
-The current setup supports the storage of up to 22 vials. The robot can take the vial to the vial holder of the xCalibur pump, the plate of the IKA station, the Quantos station, and the other way around for all the cases.
+The current setup supports the storage of up to 16 vials. The robot can take the vial to the vial holder of the xCalibur pump, the plate of the IKA station, the Quantos station, and the other way around for all the cases.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/rack.png" alt="alt text" width="60%"></p>
@@ -87,7 +130,7 @@ station.vial_rack_to_ika(vial_number=9, ika_slot_number=5)
 station.vial_ika_to_rack(ika_slot_number=6, vial_number=22)
 ```
 
-## Mounting Cartridges in Quantos Mettler
+## Mounting/Unmounting Cartridges in Quantos Mettler
 
 Currently, the setup supports up to three cartridges. 
 
@@ -124,17 +167,7 @@ station.timer.start_timer()
 station.ika.stop_stirring()
 ```
 
-## xCalibur Pump
-
-The inputs and outputs of the xCalibur pump are as follows:
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/pump_1.png" alt="alt text" width="60%"></p>
-
-Before launching a program, make sure that the holder is in the following position: 
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/3d0e05901ff619ef1c97fcd88b28760e17fe576a/imgs/pump_2.png" alt="alt text" width="60%"></p>
+## Liquid dispensing
 
 
 These are some of the instructions that can be executed: 
@@ -145,26 +178,7 @@ station.pump_inyect(input_source="I3",output="I1",quantity=2000,repeat=2)
 station.pull_pump()
 ```
 
-These are some of the instructions that can be executed:
+## Filatrtion setup 
 
-```
-station.camera_to_rack(rack_number=3)
-station.camera_to_rack_photos_on_the_way()
-```
+## Paper
 
-## Running Example 1
-
-This example aims to serve as a tutorial. If running ```python main.py```, the following routine will be executed:
-
- 1. The robot picks cartridge 1 and puts it into quantos.
- 2. The robot picks vial 1 and puts it into quantos.
- 3. The quantos station doses 10 mg of the content in cartridge 1 into the vial.
- 4. The robot moves the vial to the pump dispenser.
- 5. The robot moves the vial to the IKA station.
- 6. The IKA station starts stirring for 1 min 15 s.
- 7. The robot takes the vial from the slot number 6 and places it into the slot number 22, which is in rack 3.
- 8. The robot removes the cartridge from quantos and returns it to cartridge holder 1.
- 9. The robot takes a picture of rack 3 and saves it in ...\\RobInHoodPy\\imgs\\.
-
-
-[![Alt Text](http://img.youtube.com/vi/rQPUJDlCGj4/0.jpg)](https://www.youtube.com/watch?v=rQPUJDlCGj4)
