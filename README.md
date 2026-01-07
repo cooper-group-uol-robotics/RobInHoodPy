@@ -81,11 +81,12 @@ Clone this repo to your PC and run `pip install .` from the repository folder.
 
 ## Examples
 
-RobInHood has been used for several workflows, including porosity screning, the synthesis of CC3, and Phthalimide, which can be a accesed here: 
+RobInHood has been used for several workflows, including porosity screening, the synthesis of CC3, and phthalimide chemistry. The workflow scripts and examples can be accessed in the [RobInHoodWorkflows repository](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows.git):
 
-1. Posority
-2. CC3
-3. Phthalimide
+1. **Porosity Screening** – `Porosity_workflow` folder  
+2. **CC3 Synthesis** – `CC3_workflow` folder  
+3. **Phthalimide Chemistry** – `Epthalimida_workflow` folder
+
 
 ## Acknowledgment
 <details>
