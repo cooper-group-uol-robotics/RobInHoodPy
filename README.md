@@ -30,7 +30,7 @@ Enables repeatable and automated execution of complex chemical procedures.
 
 ### Overview of the RobInHood platform.
 - Left-hand side: liquid reagent reservoirs; a module for dispensing magnetic stir bars; syringe pump assemblies with a dispensing nozzle; and a motorized vial holder positioned above a protective drip tray.
--  Central section: an automated capping and decapping unit; vial storage racks; an imaging and illumination enclosure; the Panda robotic arm; storage for solid-dispensing cartridges used by the Quantos system; filtration cartridge storage; a heating and stirring hotplate; and the Quantos solid dispensing unit.
+-  Central section: [an automated capping and decapping unit](https://link.springer.com/chapter/10.1007/978-3-032-01486-3_35); vial storage racks; an imaging and illumination enclosure; the Panda robotic arm; storage for solid-dispensing cartridges used by the Quantos system; filtration cartridge storage; a heating and stirring hotplate; and the Quantos solid dispensing unit.
 - Right-hand side: the filtration station, comprising a receiving funnel and flask, a robotic pouring arm, and a vial holder with an associated dispensing head.
 
 
