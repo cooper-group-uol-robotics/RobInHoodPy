@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/fb58da044365d0beac8132a96daffff3d9c79980/imgs/logo.png" alt="alt text" width="14%"></p>
+  <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/fb58da044365d0beac8132a96daffff3d9c79980/imgs/logo.png" alt="alt text" width="22%"></p>
 
-# RobInHood
 RobInHood is an open-source software framework for running automated chemistry experiments inside a standard laboratory fume hood. Traditional fume hoods are designed for human chemists, which makes automation in these spaces challenging. RobInHood addresses this by combining a robotic arm with modular hardware stations and a unified Python control layer.
 
 The software is written in Python and acts as the central coordinator for all hardware components, including laboratory instruments, robotic motion, and custom-built devices. By providing a flexible and extensible architecture, RobInHood enables complex experimental workflows to be automated, reproduced, and adapted to new chemical processes.
@@ -39,7 +38,7 @@ Enables repeatable and automated execution of complex chemical procedures.
 
 RobInHood uses a Python-based control stack to coordinate robotic motion, commercial laboratory instruments, and custom hardware modules. Python serves as the central orchestration layer due to its flexibility and strong support for scientific and hardware-control libraries.
 
-Commercial devices (e.g. IKA hotplates, Tecan XCalibur pumps, and the Mettler Toledo Quantos) are integrated via drivers built on the PyLabware framework. Custom electronic, pneumatic, and motorized components are controlled through serial communication with embedded Arduino microcontrollers. The robotic arm is operated using the FrankaX Python library.
+Commercial devices (e.g. IKA hotplates, Tecan XCalibur pumps, and the Mettler Toledo Quantos) are integrated via drivers built on the [pylabware](https://github.com/croningp/pylabware.git)  framework. Custom electronic, pneumatic, and motorized components are controlled through serial communication with embedded Arduino microcontrollers. The robotic arm is operated using the FrankaX Python library.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/1539644cdfc47cc909d748a841c5aea4363c5222/imgs/software.png" alt="alt text" width="80%"></p>
@@ -121,9 +120,9 @@ pip install .
 
 RobInHood has been used for several workflows, including porosity screening, the synthesis of CC3, and phthalimide chemistry. The workflow scripts and examples can be accessed in the [RobInHoodWorkflows repository](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows.git):
 
-1. **Porosity Screening** – `Porosity_workflow` folder  
-2. **CC3 Synthesis** – `CC3_workflow` folder  
-3. **Phthalimide Chemistry** – `Phthalimide_workflow` folder
+1. [**Porosity Screening**](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows/tree/ad86fb82fad053bc43498891f581f58269986caf/Porosity_workflow)  
+2. [**CC3 Synthesis**](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows/tree/ad86fb82fad053bc43498891f581f58269986caf/CC3_synth_workflow)  
+3. [**Phthalimide Chemistry**](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows/tree/ad86fb82fad053bc43498891f581f58269986caf/Phthalimide_workflow) 
 
 
 ## Acknowledgment
