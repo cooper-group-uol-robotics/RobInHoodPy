@@ -77,22 +77,60 @@ Finally, the sample analysis stage places the filtered vial into a lightbox for 
 
 ## Setup
 
-Clone this repo to your PC and run `pip install .` from the repository folder.
+### 1. Create a virtual environment (recommended)
 
+We strongly recommend using a virtual environment to avoid dependency conflicts.
+
+```
+python -m venv venv
+source venv/bin/activate        # On Linux/macOS
+venv\Scripts\activate           # On Windows
+```
+
+### 2. Install the instrument drivers (modified pylabware)
+This project relies on instrument drivers based on the open-source
+[pylabware](https://github.com/croningp/pylabware.git) repository developed by the Cronin Group.
+
+We use a modified internal fork of pylabware that includes additional drivers for:
+
+- Mettler Toledo Quantos
+
+- XCalibur syringe pump
+
+- Tricontinent syringe pump
+
+- IKA hotplate
+
+Due to licensing and authorship constraints, this modified version cannot be publicly distributed.
+***Access to the drivers can be provided upon request.***
+
+Once access is granted, install the modified pylabware locally:
+
+```
+pip install .
+(from within the modified pylabware repository)
+```
+### 3. Install this repository’s dependencies and package
+From the root of this repository, install the required dependencies:
+
+```
+pip install -r requirements.txt
+pip install .
+```
 ## Examples
 
 RobInHood has been used for several workflows, including porosity screening, the synthesis of CC3, and phthalimide chemistry. The workflow scripts and examples can be accessed in the [RobInHoodWorkflows repository](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows.git):
 
 1. **Porosity Screening** – `Porosity_workflow` folder  
 2. **CC3 Synthesis** – `CC3_workflow` folder  
-3. **Phthalimide Chemistry** – `Epthalimida_workflow` folder
+3. **Phthalimide Chemistry** – `Phthalimide_workflow` folder
 
 
 ## Acknowledgment
 <details>
   <summary><b>Paper</b></summary>
 
-  Longley et al. .[RobInHood: A Robotic Chemist in a Fume Hood](https://arxiv.org/abs). *arXiv preprint arXiv:xxxx.xxxx*.
+  Longley et al. [RobInHood: A Robotic Chemist in a Fume Hood](https://arxiv.org/abs). *arXiv preprint arXiv:xxxx.xxxx*.
 
   ```bibtex
   @article{longley2025RobInHood,
