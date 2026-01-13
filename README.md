@@ -1,6 +1,8 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/FranciscoMunguiaGaleano/RobInHoodImgs/fb58da044365d0beac8132a96daffff3d9c79980/imgs/logo.png" alt="alt text" width="22%"></p>
 
+-----
+
 RobInHood is an open-source software framework for running automated chemistry experiments inside a standard laboratory fume hood. Traditional fume hoods are designed for human chemists, which makes automation in these spaces challenging. RobInHood addresses this by combining a robotic arm with modular hardware stations and a unified Python control layer.
 
 The software is written in Python and acts as the central coordinator for all hardware components, including laboratory instruments, robotic motion, and custom-built devices. By providing a flexible and extensible architecture, RobInHood enables complex experimental workflows to be automated, reproduced, and adapted to new chemical processes.
@@ -129,13 +131,19 @@ RobInHood has been used for several workflows, including porosity screening, the
 <details>
   <summary><b>Paper</b></summary>
 
-  Longley et al. [RobInHood: A Robotic Chemist in a Fume Hood](https://arxiv.org/abs). *arXiv preprint arXiv:xxxx.xxxx*.
+  Longley L., Munguia-Galeano F., Han Y., Clowes R., Vijayakrishnan S., Edwards A., Pizzuto G., Fakhruldeen H., and Cooper A.  
+  [**RobInHood: A Robotic Chemist in a Fume Hood**](https://chemrxiv.org/engage/chemrxiv/article-details/695e8cb7fc9dac0f376baaad).  
+  *ChemRxiv preprint*, 2026. https://doi.org/10.26434/chemrxiv-2026-s2619  
+  *(This content is a preprint and has not been peer-reviewed.)*
 
   ```bibtex
-  @article{longley2025RobInHood,
-    title={RobInHood: A Robotic Chemist in a Fume Hood},
-    author={Longley et al.},
-    journal={arXiv preprint arXiv:xxxx.xxxx},
-    year={225}
+  @article{longley2026RobInHood,
+    title   = {RobInHood: A Robotic Chemist in a Fume Hood},
+    author  = {Longley, L. and Munguia-Galeano, F. and Han, Y. and Clowes, R. and Vijayakrishnan, S. and Edwards, A. and Pizzuto, G. and Fakhruldeen, H. and Cooper, A.},
+    journal = {ChemRxiv},
+    year    = {2026},
+    doi     = {10.26434/chemrxiv-2026-s2619},
+    note    = {Preprint, not peer-reviewed}
   }
+
 
